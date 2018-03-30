@@ -34,7 +34,7 @@
         android:layout_height="30dp"
         android:layout_margin="10dp"
         android:gravity="center_vertical"
-        android:text="客服电话： 0755-26667889"/>
+        android:text="客服电话：0750-8663152"/>
 
     <TextView
         android:id="@+id/connect_tv_qq"
@@ -43,6 +43,6 @@
         android:layout_marginBottom="50dp"
         android:layout_marginLeft="10dp"
         android:gravity="center_vertical"
-        android:text="客服QQ： 988727278"/>
+        android:text="客服QQ：603895966"/>
 
 </LinearLayout>

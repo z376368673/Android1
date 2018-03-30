@@ -26,8 +26,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:text="我的财富"
+                android:textSize="18sp"
                 android:textColor="@color/white" />
 
         </LinearLayout>
@@ -50,7 +51,7 @@
                     android:id="@+id/guquan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="100"
+                    android:text="0"
                     android:textColor="#ffffff"
                     android:textSize="28sp" />
 
@@ -75,7 +76,7 @@
                     android:id="@+id/fenhong"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="100"
+                    android:text="0"
                     android:textColor="#ffffff"
                     android:textSize="28sp" />
 
@@ -99,7 +100,7 @@
                     android:id="@+id/total_fee"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="100"
+                    android:text="0"
                     android:textColor="#ffffff"
                     android:textSize="28sp" />
 
@@ -159,7 +160,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="bottom"
-                android:text="100"
+                android:text="0"
                 android:textColor="@color/glod_ee"
                 android:textSize="28sp" />
 
@@ -197,7 +198,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="bottom"
-                android:text="100"
+                android:text="0"
                 android:textColor="@color/glod_ee"
                 android:textSize="28sp" />
 

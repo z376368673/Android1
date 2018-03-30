@@ -110,7 +110,7 @@ public class RegActivity extends AppCompatActivity implements View.OnClickListen
                     EditText[] editTextArr = (EditText[]) objectArr[1];
                     editTextArr[i].requestFocus();
                 } else {
-                    BaseApplication.iService.register(contentArr[0], MD5Util.encode(contentArr[2]), /*contentArr[4],*/
+                    BaseApplication.iService.register(contentArr[0], contentArr[2], /*contentArr[4],*/
                             contentArr[5]).enqueue(new RetrofitCallback(getBaseContext(), new RetrofitCallback.DataParser() {
                         @Override
                         public void parse(String data) {

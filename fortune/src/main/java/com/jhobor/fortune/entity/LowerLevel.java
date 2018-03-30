@@ -7,11 +7,17 @@ package com.jhobor.fortune.entity;
 public class LowerLevel {
     private int id;
     private String name;
+    private String mobile;
     private String joinTime;
     private float capital;
     private float profit;
 
     public LowerLevel() {
+    }
+
+    public LowerLevel(String mobile, float capital) {
+        this.mobile = mobile;
+        this.capital = capital;
     }
 
     public LowerLevel(int id, String name, String joinTime, float capital, float profit) {
@@ -20,6 +26,14 @@ public class LowerLevel {
         this.joinTime = joinTime;
         this.capital = capital;
         this.profit = profit;
+    }
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
     }
 
     public int getId() {

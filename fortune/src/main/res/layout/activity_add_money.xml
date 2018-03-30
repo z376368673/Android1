@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <include layout="@layout/bar_top"/>
+    <include layout="@layout/bar_top" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_gravity="center_horizontal"
-        android:background="#999"/>
+        android:background="#999" />
 
     <EditText
-        android:inputType="number"
         android:id="@+id/add_et"
         android:layout_width="match_parent"
         android:layout_height="42dp"
         android:layout_margin="20dp"
         android:background="@drawable/shape_account_et"
         android:hint="请输出投资金额"
+        android:inputType="number"
         android:paddingLeft="5dp"
-        android:textColorHint="#999"/>
+        android:textColorHint="#999" />
 
     <TextView
         android:id="@+id/add_submmit"
@@ -32,7 +32,7 @@
         android:gravity="center"
         android:text="提交"
         android:textColor="#fff"
-        android:textSize="22sp"/>
+        android:textSize="22sp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -40,23 +40,51 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
-        android:text="提示： \n请将投资款项打入平台账户，打款成功后可以在“我的”_“增资记录”中查看增资明细. \n"
-        android:textSize="18sp"/>
+        android:lineSpacingExtra="8dp"
+        android:text="提示：
+          请将投资款项打入平台账户，打款成功后可以在“我的”-“增资记录”中查看增资明细。"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="8dp"
+            android:text="中平台账户类型："
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="5dp"
+            android:text="中国建设银行股份有限公司开平水口东支行"
+            android:textSize="18sp" />
+
+    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:text="平台账户类型： 中国银行"
-        android:textSize="18sp"/>
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="8dp"
+        android:text="中平台账户类型： 中国建设银行股份有限公司开平水口东支行"
+        android:textSize="18sp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="3dp"
-        android:text="卡号：6222021908447636188"
-        android:textSize="18sp"/>
+        android:layout_marginTop="10dp"
+        android:text="开户账号 ：4405 0167 9945 0000 0105"
+        android:textSize="18sp" />
 </LinearLayout>

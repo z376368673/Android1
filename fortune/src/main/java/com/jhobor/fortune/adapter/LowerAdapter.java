@@ -19,9 +19,9 @@ public class LowerAdapter extends BaseQuickAdapter<LowerLevel, BaseViewHolder> {
 
     @Override
     protected void convert(BaseViewHolder helper, LowerLevel item) {
-        helper.setText(R.id.name, item.getName())
-                .setText(R.id.joinTime, item.getJoinTime())
-                .setText(R.id.capital, String.valueOf(item.getCapital()))
+        helper.setText(R.id.name, item.getMobile())
+                .setText(R.id.joinTime, item.getMobile())
+                .setText(R.id.capital, String.valueOf(item.getCapital())+"万")
                 .setText(R.id.profit, String.valueOf(item.getProfit()));
     }
 }

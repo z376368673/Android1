@@ -115,8 +115,31 @@ public class TeamFragment extends Fragment implements View.OnClickListener {
             public void parse(String data) {
                 try {
                    JSONObject jsonObject = new JSONObject(data);
-                    int isLogin = jsonObject.getInt("isLogin");
-                    if (isLogin == 1) {
+                    int msg = jsonObject.getInt("msg");
+                    if (msg == 1) {
+                        JSONArray childrenList = jsonObject.getJSONArray("childrenList");
+                        JSONArray grandsonList = jsonObject.getJSONArray("grandsonList");
+                        childrenCount = childrenList.length();
+
+                        List<LowerLevel> list = new ArrayList<>();
+                        for (int i = 0; i < childrenCount; i++) {
+                            JSONObject chObj = childrenList.getJSONObject(i);
+                            String mobile = chObj.getString("mobile");
+                            float capital = (float) chObj.getDouble("capital");
+                            list.add(new LowerLevel(mobile, capital));
+                        }
+                        lowerList.put(0, list);
+                        grandsonCount = grandsonList.length();
+                        List<LowerLevel> list2 = new ArrayList<>();
+                        for (int i = 0; i < grandsonCount; i++) {
+                            JSONObject chObj = childrenList.getJSONObject(i);
+                            String mobile = chObj.getString("mobile");
+                            float capital = (float) chObj.getDouble("capital");
+                            list.add(new LowerLevel(mobile, capital));
+                        }
+                        lowerList.put(1, list2);
+/*
+
                         childrenCount = jsonObject.getInt("childrenCount");
                         grandsonCount = jsonObject.getInt("grandsonCount");
                         JSONArray childrenList = jsonObject.getJSONArray("childrenList");
@@ -131,7 +154,7 @@ public class TeamFragment extends Fragment implements View.OnClickListener {
                             float profit = (float) jsonArray.getDouble(4);//金额
                             list.add(new LowerLevel(id, name, time, capital, profit));
                         }
-                        lowerList.put(0, list);
+
                         List<LowerLevel> list2 = new ArrayList<>();
                         for (int i = 0; i < grandsonCount; i++) {
                             JSONArray jsonArray = grandsonList.getJSONArray(i);
@@ -144,7 +167,7 @@ public class TeamFragment extends Fragment implements View.OnClickListener {
                         }
                         lowerList.put(1, list2);
                         //lowerAdapter = new LowerAdapter(R.layout.item_lower_level, lowerList.get(tab));
-
+*/
                         List<LowerLevel> lowerLevels = lowerList.get(0);
                         if (lowerLevels.size() > 0){
                             ll1.setVisibility(View.VISIBLE);

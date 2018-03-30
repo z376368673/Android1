@@ -72,12 +72,13 @@ public interface IService {
     Call<ResponseBody> manageProperty(@Query("uuid") String token, @Query("money") int money);
 
     /**
-     * 我的下级
+     * 我的团队
      *
      * @param token
-     * @return
+     * @return http://tz.1yuanpf.com/rentalcarUsb/groupInfo/myGroupInfo
+
      */
-    @POST("relation/list.do")
+    @POST("groupInfo/myGroupInfo.do")
     Call<ResponseBody> myLower(@Query("uuid") String token);
 
     /**
