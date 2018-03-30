@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="5dp">
+        android:padding="15dp">
 
         <TextView
             android:id="@+id/name"
@@ -16,23 +16,22 @@
             android:layout_height="match_parent"
             android:layout_weight="4"
             android:gravity="left"
-            android:text="【姓名】"
-            />
+            android:text="【姓名】" />
 
         <TextView
             android:id="@+id/joinTime"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:visibility="gone"
             android:layout_weight="4"
-            android:text="【帐号】" />
+            android:text="【帐号】"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/capital"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:gravity="right"
             android:layout_weight="3"
+            android:gravity="right"
             android:text="0"
             android:textColor="@color/tabActived" />
 
@@ -46,4 +45,9 @@
             android:textColor="@color/tabActived"
             android:visibility="gone" />
     </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/blue_5e" />
 </LinearLayout>

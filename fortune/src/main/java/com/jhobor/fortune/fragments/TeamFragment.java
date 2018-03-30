@@ -38,7 +38,7 @@ import java.util.Locale;
 public class TeamFragment extends Fragment implements View.OnClickListener {
     View view;
     RelativeLayout oneBox, twoBox;
-    LinearLayout ll1,ll2;
+    LinearLayout ll1,ll2,one_ll,two_ll;
     TextView oneLevel, twoLevel, oneText, twoText;
     RecyclerView recyclerView,recyclerView1;
     ImageView arrow1,arrow2;
@@ -72,6 +72,10 @@ public class TeamFragment extends Fragment implements View.OnClickListener {
         arrow2 = (ImageView) view.findViewById(R.id.down_two);
         ll1 = (LinearLayout) view.findViewById(R.id.team_ll1);
         ll2 = (LinearLayout) view.findViewById(R.id.team_ll2);
+        one_ll = (LinearLayout) view.findViewById(R.id.one_ll);
+        one_ll.setTag(1);
+        two_ll = (LinearLayout) view.findViewById(R.id.two_ll);
+        two_ll.setTag(0);
         p1 = (TextView) view.findViewById(R.id.people_1);
         p2 = (TextView) view.findViewById(R.id.people_2);
 
@@ -200,7 +204,29 @@ public class TeamFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-
+        if (v == oneBox){
+            int tag = (int) one_ll.getTag();
+            if (tag==0){
+                one_ll.setTag(1);
+                one_ll.setVisibility(View.VISIBLE);
+                arrow1.setImageResource(R.mipmap.down);
+            }else {
+                one_ll.setTag(0);
+                one_ll.setVisibility(View.GONE);
+                arrow1.setImageResource(R.mipmap.up);
+            }
+        }else if (v == twoBox){
+            int tag = (int) two_ll.getTag();
+            if (tag==0){
+                two_ll.setTag(1);
+                two_ll.setVisibility(View.VISIBLE);
+                arrow2.setImageResource(R.mipmap.down);
+            }else {
+                two_ll.setTag(0);
+                two_ll.setVisibility(View.GONE);
+                arrow2.setImageResource(R.mipmap.up);
+            }
+        }
         /*if (v == oneBox) {
             if (tab != 0) {
                 tab = 0;
@@ -216,29 +242,29 @@ public class TeamFragment extends Fragment implements View.OnClickListener {
 //                lowerAdapter.notifyDataSetChanged();
             }
         }*/
-        if (v == oneBox) {
-            if (isAFloded) {
-                //不折叠
-                ll1.setVisibility(view.VISIBLE);
-                arrow1.setImageResource(R.drawable.up);
-                isAFloded = !isAFloded;
-            }else if(!isAFloded){
-                //折叠
-                ll1.setVisibility(view.GONE);
-                arrow1.setImageResource(R.drawable.down);
-                isAFloded = !isAFloded;
-            }
-        } else if (v == twoBox) {
-            if (isBFloded) {
-                ll2.setVisibility(view.VISIBLE);
-                arrow2.setImageResource(R.drawable.up);
-                isBFloded = !isBFloded;
-            }else if(!isBFloded){
-                ll2.setVisibility(view.GONE);
-                arrow2.setImageResource(R.drawable.down);
-                isBFloded = !isBFloded;
-            }
-        }
+//        if (v == oneBox) {
+//            if (isAFloded) {
+//                //不折叠
+//                ll1.setVisibility(view.VISIBLE);
+//                arrow1.setImageResource(R.drawable.up);
+//                isAFloded = !isAFloded;
+//            }else if(!isAFloded){
+//                //折叠
+//                ll1.setVisibility(view.GONE);
+//                arrow1.setImageResource(R.drawable.down);
+//                isAFloded = !isAFloded;
+//            }
+//        } else if (v == twoBox) {
+//            if (isBFloded) {
+//                ll2.setVisibility(view.VISIBLE);
+//                arrow2.setImageResource(R.drawable.up);
+//                isBFloded = !isBFloded;
+//            }else if(!isBFloded){
+//                ll2.setVisibility(view.GONE);
+//                arrow2.setImageResource(R.drawable.down);
+//                isBFloded = !isBFloded;
+//            }
+//        }
 
     }
 

@@ -33,17 +33,21 @@
         android:text="提交"
         android:textColor="#fff"
         android:textSize="22sp" />
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
-        android:lineSpacingExtra="8dp"
-        android:text="提示：
-          请将投资款项打入平台账户，打款成功后可以在“我的”-“增资记录”中查看增资明细。"
-        android:textSize="18sp" />
+        android:text="提示："
+        android:textSize="15sp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="         请将投资款项打入平台账户，打款成功后可以在“我的”-“增资记录”中查看增资明细。"
+        android:textSize="15sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -56,16 +60,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:lineSpacingExtra="8dp"
             android:text="中平台账户类型："
-            android:textSize="18sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:lineSpacingExtra="5dp"
             android:text="中国建设银行股份有限公司开平水口东支行"
-            android:textSize="18sp" />
+            android:textSize="15sp" />
 
     </LinearLayout>
 
@@ -75,16 +77,6 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
-        android:lineSpacingExtra="8dp"
-        android:text="中平台账户类型： 中国建设银行股份有限公司开平水口东支行"
-        android:textSize="18sp" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="10dp"
         android:text="开户账号 ：4405 0167 9945 0000 0105"
-        android:textSize="18sp" />
+        android:textSize="15sp" />
 </LinearLayout>
