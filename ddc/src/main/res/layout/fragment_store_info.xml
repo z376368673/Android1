@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageBg"
+    android:orientation="vertical"
+    tools:context="com.jhobor.ddc.fragment.StoreInfoFragment">
+
+    <TextView
+        android:id="@+id/period"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:drawableLeft="@mipmap/store_period"
+        android:drawablePadding="20dp"
+        android:drawableStart="@mipmap/store_period"
+        android:gravity="center_vertical"
+        android:padding="15dp"
+        android:text="【经营时间】"
+        android:textSize="@dimen/text_size" />
+
+    <TextView
+        android:id="@+id/storeAddr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:drawableLeft="@mipmap/store_addr"
+        android:drawablePadding="20dp"
+        android:drawableStart="@mipmap/store_addr"
+        android:gravity="center_vertical"
+        android:padding="15dp"
+        android:text="【商家地址】"
+        android:textSize="@dimen/text_size" />
+
+    <TextView
+        android:id="@+id/tel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:drawableLeft="@mipmap/store_tel"
+        android:drawablePadding="20dp"
+        android:drawableStart="@mipmap/store_tel"
+        android:gravity="center_vertical"
+        android:padding="15dp"
+        android:text="【店铺手机号码】"
+        android:textSize="@dimen/text_size" />
+
+    <TextView
+        android:id="@+id/report"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="举报商家"
+        android:textColor="@color/redTheme"
+        android:textSize="@dimen/text_size_subtitle"
+        android:textStyle="bold" />
+
+</LinearLayout>

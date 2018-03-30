@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <CheckBox
+        android:id="@+id/parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/cb_collect_item"
+        android:textColor="@color/grayText2"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_margin="10dp"
+        android:text="默认路径"/>
+    <TextView
+        android:id="@+id/defaultPath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        android:text="商品-天然石材-大理石"/>
+
+</LinearLayout>

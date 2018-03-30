@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/page_bg"
+    android:orientation="vertical"
+    tools:context="com.jhobor.fortune.ManagePropertyActivity">
+
+    <include layout="@layout/bar_top" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/finance_icon" />
+
+        <TextView
+            android:id="@+id/money"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:background="@mipmap/round_edit_white_bg"
+            android:gravity="center"
+            android:padding="@dimen/padding"
+            android:text="请选择金额"
+            android:textSize="@dimen/subtitle" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:background="@color/glod"
+        android:text="提交"
+        android:textColor="@color/text"
+        android:textSize="@dimen/subtitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text"
+        android:textSize="@dimen/subtitle2"
+        android:layout_gravity="center_horizontal"
+        android:text="此功能暂未开放"/>
+</LinearLayout>

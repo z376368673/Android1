@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/page_bg"
+    android:orientation="vertical"
+    tools:context="com.jhobor.fortune.WithdrawActivity">
+
+    <include layout="@layout/bar_top" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/line" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@mipmap/round_edit_white_bg"
+        android:padding="@dimen/padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="总金额"
+            android:textSize="@dimen/subtitle" />
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:text="0"
+            android:textSize="@dimen/subtitle"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@mipmap/round_edit_white_bg"
+        android:hint="请输入提现金额"
+        android:inputType="number"
+        android:maxLength="6"
+        android:padding="@dimen/padding"
+        android:textSize="@dimen/subtitle2" />
+
+    <Spinner
+        android:id="@+id/receiptWay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@mipmap/round_spinner_white_bg" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:text="备注："
+        android:textColor="@color/text"
+        android:textSize="@dimen/content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:text="      1、提现金额必须是100的整数倍。"
+        android:textColor="@color/text"
+        android:textSize="@dimen/content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:text="      2、提现金额高于500的，不收任何手续费；提现金额低于500的，则需要收取5%的手续费。"
+        android:textColor="@color/text"
+        android:textSize="@dimen/content" />
+
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/glod"
+        android:text="提交"
+        android:textColor="@color/text"
+        android:textSize="@dimen/subtitle" />
+</LinearLayout>

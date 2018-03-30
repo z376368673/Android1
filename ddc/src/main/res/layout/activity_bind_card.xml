@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_bind_card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageBg"
+    tools:context="com.jhobor.ddc.activity.BindCardActivity">
+
+    <include layout="@layout/bar_top" />
+
+    <TableRow style="@style/tr_bg_white">
+
+        <TextView
+            style="@style/tv_weight1"
+            android:text="持卡人：" />
+
+        <EditText
+            android:id="@+id/realName"
+            style="@style/edt_weight3"
+            android:hint="输入持卡人的真实姓名"
+            android:inputType="textPersonName" />
+    </TableRow>
+
+    <TableRow style="@style/tr_bg_white">
+
+        <TextView
+            style="@style/tv_weight1"
+            android:text="银 行：" />
+
+        <EditText
+            android:id="@+id/belong"
+            style="@style/edt_weight3"
+            android:hint="开户银行" />
+    </TableRow>
+
+    <TableRow style="@style/tr_bg_white">
+
+        <TextView
+            style="@style/tv_weight1"
+            android:text="卡号：" />
+
+        <EditText
+            android:id="@+id/cardNo"
+            style="@style/edt_weight3"
+            android:hint="银行卡上的卡号"
+            android:inputType="number"
+            android:maxLength="19" />
+    </TableRow>
+
+    <TableRow style="@style/tr_bg_white">
+
+        <TextView
+            style="@style/tv_weight1"
+            android:text="所属省市：" />
+
+        <EditText
+            android:id="@+id/region"
+            style="@style/edt_weight3"
+            android:hint="如：广东省深圳市" />
+    </TableRow>
+
+    <TableRow style="@style/tr_bg_white">
+
+        <TextView
+            style="@style/tv_weight1"
+            android:text="所属分行：" />
+
+        <EditText
+            android:id="@+id/branch"
+            style="@style/edt_weight3"
+            android:hint="如：宝安分行" />
+    </TableRow>
+
+    <TableRow style="@style/tr_bg_white">
+
+        <TextView
+            style="@style/tv_weight1"
+            android:text="验证码：" />
+
+        <EditText
+            android:id="@+id/code"
+            style="@style/edt"
+            android:layout_weight="1"
+            android:hint="输入验证码"
+            android:inputType="number"
+            android:maxLength="6" />
+
+        <TextView
+            android:id="@+id/getCode"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:text="│获取验证码"
+            android:textSize="@dimen/text_size_small" />
+    </TableRow>
+
+    <Button
+        android:id="@+id/ok"
+        style="@style/btn_bg_red"
+        android:layout_marginTop="30dp"
+        android:text="确定" />
+
+</TableLayout>

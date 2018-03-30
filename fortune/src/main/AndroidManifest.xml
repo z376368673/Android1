@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jhobor.fortune">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:name=".base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/new_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ForgetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ResetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FinanceDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WalletsDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ReceiptWayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TradeRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WithdrawRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ModifyPassActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WithdrawActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ManagePropertyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FillBindAccountInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BrowserActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".TradeDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".GiveHandActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".GetHandActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".BalanceDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".FreezeDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".TradeRecordHelpActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".BoodingDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".BoodingCoinActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ChooseActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".fragments.JiHuomaActivity"
+                  android:screenOrientation="portrait" />
+        <activity android:name=".fragments.DynamicBoxActivity"
+                  android:screenOrientation="portrait" />
+        <activity android:name=".view.MyAccountActivity"/>
+        <activity android:name=".view.GridManagerActivity"/>
+        <activity android:name=".view.FankuiActivity"/>
+        <activity android:name=".view.ConnectActivity"/>
+        <activity android:name=".view.SettingUserActivity"/>
+        <activity android:name=".view.ShareActivity"/>
+        <activity android:name=".view.AddMoneyActivity"/>
+        <activity android:name=".view.AccountWithdrawActivity"/>
+        <activity android:name=".view.IntegralTransActivity"/>
+        <activity android:name=".view.AddBankCardActivity"/>
+    </application>
+
+</manifest>

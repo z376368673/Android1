@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_sending_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageBg"
+    tools:context="com.jhobor.ddc.activity.SendingDetailsActivity">
+
+    <include layout="@layout/bar_top" />
+
+    <TableRow
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:text="派单员："
+            android:textSize="@dimen/text_size_subtitle"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sender"
+            android:text="xxx"
+            android:textSize="@dimen/text_size_subtitle"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/callSender"
+            android:layout_height="20dp"
+            android:layout_gravity="end"
+            android:src="@mipmap/rush_orders_phone" />
+
+        <Button
+            android:id="@+id/report"
+            style="@style/btn_bg_red"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="举报"
+            android:visibility="gone" />
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:text="收货人："
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/receiver"
+            android:text="xx xx xx"
+            android:textSize="@dimen/text_size" />
+    </TableRow>
+
+    <TableRow
+        android:background="@color/white"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:text="电  话："
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/phone"
+            android:text="00000000000"
+            android:textSize="@dimen/text_size" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:text="收货地址："
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/toAddr"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="xxxxxxxxxxxxxxxxx"
+            android:textSize="@dimen/text_size" />
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:text="付款时间："
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/payTime"
+            android:text="2017-01-11 12:00:00"
+            android:textSize="@dimen/text_size" />
+    </TableRow>
+
+    <TableRow
+        android:background="@color/white"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:text="发货时间："
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/sendTime"
+            android:text="2017-01-11 12:00:00"
+            android:textSize="@dimen/text_size" />
+    </TableRow>
+
+    <TableRow
+        android:background="@color/white"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:text="约定送达时间："
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/minTime"
+            android:text="2017-01-11 12:00:00"
+            android:textSize="@dimen/text_size" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:text="订单号："
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/ordersNo"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="0000000000000000"
+            android:textSize="@dimen/text_size" />
+    </TableRow>
+
+</TableLayout>
+

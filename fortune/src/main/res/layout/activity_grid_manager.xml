@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/bar_top"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#f3f3f3"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/account_jf_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="300"
+            android:textColor="#f00"
+            android:textSize="36sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="我的积分"
+            android:textColor="#999"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="5dp"
+            android:text="(满500分可以提现)"
+            android:textColor="#999"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"
+        android:background="#f3f3f3"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/account_tv_add"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_grid_tv1"
+            android:gravity="center"
+            android:text="增资"
+            android:textColor="#fff"/>
+
+        <TextView
+            android:id="@+id/account_tv_withdraw"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_grid_tv2"
+            android:gravity="center"
+            android:text="提现"
+            android:textColor="#fff"/>
+
+        <TextView
+            android:id="@+id/account_tv_zr"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_getverfycode"
+            android:gravity="center"
+            android:text="积分转让"
+            android:textColor="#000"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#f3f3f3"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_trade_record"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#fff"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_vertical"
+            android:text="交易记录"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:src="@mipmap/item_arrow"/>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="13dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@mipmap/ship_addr_item_bg"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/realName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="小梁"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/realName"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_toEndOf="@id/realName"
+            android:layout_toRightOf="@id/realName"
+            android:text="18676690358"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/addr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/realName"
+            android:layout_alignStart="@id/realName"
+            android:layout_below="@id/realName"
+            android:layout_marginTop="5dp"
+            android:maxEms="13"
+            android:text="广东省深圳市光明新区民生大道上辇村口"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size" />
+
+        <ImageView
+            android:id="@+id/location"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/shiping_addr_locate" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/location"
+            android:layout_alignStart="@id/location"
+            android:layout_below="@id/location"
+            android:layout_marginLeft="3dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="5dp"
+            android:text="定位"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_subtitle" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/setAddrAsDefault"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/shipping_addr_rd"
+            android:paddingLeft="15dp"
+            android:paddingStart="15dp"
+            android:text="设置为默认地址"
+            android:textColor="@color/black" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="编辑"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="删除"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+</LinearLayout>

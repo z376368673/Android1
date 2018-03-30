@@ -1,0 +1,140 @@
+<resources>
+    <string name="app_name">战术射击训练营</string>
+
+    <!-- 登录界面 -->
+
+    <!-- 底部导航栏 -->
+    <string name="nav_home">首页</string>
+    <string name="nav_bbs">社区</string>
+    <string name="nav_store">基地</string>
+    <string name="nav_equipment">装备</string>
+    <string name="nav_me">我的</string>
+
+    <!--第一服务器地址-->
+    <string name="first_host">http://www.ir-touch.com/</string>
+    <!-- 登录验证地址 -->
+    <string name="send_json_url">
+        userInfo_addUI.action
+    </string>
+    <!-- 发送数据获取对应店铺的场地出售状态的地址 -->
+    <string name="send_and_get_store_data_url">
+        rented_list.action
+    </string>
+    <!-- 提交选定箭道的地址 -->
+    <string name="submit_store_data_url">
+        rented_rentedQuery.action
+    </string>
+    <!-- 提交选定箭道的地址 -->
+    <string name="pay_with_member_url">
+        rented_memberPay.action
+    </string>
+    <!-- 支付成功通知服务器地址 -->
+    <string name="pay_success_url">
+        orders_ordersPay.action
+    </string>
+    <!-- 支付失败通知服务器地址 -->
+    <string name="pay_fail_url">
+        orders_orderFailure.action
+    </string>
+    <!-- 获取订单信息地址 -->
+    <string name="get_orders_info_url">
+        orders_list.action
+    </string>
+    <!-- 获取训练记录 -->
+    <string name="get_train_records_url">
+        record_list.action
+    </string>
+    <!-- 获取装备 -->
+    <string name="get_equipments_url">
+        outfit_list.action
+    </string>
+    <!-- 获取排名 -->
+    <string name="get_ranks_rul">
+        ranklist_scoreRank.action
+    </string>
+    <!-- 获取我的信息 -->
+    <string name="get_my_info_rul">
+        ranklist_myScore.action
+    </string>
+    <!-- 充值连接 -->
+    <string name="charge_url">
+        fund_recharge.action
+    </string>
+    <string name="wx_charge_url">
+        fund_weChatFundPay.action
+    </string>
+    <!-- 获取好友连接 -->
+    <string name="get_friends_url">
+        record_getRecordScore.action
+    </string>
+    <!-- 关注好友连接 -->
+    <string name="add_friends_url">
+        friend_addFriend.action
+    </string>
+    <!-- 查询好友连接 -->
+    <string name="search_friends_url">
+        friend_queryFriend.action
+    </string>
+    <!-- 查询余额连接 -->
+    <string name="check_money_url">
+        fund_checkMoney.action
+    </string>
+    <!-- 查询消息连接 -->
+    <string name="get_msg_url">
+        news_list.action
+    </string>
+    <!-- 查询玩家玩到的关数连接 -->
+    <string name="get_depth_url">
+        ranklist_myPass.action
+    </string>
+    <!-- 启动广告图片 -->
+    <string name="get_advertisement_url">
+        picture_list.action
+    </string>
+    <string name="get_share_photos">
+        record_share.action
+    </string>
+
+    <!-- 第三方key -->
+    <string name="key_id_qq">1105528692</string>
+    <!--<string name="key_id_qq">222222</string>-->
+    <!--应用id-->
+    <string name="key_id_wechat">wx10099e56ba3222b8</string>
+    <!--微信开放平台密钥-->
+    <string name="app_secret_wechat">7cb34bdebecf91e2eb11c42b8ae3ff27</string>
+    <!--合作者id-->
+    <string name="partner_id">1380345002</string>
+
+    <!-- 我 -->
+    <string name="total_scores">总分数</string>
+
+    <!-- 商店详情 -->
+    <string name="space_rent">场地租赁</string>
+    <string name="can_select">可选</string>
+    <string name="selected">已选</string>
+    <string name="sold">已售</string>
+    <string name="submit">提交订单</string>
+    <string name="ok">确定</string>
+
+    <!-- 我的订单 -->
+    <string name="paid">已支付</string>
+    <string name="used">已使用</string>
+    <string name="unuse">未使用</string>
+
+    <!--极光推送-->
+    <string name="tag_hint">Tag为大小写字母，数字，下划线,中文， 多个用以逗号分隔</string>
+    <string name="alias_hint">Alias为大小写字母，数字，下划线</string>
+    <string name="style_hint">style为数字</string>
+    <string name="error_style_empty">style不能为空</string>
+    <string name="error_alias_empty">alias不能为空</string>
+    <string name="error_tag_empty">tag不能为空</string>
+    <string name="error_tag_gs_empty">格式不对</string>
+    <string name="error_network">网络连接异常,初始化失败 请检查网络！</string>
+    <string name="logining">程序在后台执行, 请查看日志！</string>
+    <string name="setting_su">设置成功</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_equipment">EquipmentActivity</string>
+
+</resources>

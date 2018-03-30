@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@mipmap/bg1"
+              android:orientation="vertical"
+              tools:context="com.jhobor.fortune.GetHandActivity">
+
+    <include layout="@layout/bar_top"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginLeft="@dimen/padding"
+        android:layout_marginRight="@dimen/padding"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_wallet_white_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/jt"/>
+
+        <LinearLayout
+            android:paddingLeft="@dimen/dp_10"
+
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:gravity="center"
+
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/paddingMiddle"
+                android:text="静态钱包"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/balance"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textColor="@color/tabActived"
+                android:textSize="28sp"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/useStatic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_margin="20dp"
+            android:src="@mipmap/wallet_checked"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginLeft="@dimen/padding"
+        android:layout_marginRight="@dimen/padding"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_wallet_white_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/dt"/>
+
+        <LinearLayout
+            android:paddingLeft="@dimen/dp_10"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/paddingMiddle"
+                android:text="奖金钱包"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/prize"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textColor="@color/tabActived"
+                android:textSize="28sp"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/usePrize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_margin="20dp"
+            android:src="@mipmap/wallet_unchecked"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding"
+        android:layout_marginRight="@dimen/padding"
+        android:layout_marginTop="15dp"
+        android:text="您本次申请得到帮助的金额（人民币）"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/text"/>
+
+    <EditText
+        android:id="@+id/money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="@dimen/paddingSmall"
+        android:background="@drawable/card_round_bg"
+        android:ems="10"
+        android:hint="金额为100的整数倍，最低500元，最高50000元"
+        android:inputType="number"
+        android:maxLength="5"
+        android:padding="@dimen/padding"
+        android:textColorHint="@color/glod"
+        android:textSize="@dimen/text"/>
+
+    <!--<RelativeLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@mipmap/round_spinner_white_bg"
+            android:gravity="center_vertical"
+            android:text="请选择提现方式"
+            android:textColor="@color/glod"/>
+
+        <Spinner
+            android:id="@+id/receiptWay"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@mipmap/round_spinner_white_bg"/>
+    </RelativeLayout>-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding"
+        android:layout_marginRight="@dimen/padding"
+        android:layout_marginTop="20dp"
+        android:text="温馨提示："
+        android:textColor="@color/LogoTextSize"
+        android:textSize="22sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding"
+        android:layout_marginRight="@dimen/padding"
+        android:layout_marginTop="@dimen/padding"
+        android:text="1、订单金额提交后将不能取消或修改\n2、当系统为您匹配到接受到对方的打款后，请在12小时内确认，谢谢\n3、如果对方12小时内未打款，系统将为您重新匹配\n"
+        android:textColor="@color/LogoTextSize"
+        android:textSize="12dp"/>
+
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding"
+        android:layout_marginRight="@dimen/padding"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape_getverfycode"
+        android:text="提交"
+        android:textColor="#fff"
+        android:textSize="@dimen/title"/>
+
+</LinearLayout>

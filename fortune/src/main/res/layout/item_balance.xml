@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_4"
+    android:background="@color/white"
+    android:columnCount="2">
+
+    <TextView
+        android:id="@+id/moneyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding"
+        android:layout_marginRight="@dimen/padding"
+        android:text="提供金额" />
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/doubblepadding"
+        android:layout_marginRight="@dimen/padding"
+        android:text="---"
+        android:textColor="@color/green" />
+
+    <TextView
+        android:id="@+id/traderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding"
+        android:layout_marginRight="@dimen/padding"
+        android:layout_marginTop="@dimen/paddingSmall"
+        android:text="得到者姓名" />
+
+    <TextView
+        android:id="@+id/trader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/doubblepadding"
+        android:layout_marginRight="@dimen/padding"
+        android:layout_marginTop="@dimen/paddingSmall"
+        android:text="xxx"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/telText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding"
+        android:layout_marginRight="@dimen/padding"
+        android:layout_marginTop="@dimen/paddingSmall"
+        android:text="得到者电话" />
+
+    <TextView
+        android:id="@+id/tel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/doubblepadding"
+        android:layout_marginRight="@dimen/padding"
+        android:layout_marginTop="@dimen/paddingSmall"
+        android:text="xxxxxxxxxxx"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding"
+        android:layout_marginRight="@dimen/padding"
+        android:layout_marginTop="@dimen/paddingSmall"
+        android:text="完成日期" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/doubblepadding"
+        android:layout_marginRight="@dimen/padding"
+        android:layout_marginTop="@dimen/paddingSmall"
+        android:text="xxxx-xx-xx xx:xx:xx"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/paddingSmall"
+        android:layout_marginLeft="@dimen/padding"
+        android:layout_marginRight="@dimen/padding"
+        android:layout_marginTop="@dimen/paddingSmall"
+        android:text="状态" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/doubblepadding"
+        android:layout_marginRight="@dimen/padding"
+        android:layout_marginTop="@dimen/paddingSmall"
+        android:text="---"
+        android:textColor="@color/tabActived" />
+</GridLayout>

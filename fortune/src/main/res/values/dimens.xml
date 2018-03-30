@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding">10dp</dimen>
+    <dimen name="paddingfive">5dp</dimen>
+    <dimen name="doubblepadding">20dp</dimen>
+    <dimen name="paddingMiddle">5dp</dimen>
+    <dimen name="paddingSmall">3dp</dimen>
+
+    <dimen name="title">24sp</dimen>
+    <dimen name="subtitle">18sp</dimen>
+    <dimen name="subtitle2">16sp</dimen>
+    <dimen name="content">14sp</dimen>
+    <dimen name="text">12sp</dimen>
+    <dimen name="tips">10sp</dimen>
+
+</resources>

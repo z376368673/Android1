@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_know_us"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jhobor.ddc.activity.KnowUsActivity">
+
+    <include layout="@layout/bar_top" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:text="\t\t本平台由深圳市华众互联网络科技有限公司（以下简称华众）携手深圳市天天来买卖科技有限公司（以下简称天天来）打造，“华众”是一家IT软件开发公司，有丰富的开发经验，优秀的技术人才，主攻：app开发，平台搭建，微信公众号开发，小程序开发，PC端程序开发。合作客户涉及：影视，房地产，旅游，电商，金融，电子，装修等各个行业。本平台是“华众”携手“天天来”的心血之作，希望大家喜欢。\n\n\n业务联系电话：15989426734\n\n\n平台客服电话：0755-36539322"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size" />
+
+</LinearLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_withdraw"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageBg"
+    android:orientation="vertical"
+    tools:context="com.jhobor.ddc.activity.WithdrawActivity">
+
+    <include layout="@layout/bar_top" />
+
+    <RelativeLayout
+        android:id="@+id/choose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_top_bottom"
+        android:paddingBottom="8dp"
+        android:paddingEnd="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp"
+        android:paddingStart="10dp"
+        android:paddingTop="8dp">
+
+        <ImageView
+            android:id="@+id/bankIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@color/green" />
+
+        <TextView
+            android:id="@+id/bankName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/bankIcon"
+            android:text="银行名称"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/brief"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/bankName"
+            android:layout_alignStart="@id/bankName"
+            android:layout_below="@id/bankName"
+            android:text="尾号8592储蓄卡"
+            android:textSize="@dimen/text_size_small" />
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/me_item_enter"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_top_shadow_bottom"
+        android:paddingBottom="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提现金额" />
+
+        <LinearLayout
+            android:id="@+id/moneyBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/symbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_title" />
+
+            <EditText
+                android:id="@+id/money"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入提款金额"
+                android:inputType="number"
+                android:textSize="@dimen/text_size" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/takeAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/moneyBox"
+            android:text="全部提现"
+            android:textColor="@color/redTheme"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/takeAll"
+            android:text="可用余额 123456.00元"
+            android:textSize="@dimen/text_size_small" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/ok"
+        style="@style/btn_bg_red"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:text="确认提现" />
+
+</LinearLayout>

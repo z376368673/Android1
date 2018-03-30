@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg1"
+    android:orientation="vertical"
+    tools:context="com.jhobor.fortune.GiveHandActivity">
+
+    <include layout="@layout/bar_top" />
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding"
+        android:layout_marginRight="@dimen/padding"
+        android:layout_marginTop="15dp"
+        android:text="您本次申请提供帮助的金额（人民币）"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/content" />
+
+    <EditText
+        android:id="@+id/money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/doubblepadding"
+        android:layout_marginRight="@dimen/doubblepadding"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/card_round_bg"
+        android:ems="10"
+        android:textColorHint="@color/glod"
+        android:hint="金额是100的整数倍，最低2000，最高20000"
+        android:inputType="number"
+        android:maxLength="5"
+        android:padding="@dimen/padding"
+        android:textSize="@dimen/content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding"
+        android:layout_marginRight="@dimen/padding"
+        android:layout_marginTop="20dp"
+        android:text="温馨提示："
+        android:textColor="@color/LogoTextSize"
+        android:textSize="@dimen/subtitle" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding"
+        android:layout_marginRight="@dimen/padding"
+        android:layout_marginTop="20dp"
+        android:text="1、订单金额提交后将不能取消或修改。\n\n2、当系统为您匹配好接受帮助的会员后，请在12小时内打10%的预付款，交易完成后随机3到13天匹配打余额、打款后立即提款，提款8-10天内随机匹配。\n\n3、排单2000-5000、利息25%。10-12天匹配收款、排单5000-20000、利息20%。10-13天收款。\n\n4、匹配成功12小时内打款、收款12小时内确认，否则冻结账户永不解冻。"
+        android:textColor="@color/LogoTextSize" />
+
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/doubblepadding"
+        android:layout_marginRight="@dimen/doubblepadding"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/shape_getverfycode"
+        android:text="提交"
+        android:textColor="@color/text"
+        android:textSize="@dimen/title" />
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemShopping"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/storePic"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:paddingRight="10dp"
+        android:src="@mipmap/shopping_store_pic" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/storeName"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:ellipsize="marquee"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:maxEms="15"
+            android:text="深圳市华众互联网络科技有限公司"
+            android:textSize="@dimen/text_size_subtitle" />
+
+        <TextView
+            android:id="@+id/storeAddr"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:ellipsize="marquee"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:maxEms="16"
+            android:text="公明街道民生大道上辇新村7号明婕商务大厦1201"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="115m"
+        android:textSize="@dimen/text_size_small" />
+
+</LinearLayout>

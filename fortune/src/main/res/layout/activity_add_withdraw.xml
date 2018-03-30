@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/bar_top"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#999"/>
+
+    <EditText
+        android:id="@+id/with_draw_et"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_account_et"
+        android:hint="请输出提现金额"
+        android:inputType="number"
+        android:paddingLeft="5dp"
+        android:textColorHint="#999"/>
+
+    <EditText
+        android:id="@+id/with_draw_account"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_account_et"
+        android:hint="请选择收款账户"
+        android:paddingLeft="5dp"
+        android:textColorHint="#999"/>
+
+    <EditText
+        android:inputType="textPassword"
+        android:id="@+id/with_draw_psd"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_account_et"
+        android:hint="请输入支付密码"
+        android:paddingLeft="5dp"
+        android:textColorHint="#999"/>
+
+    <TextView
+        android:id="@+id/with_draw_submmit"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/shape_getverfycode"
+        android:gravity="center"
+        android:text="确认提现"
+        android:textColor="#fff"
+        android:textSize="22sp"/>
+
+
+</LinearLayout>

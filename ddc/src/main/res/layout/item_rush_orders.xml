@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TableRow android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/storeName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="华众小店"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/call"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="end"
+            android:src="@mipmap/rush_orders_phone" />
+    </TableRow>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/black" />
+
+    <TableRow android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/task"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="有机大米"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_gravity="end"
+            android:text="费用："
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/money"
+            android:text="￥20"
+            android:textColor="@color/redTheme"
+            android:textSize="@dimen/text_size_subtitle"
+            android:textStyle="bold" />
+    </TableRow>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray" />
+
+    <TextView
+        android:text="拿货地址："
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_small" />
+
+    <TextView
+        android:id="@+id/fromAddr"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:text="广东省深圳市宝安区公明镇民生大道明婕商务大厦1201"
+        android:textColor="@color/textGray"
+        android:textSize="@dimen/text_size_small" />
+
+    <TextView
+        android:text="目的地："
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_small" />
+
+    <TextView
+        android:id="@+id/toAddr"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:text="广东省深圳市宝安区西乡大道1201号"
+        android:textColor="@color/textGray"
+        android:textSize="@dimen/text_size_small" />
+
+    <TableRow>
+
+        <TextView
+            android:layout_weight="1"
+            android:text="配送员最低信誉度："
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@+id/reputationScore"
+            android:layout_weight="1"
+            android:text="60分"
+            android:textColor="@color/redTheme"
+            android:textSize="@dimen/text_size_small" />
+    </TableRow>
+
+    <TableRow
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/phoneTitle"
+            android:layout_weight="1"
+            android:text="雇主电话："
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_weight="1"
+            android:text="18676690358"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_small" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_weight="1"
+            android:text="最晚送达时间："
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_weight="1"
+            android:text="2017-01-02"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_small" />
+    </TableRow>
+
+    <Button
+        android:id="@+id/rush"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/fg_btn_slt"
+        android:text="马上抢"
+        android:textColor="@color/white" />
+
+</TableLayout>

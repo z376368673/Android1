@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0000</color>
+    <color name="colorPrimaryDark">#0000</color>
+    <color name="colorAccent">#EF900F</color>
+
+    <!-- 常用 -->
+    <color name="defaultBackground">#FAFAFA</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="text_black">#333333</color>
+    <color name="orange">#EF900F</color>
+
+    <!-- 字体颜色 -->
+    <color name="nav_text_checked">#40FCFC</color>
+    <color name="nav_text_unchecked">#959595</color>
+    <color name="first_text_color">#13F2F2</color>
+    <color name="second_text_color">#C3C3C4</color>
+    <color name="red_text_color">#E5181A</color>
+    <color name="green_text_color">#4AC925</color>
+    <color name="gray_text_color">#656665</color>
+
+    <!-- 消息背景 -->
+    <color name="bg_alpha">#66000000</color>
+
+    <!-- 分割线 -->
+    <color name="line">#DADADB</color>
+
+    <!-- 商店详情 -->
+    <color name="store_detail_top_bg">#EEEEEE</color>
+    <color name="store_detail_line">#B5B5B5</color>
+
+</resources>

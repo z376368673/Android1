@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding"
+    android:paddingRight="@dimen/padding"
+    tools:context="com.jhobor.fortune.ResetActivity">
+
+    <include layout="@layout/bar_top" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:src="@mipmap/line" />
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/lock" />
+
+        <EditText
+            android:background="@drawable/shape_textfangbg"
+            android:id="@+id/pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入新密码"
+            android:inputType="textPassword"
+            android:maxLength="18"
+            android:padding="@dimen/padding"
+            android:textColor="#000"
+            android:textColorHint="#999"
+            android:textSize="@dimen/subtitle2" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/line" />
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/lock" />
+
+        <EditText
+            android:id="@+id/confirmPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_textfangbg"
+            android:hint="请再次确认您的密码"
+            android:inputType="textPassword"
+            android:maxLength="18"
+            android:padding="@dimen/padding"
+            android:textColor="#000"
+            android:textColorHint="#999"
+            android:textSize="@dimen/subtitle2" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/line" />
+
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/shape_getverfycode"
+        android:text="提交"
+        android:textColor="@color/text"
+        android:textSize="@dimen/subtitle" />
+
+</LinearLayout>

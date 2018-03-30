@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg1"
+    android:orientation="vertical"
+    tools:context="com.jhobor.fortune.TradeRecordHelpActivity">
+
+    <include layout="@layout/bar_top" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding"
+        android:background="#F7E6C8"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/padding"
+        android:paddingTop="@dimen/padding">
+
+        <TextView
+            android:id="@+id/help"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="提供帮助"
+            android:textSize="@dimen/subtitle" />
+
+        <TextView
+            android:id="@+id/getHelp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="得到帮助"
+            android:textSize="@dimen/subtitle" />
+        <TextView
+            android:id="@+id/prize"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="奖金纪录"
+            android:textSize="@dimen/subtitle" />
+    </LinearLayout>
+    <View
+        android:background="@color/glod"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"/>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

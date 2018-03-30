@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg1"
+    android:orientation="vertical"
+    tools:context="com.jhobor.fortune.FreezeDetailsActivity">
+
+    <include layout="@layout/bar_top" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/padding"
+        android:paddingTop="@dimen/padding">
+
+        <TextView
+            android:id="@+id/orderRecord"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="排单记录"
+            android:textSize="@dimen/subtitle" />
+
+        <TextView
+            android:id="@+id/interestRecord"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="利息记录"
+            android:textSize="@dimen/subtitle" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_4" />
+
+</LinearLayout>

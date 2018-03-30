@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:background="@color/white"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/ticket_publish_bg"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:maxLines="1"
+                    android:text="5"
+                    android:textSize="60sp" />
+
+                <TextView
+                    android:id="@+id/restrict"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/money"
+                    android:layout_toRightOf="@id/money"
+                    android:text="满20即可使用"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/privilege"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/restrict"
+                    android:layout_alignStart="@id/restrict"
+                    android:layout_below="@id/restrict"
+                    android:text="元优惠券"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/countText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/restrict"
+                    android:layout_alignStart="@id/restrict"
+                    android:layout_below="@+id/privilege"
+                    android:text="剩余："
+                    android:textSize="@dimen/text_size_subtitle" />
+
+                <TextView
+                    android:id="@+id/count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/countText"
+                    android:layout_toEndOf="@id/countText"
+                    android:layout_toRightOf="@id/countText"
+                    android:text="0"
+                    android:textColor="@color/redTheme"
+                    android:textSize="@dimen/text_size_subtitle" />
+            </RelativeLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ems="2"
+                android:text="删除"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_title" />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/bar_top"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#999"/>
+
+    <EditText
+        android:inputType="number"
+        android:id="@+id/add_et"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/shape_account_et"
+        android:hint="请输出投资金额"
+        android:paddingLeft="5dp"
+        android:textColorHint="#999"/>
+
+    <TextView
+        android:id="@+id/add_submmit"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/shape_getverfycode"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="#fff"
+        android:textSize="22sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:text="提示： \n请将投资款项打入平台账户，打款成功后可以在“我的”_“增资记录”中查看增资明细. \n"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="平台账户类型： 中国银行"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="3dp"
+        android:text="卡号：6222021908447636188"
+        android:textSize="18sp"/>
+</LinearLayout>

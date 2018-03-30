@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="lib_crop-1.0.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../ddc/build/intermediates/exploded-aar/com.soundcloud.android.crop/lib_crop/1.0.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../ddc/build/intermediates/exploded-aar/com.soundcloud.android.crop/lib_crop/1.0.0/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="pager-bottom-tab-strip-2.1.0">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/build/intermediates/exploded-aar/me.majiajie/pager-bottom-tab-strip/2.1.0/res" />
+      <root url="jar://$PROJECT_DIR$/build/intermediates/exploded-aar/me.majiajie/pager-bottom-tab-strip/2.1.0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.majiajie/pager-bottom-tab-strip/2.1.0/a75ba3ece57d3b355e8e82c82e71842070cada5f/pager-bottom-tab-strip-2.1.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.majiajie/pager-bottom-tab-strip/2.1.0/a75ba3ece57d3b355e8e82c82e71842070cada5f/pager-bottom-tab-strip-2.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

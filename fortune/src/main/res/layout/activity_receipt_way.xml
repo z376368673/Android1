@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jhobor.fortune.ReceiptWayActivity">
+
+
+    <include layout="@layout/bar_top" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/line" />
+
+    <LinearLayout
+        android:id="@+id/unionBox"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@mipmap/union_pay_bg"
+        android:orientation="vertical"
+        android:padding="@dimen/padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginStart="130dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="银行卡帐号"
+            android:textColor="@color/tabNormal"
+            android:textSize="@dimen/subtitle2" />
+
+        <TextView
+            android:id="@+id/unionPayAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginStart="130dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0000000000000000"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subtitle2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/aliBox"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@mipmap/alipay_bg"
+        android:orientation="vertical"
+        android:padding="@dimen/padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginStart="130dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="支付宝帐号"
+            android:textColor="@color/tabNormal"
+            android:textSize="@dimen/subtitle2" />
+
+        <TextView
+            android:id="@+id/aliPayAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginStart="130dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0000000000000000"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subtitle2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/wechatBox"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@mipmap/wechat_pay_bg"
+        android:orientation="vertical"
+        android:padding="@dimen/padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginStart="130dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="微信帐号"
+            android:textColor="@color/tabNormal"
+            android:textSize="@dimen/subtitle2" />
+
+        <TextView
+            android:id="@+id/wechatPayAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginStart="130dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0000000000000000"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subtitle2" />
+    </LinearLayout>
+
+</LinearLayout>

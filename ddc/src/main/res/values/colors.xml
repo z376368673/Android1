@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#E6E6E6</color>
+
+    <color name="white">#fff</color>
+    <color name="redTheme">#FF2D4B</color>
+    <color name="redPress">#e12842</color>
+    <color name="redPink">#F95F75</color>
+    <color name="pageBg">#F3F3F3</color>
+    <color name="grayLight">#eeeeee</color>
+    <color name="gray">#E6E6E6</color>
+    <color name="textGray">#757575</color>
+    <color name="grayTranslucent">#6000</color>
+    <color name="orange">#FF6C3B</color>
+    <color name="pink">#FF9BA9</color>
+    <color name="black">#333333</color>
+    <color name="blackGray">#666666</color>
+    <color name="green">#3FE74A</color>
+
+</resources>

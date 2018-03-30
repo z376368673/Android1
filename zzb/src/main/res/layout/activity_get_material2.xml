@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jhobor.zzb.GetMaterial2Activity">
+
+    <include android:id="@+id/header" layout="@layout/bar_header"/>
+
+    <TextView
+        android:id="@+id/giftTarget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:text="赠送对象"/>
+
+    <TextView
+        android:id="@+id/target"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/giftTarget"
+        android:layout_toRightOf="@id/giftTarget"
+        android:layout_toEndOf="@id/giftTarget"
+        android:text="设计师"/>
+
+    <TextView
+        android:id="@+id/getWay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/giftTarget"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/black"
+        android:text="索取方式"/>
+
+    <TextView
+        android:id="@+id/way"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/getWay"
+        android:layout_toRightOf="@id/getWay"
+        android:layout_toEndOf="@id/getWay"
+        android:text="发送我的名片"/>
+
+    <LinearLayout
+        android:id="@+id/tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/getWay"
+        android:layout_alignLeft="@id/getWay"
+        android:layout_alignStart="@id/getWay"
+        android:layout_marginTop="10dp"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:textSize="12sp"
+            android:text="如果"/>
+        <TextView
+            android:id="@+id/myCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:text="我的名片"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="没有设置将无法发送与获取"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:background="@color/purple"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tips"
+        android:layout_marginTop="50dp"
+        android:text="发送"/>
+</RelativeLayout>

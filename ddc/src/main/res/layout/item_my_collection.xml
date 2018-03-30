@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/storePic"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        app:srcCompat="@mipmap/shopping_store_pic" />
+
+    <TextView
+        android:id="@+id/storeName"
+        style="@style/tv_subtitle_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@id/storePic"
+        android:layout_toRightOf="@id/storePic"
+        android:maxEms="13"
+        android:text="深圳公明店" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/storeName"
+        android:layout_alignStart="@id/storeName"
+        android:layout_below="@id/storeName"
+        android:layout_marginTop="5dp"
+        android:numStars="5"
+        android:rating="4" />
+
+    <TextView
+        android:id="@+id/scores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/ratingBar"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@id/ratingBar"
+        android:layout_toRightOf="@id/ratingBar"
+        android:text="4"
+        android:textColor="@color/orange"
+        android:textSize="@dimen/text_size_small" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/storeName"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="2017-01-05"
+        android:textSize="@dimen/text_size_small" />
+</RelativeLayout>

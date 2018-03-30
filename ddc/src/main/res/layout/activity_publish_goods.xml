@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_publish_goods"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageBg"
+    android:orientation="vertical"
+    tools:context="com.jhobor.ddc.activity.PublishGoodsActivity">
+
+    <include layout="@layout/bar_top" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow style="@style/tr_bg_white">
+
+                <TextView
+                    style="@style/tv_weight1"
+                    android:text="商品名称"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/goodsName"
+                    style="@style/edt_weight3"
+                    android:hint="请输入商品名称" />
+            </TableRow>
+
+            <TableRow style="@style/tr_bg_white">
+
+                <TextView
+                    style="@style/tv_weight1"
+                    android:text="商品分类"
+                    android:textColor="@color/black" />
+
+                <Spinner
+                    android:id="@+id/category"
+                    android:layout_weight="1" />
+
+                <Space android:layout_weight="2" />
+            </TableRow>
+
+            <TableRow style="@style/tr_bg_white">
+
+                <TextView
+                    style="@style/tv_weight1"
+                    android:text="零售价"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/retailPrice"
+                    style="@style/edt_weight3"
+                    android:hint="请设置商品零售价（元）"
+                    android:inputType="numberDecimal" />
+            </TableRow>
+
+            <TableRow style="@style/tr_bg_white">
+
+                <TextView
+                    style="@style/tv_weight1"
+                    android:text="批发价"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/wholesalePrice"
+                    style="@style/edt_weight3"
+                    android:hint="请设置商品批发价（元）"
+                    android:inputType="numberDecimal" />
+            </TableRow>
+
+            <TableRow style="@style/tr_bg_white">
+
+                <TextView
+                    style="@style/tv_weight1"
+                    android:text="批发数量"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/wholesaleVolume"
+                    style="@style/edt_weight3"
+                    android:hint="达到此数量视为批发，按批发价购买"
+                    android:inputType="number" />
+            </TableRow>
+
+            <TableRow style="@style/tr_bg_white">
+
+                <TextView
+                    style="@style/tv_weight1"
+                    android:text="库存量"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/stock"
+                    style="@style/edt_weight3"
+                    android:hint="请设置商品库存量"
+                    android:inputType="number" />
+            </TableRow>
+
+            <TextView
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:text="商品描述"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:background="@color/white"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/publish_goods_edt_border"
+                    android:gravity="start"
+                    android:hint="关于商品的描述，可以填写产品的亮点、卖点或特别的地方"
+                    android:lines="6"
+                    android:padding="5dp"
+                    android:textSize="@dimen/text_size_small" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:text="商品小图"
+                android:textColor="@color/black" />
+
+            <FrameLayout
+                android:background="@color/white"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:id="@+id/smallPhoto"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@color/white"
+                    android:src="@mipmap/comment_camera" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:text="商品图片"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:id="@+id/takePhoto1"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:src="@mipmap/comment_camera" />
+
+                <ImageView
+                    android:id="@+id/takePhoto2"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:src="@mipmap/comment_camera" />
+
+                <ImageView
+                    android:id="@+id/takePhoto3"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:src="@mipmap/comment_camera" />
+
+                <ImageView
+                    android:id="@+id/takePhoto4"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:src="@mipmap/comment_camera" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:paddingBottom="30dp"
+                android:paddingTop="30dp">
+
+                <Button
+                    android:id="@+id/ok"
+                    style="@style/btn_bg_red"
+                    android:layout_width="match_parent"
+                    android:text="发布" />
+            </FrameLayout>
+        </TableLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_publish_demand"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageBg"
+    android:orientation="vertical"
+    tools:context="com.jhobor.ddc.activity.PublishDemandActivity">
+
+    <include layout="@layout/bar_top" />
+
+    <EditText
+        android:id="@+id/demand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/publish_demand_bg"
+        android:gravity="top"
+        android:hint="请输入您的需求"
+        android:lines="6"
+        android:padding="10dp"
+        android:textSize="@dimen/text_size" />
+
+    <Button
+        android:id="@+id/ok"
+        style="@style/btn_bg_red"
+        android:layout_width="match_parent"
+        android:layout_marginTop="150dp"
+        android:text="提交" />
+
+</LinearLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/item_padding_small"
+    android:paddingTop="@dimen/item_padding_small">
+
+    <ImageView
+        android:id="@+id/userIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="@dimen/item_padding" />
+
+    <TextView
+        android:id="@+id/userIdTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/item_padding"
+        android:layout_toEndOf="@+id/userIcon"
+        android:layout_toRightOf="@+id/userIcon"
+        android:text="用户ID："
+        android:textColor="@color/second_text_color"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/userId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/userIdTxt"
+        android:layout_toEndOf="@+id/userIdTxt"
+        android:layout_toRightOf="@+id/userIdTxt"
+        android:text="123"
+        android:textColor="@color/second_text_color"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/userNameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/userIdTxt"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/userId"
+        android:layout_toRightOf="@+id/userId"
+        android:text="用户名："
+        android:textColor="@color/second_text_color"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/userIdTxt"
+        android:layout_toEndOf="@+id/userNameTxt"
+        android:layout_toRightOf="@+id/userNameTxt"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxEms="5"
+        android:text="阿猫阿狗"
+        android:textColor="@color/second_text_color"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/scoreTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userIdTxt"
+        android:layout_toEndOf="@+id/userIcon"
+        android:layout_toRightOf="@+id/userIcon"
+        android:text="总分数："
+        android:textColor="@color/second_text_color"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/scoreTxt"
+        android:layout_toEndOf="@+id/scoreTxt"
+        android:layout_toRightOf="@+id/scoreTxt"
+        android:text="456"
+        android:textColor="@color/second_text_color"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/depthTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/scoreTxt"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/score"
+        android:layout_toRightOf="@+id/score"
+        android:text="总关数："
+        android:textColor="@color/second_text_color"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/depth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/scoreTxt"
+        android:layout_toEndOf="@+id/depthTxt"
+        android:layout_toRightOf="@+id/depthTxt"
+        android:text="8"
+        android:textColor="@color/second_text_color"
+        android:textSize="14sp" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:button="@drawable/check_box" />
+
+</RelativeLayout>

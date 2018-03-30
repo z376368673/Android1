@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_about"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jhobor.ddc.activity.AboutActivity">
+
+    <include layout="@layout/bar_top" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:text="\t\t天天来买卖平台是一个集周边生活与农产品为一体的电商平台，周边生活可以满足你在附近的吃喝玩乐的需求，我们的宗旨是解决食品安全问题，发展农村电商，实现农村与城市产品的互通。\n\n\n业务联系电话：15989426734\n\n\n平台客服电话：0755-36539322"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_gravity="center_horizontal"
+        android:text="深圳市天天来科技有限公司Copyright©2017"/>
+
+</LinearLayout>

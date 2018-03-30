@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:columnCount="2"
+    android:layout_marginTop="@dimen/dp_4"
+    android:paddingLeft="@dimen/dp_10"
+    android:paddingRight="@dimen/dp_10" >
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding"
+        android:layout_marginRight="@dimen/padding"
+        android:layout_marginTop="@dimen/paddingSmall"
+        android:text="排单金额"
+        android:textSize="@dimen/subtitle2" />
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding"
+        android:layout_marginRight="@dimen/padding"
+        android:layout_marginTop="@dimen/paddingSmall"
+        android:text="--.-"
+        android:textColor="@color/tabActived"
+        android:textSize="@dimen/subtitle2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding"
+        android:layout_marginRight="@dimen/padding"
+        android:layout_marginTop="@dimen/paddingSmall"
+        android:text="利息率"
+        android:textSize="@dimen/subtitle2" />
+
+    <TextView
+        android:id="@+id/rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding"
+        android:layout_marginRight="@dimen/padding"
+        android:layout_marginTop="@dimen/paddingSmall"
+        android:text="--.-%"
+        android:textColor="@color/black"
+        android:textSize="@dimen/subtitle2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding"
+        android:layout_marginRight="@dimen/padding"
+        android:layout_marginTop="@dimen/paddingSmall"
+        android:text="利息金额"
+        android:textSize="@dimen/subtitle2" />
+
+    <TextView
+        android:id="@+id/no_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding"
+        android:layout_marginRight="@dimen/padding"
+        android:layout_marginTop="@dimen/paddingSmall"
+        android:text="--.-%"
+        android:textColor="@color/black"
+        android:textSize="@dimen/subtitle2" />
+
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding"
+        android:layout_marginRight="@dimen/padding"
+        android:layout_marginTop="@dimen/paddingSmall"
+        android:text="获利日期"
+        android:textSize="@dimen/subtitle2" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding"
+        android:layout_marginRight="@dimen/padding"
+        android:layout_marginTop="@dimen/paddingSmall"
+        android:text="xxxx-xx-xx xx:xx:xx"
+        android:textColor="@color/black"
+        android:textSize="@dimen/subtitle2" />
+</GridLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+   <LinearLayout
+       android:orientation="horizontal"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding"
+        android:layout_weight="3"
+        android:text="【姓名】"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/joinTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding"
+        android:layout_weight="4"
+        android:text="【帐号】"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/capital"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding"
+        android:layout_weight="3"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/tabActived" />
+
+    <TextView
+        android:id="@+id/profit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding"
+        android:layout_weight="3"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/tabActived" />
+   </LinearLayout>
+    <View
+        android:background="#EAEAEA"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+</LinearLayout>

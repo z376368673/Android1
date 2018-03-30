@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#f3f3f3"
+              android:orientation="vertical">
+
+    <include layout="@layout/bar_top"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="25dp"/>
+
+    <LinearLayout
+        android:id="@+id/changed_psd"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/text"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding">
+
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="密码修改"
+            android:textColor="#0f0f0f"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/item_arrow"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/line"/>
+    <LinearLayout
+        android:id="@+id/auuount_again"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/text"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding">
+
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="切换账号"
+            android:textColor="#0f0f0f"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/item_arrow"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/line"/>
+    <LinearLayout
+        android:id="@+id/clear_cache"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/text"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding">
+
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="清除缓存"
+            android:textColor="#0f0f0f"/>
+        <TextView
+            android:id="@+id/nu_cache"
+            android:layout_marginLeft="5dp"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="0k"
+            android:textColor="#0f0f0f"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/item_arrow"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/line"/>
+    <LinearLayout
+        android:id="@+id/getout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/text"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding">
+
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="退出"
+            android:textColor="#0f0f0f"/>
+
+    </LinearLayout>
+
+</LinearLayout>

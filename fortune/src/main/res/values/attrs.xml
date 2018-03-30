@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="RegisterView">
+        <attr name="login_iv" format="integer"/>
+        <attr name="login_et" format="string"/>
+        <attr name="login_et_hint" format="string"/>
+        <attr name="login_tv" format="string"/>
+        <attr name="login_isTvShow" format="boolean"/>
+        <attr name="max_num" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="TitleView">
+        <attr name="left_iv" format="integer"/>
+        <attr name="center_tv" format="string"/>
+        <attr name="right_tv" format="integer"/>
+        <attr name="is_right_tvShow" format="boolean"/>
+        <attr name="is_left_ivShow" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="MainIndicatorVew">
+        <attr name="main_indicator_center_tv" format="string"/>
+        <attr name="main_indicator_right_tv" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="roundedimageview">
+
+        <attr name="border_thickness" format="dimension"/>
+
+        <attr name="border_inside_color" format="color"/>
+
+        <attr name="border_outside_color" format="color"></attr>
+
+    </declare-styleable>
+
+
+
+
+</resources>

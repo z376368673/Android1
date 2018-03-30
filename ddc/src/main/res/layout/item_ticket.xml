@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:background="@color/white"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/ticket_useless_bg"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="5"
+                    android:textSize="60sp" />
+
+                <TextView
+                    android:id="@+id/restrict"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/money"
+                    android:layout_toRightOf="@id/money"
+                    android:text="满20即可使用"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/privilege"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/restrict"
+                    android:layout_alignStart="@id/restrict"
+                    android:layout_below="@id/restrict"
+                    android:text="元优惠券"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/expiry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/privilege"
+                    android:layout_centerHorizontal="true"
+                    android:text="有效期：2017.01.01-2017.08.15"
+                    android:textSize="@dimen/text_size_small" />
+
+                <TextView
+                    android:id="@+id/company"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/expiry"
+                    android:layout_centerHorizontal="true"
+                    android:text="华众互联网络科技有限公司"
+                    android:textSize="@dimen/text_size_small" />
+            </RelativeLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ems="2"
+                android:text="已经过期"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_title" />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

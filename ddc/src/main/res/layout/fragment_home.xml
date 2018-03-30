@@ -1,0 +1,240 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageBg"
+    android:fillViewport="true"
+    tools:context="com.jhobor.ddc.fragment.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <com.youth.banner.Banner
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="150dp" />
+
+            <LinearLayout
+                android:id="@+id/locateBox"
+                style="@style/ll_hz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/home_bg_corner_gray"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/home_locate" />
+
+                <TextView
+                    android:id="@+id/location"
+                    style="@style/tv_small_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:maxEms="16"
+                    android:text="定位中...定位中...定位中...定位中..." />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/locateBox"
+                android:layout_toRightOf="@id/locateBox"
+                android:background="@drawable/home_bg_corner_gray"
+                android:padding="5dp"
+                android:src="@mipmap/home_search" />
+
+        </RelativeLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/shopping"
+                    style="@style/tv_drawable_bg_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/home_shopping"
+                    android:text="附近购物" />
+
+                <TextView
+                    android:id="@+id/hotel"
+                    style="@style/tv_drawable_bg_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/home_hotel"
+                    android:text="酒店" />
+
+                <TextView
+                    android:id="@+id/entertainment"
+                    style="@style/tv_drawable_bg_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/home_entertainment"
+                    android:text="休闲娱乐" />
+
+                <TextView
+                    android:id="@+id/service"
+                    style="@style/tv_drawable_bg_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/home_service"
+                    android:text="生活服务" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/buyer"
+                    style="@style/tv_drawable_bg_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/home_buyer"
+                    android:text="买家中心" />
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0.5dp"
+                    android:layout_weight="2.02"
+                    android:background="@color/white"
+                    android:src="@mipmap/home_logo" />
+
+                <TextView
+                    android:id="@+id/seller"
+                    style="@style/tv_drawable_bg_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/home_seller"
+                    android:text="卖家中心" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/food"
+                    style="@style/tv_drawable_bg_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/home_food"
+                    android:text="美食" />
+
+                <TextView
+                    android:id="@+id/takeAway"
+                    style="@style/tv_drawable_bg_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/home_take_away"
+                    android:text="外卖" />
+
+                <TextView
+                    android:id="@+id/rushOrders"
+                    style="@style/tv_drawable_bg_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/home_rush_orders"
+                    android:text="物流抢单" />
+
+                <TextView
+                    android:id="@+id/farming"
+                    style="@style/tv_drawable_bg_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/home_farming"
+                    android:text="农产品" />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:id="@+id/recommend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <ImageView
+                android:id="@+id/subtitlePic"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/home_menu_title" />
+
+            <com.jhobor.ddc.views.InlineViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:clipToPadding="false"
+                android:paddingLeft="60dp"
+                android:paddingRight="60dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/subtitle"
+                style="@style/tv_subtitle_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:drawableLeft="@mipmap/home_nearby"
+                android:drawablePadding="3dp"
+                android:drawableStart="@mipmap/home_nearby"
+                android:padding="8dp"
+                android:text="附近商家" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/pageBg" />
+
+            <com.jhobor.ddc.views.InlineListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

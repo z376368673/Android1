@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_choose_capital"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4C4C4C"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/padding"
+        android:text="请选择投资金额"
+        android:textColor="@color/text"
+        android:textSize="@dimen/subtitle" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#6B6B6B"
+        android:dividerHeight="0.5dp" />
+</LinearLayout>

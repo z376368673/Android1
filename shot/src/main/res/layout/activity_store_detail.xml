@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.huazong.app.huazong.StoreDetailActivity">
+
+    <ImageView
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/top_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/bg_choose_seat2"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_title_bar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@null"
+                android:src="@mipmap/seat_unchosen" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@null"
+                android:src="@mipmap/seat_chosen" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@null"
+                android:src="@mipmap/seat_sold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_padding"
+            android:orientation="horizontal"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/can_select"
+                android:textColor="@color/second_text_color"
+                android:textSize="@dimen/text_size_small" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/selected"
+                android:textColor="@color/second_text_color"
+                android:textSize="@dimen/text_size_small" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/sold"
+                android:textColor="@color/second_text_color"
+                android:textSize="@dimen/text_size_small" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/horizontal_line_green" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/decrease"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:src="@mipmap/arrow_left_white" />
+
+            <TextView
+                android:id="@+id/selectDate"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="2016-07-02"
+                android:textColor="@color/defaultBackground"
+                android:textSize="@dimen/text_size" />
+
+            <ImageView
+                android:id="@+id/increase"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:src="@mipmap/arrow_right_white" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/horizontal_line_green" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ListView
+                android:id="@+id/timeView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:divider="@drawable/line_horizontal"
+                android:dividerHeight="2dp"
+                android:fastScrollEnabled="false"
+                android:scrollbars="none" />
+
+            <HorizontalScrollView
+                android:id="@+id/hsvContent"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:scrollbars="none">
+
+                <FrameLayout
+                    android:id="@+id/container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <GridView
+                        android:id="@+id/passStateView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="none"
+                        android:verticalSpacing="2dp" />
+                </FrameLayout>
+
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <HorizontalScrollView
+                android:id="@+id/hsvColumnTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/whichPassView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/item_padding"
+                    android:paddingTop="@dimen/item_padding" />
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/below"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp"
+                android:layout_centerHorizontal="true">
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" "
+                    android:textColor="@color/green_text_color"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:text=" "
+                    android:textColor="@color/green_text_color"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/below"
+                android:layout_centerHorizontal="true"
+                android:background="@mipmap/btn_green"
+                android:text="@string/submit"
+                android:textColor="@color/defaultBackground"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

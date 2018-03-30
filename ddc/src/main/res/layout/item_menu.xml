@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <ImageView
+        android:id="@+id/foodPic"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/home_chicken" />
+
+    <TextView
+        android:id="@+id/restaurant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/foodPic"
+        android:background="#ccFF6D6D"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="广东第一海鲜酒楼"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size" />
+
+    <!--<RatingBar
+        android:id="@+id/ratingBar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/restaurant"
+        android:layout_margin="5dp"
+        android:rating="4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/restaurant"
+        android:layout_margin="5dp"
+        android:text="1km"
+        android:textSize="@dimen/text_size" />-->
+
+</RelativeLayout>

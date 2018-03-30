@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding"
+    android:paddingRight="@dimen/padding"
+    tools:context="com.jhobor.fortune.ForgetActivity">
+
+    <include layout="@layout/bar_top" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="财富天下"
+        android:textColor="@color/LogoTextSize"
+        android:textSize="42sp"/>
+
+    <RelativeLayout
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_10">
+
+        <ImageView
+            android:id="@+id/iv_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/telno"/>
+
+        <EditText
+            android:id="@+id/mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/iv_mobile"
+            android:background="@drawable/shape_textfangbg"
+            android:ems="10"
+            android:hint="请输入您的手机号码"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:padding="@dimen/padding"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:textSize="@dimen/subtitle2"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_10">
+
+        <ImageView
+            android:id="@+id/iv_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/verfiycode"/>
+
+        <EditText
+            android:id="@+id/code"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/iv_code"
+            android:background="@drawable/shape_textfangbg"
+            android:ems="10"
+            android:hint="请输入验证码"
+            android:inputType="number"
+            android:maxLength="6"
+            android:padding="@dimen/padding"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:textSize="@dimen/subtitle2"/>
+
+
+        <TextView
+            android:id="@+id/getCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:background="@drawable/shape_getverfycode"
+            android:padding="@dimen/padding"
+            android:text="获取验证码"
+            android:textColor="@color/text"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_10">
+
+        <ImageView
+            android:id="@+id/iv_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/blacklock"/>
+
+        <EditText
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/iv_pass"
+            android:id="@+id/pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_textfangbg"
+            android:ems="10"
+            android:hint="请输入您6-18位密码"
+            android:inputType="textPassword"
+            android:maxLength="18"
+            android:padding="@dimen/padding"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:textSize="@dimen/subtitle2"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_10">
+
+        <ImageView
+            android:id="@+id/iv_pass_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/blacklock"/>
+
+        <EditText
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/iv_pass_again"
+            android:id="@+id/pass_again"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_textfangbg"
+            android:ems="10"
+            android:hint="请再次确认密码"
+            android:inputType="textPassword"
+            android:maxLength="18"
+            android:padding="@dimen/padding"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:textSize="@dimen/subtitle2"/>
+    </RelativeLayout>
+
+
+
+    <Button
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/next"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/shape_getverfycode"
+        android:text="找回密码"
+        android:textColor="@color/text"
+        android:textSize="@dimen/subtitle" />
+
+</LinearLayout>

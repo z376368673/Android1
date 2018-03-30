@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayBg"
+    tools:context="com.jhobor.zzb.GetMaterialActivity">
+
+    <include android:id="@+id/header" layout="@layout/bar_header"/>
+
+    <TextView
+        android:id="@+id/giftTarget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:text="赠送对象"/>
+
+    <TextView
+        android:id="@+id/target"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/giftTarget"
+        android:layout_toRightOf="@id/giftTarget"
+        android:layout_toEndOf="@id/giftTarget"
+        android:text="设计师"/>
+
+    <TextView
+        android:id="@+id/getWay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/giftTarget"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/black"
+        android:text="索取方式"/>
+    <Spinner
+        android:id="@+id/province"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/getWay"
+        android:layout_toRightOf="@id/getWay"
+        android:layout_toEndOf="@id/getWay"/>
+    <Spinner
+        android:id="@+id/city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/province"
+        android:layout_toRightOf="@id/province"
+        android:layout_toEndOf="@id/province"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"/>
+
+    <RelativeLayout
+        android:id="@+id/sendBox"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/resultTips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grayText"
+            android:textSize="10dp"
+            android:text="附近没有门店，直接找品牌方..."/>
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/resultTips"
+            android:layout_marginTop="10dp"
+            android:textSize="12sp"
+            android:text="如果"/>
+        <TextView
+            android:id="@+id/myCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="我的名片"
+            android:layout_alignBaseline="@id/tv1"
+            android:layout_toRightOf="@id/tv1"
+            android:layout_toEndOf="@id/tv1"
+            android:textSize="14sp"
+            />
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv1"
+            android:layout_toRightOf="@id/myCard"
+            android:layout_toEndOf="@id/myCard"
+            android:layout_marginTop="10dp"
+            android:textSize="12sp"
+            android:text="没有设置将无法发送与获取"/>
+        <Button
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:textColor="@color/white"
+            android:layout_below="@id/tv1"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@color/purple"
+            android:text="发送"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/getWay"
+        android:layout_above="@id/sendBox"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"/>
+
+
+</RelativeLayout>

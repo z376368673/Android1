@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg1"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/padding"
+    android:paddingLeft="@dimen/padding"
+    android:paddingRight="@dimen/padding"
+    tools:context="com.jhobor.fortune.FillBindAccountInfoActivity">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/bar_top"/>
+        </LinearLayout>
+        <Button
+            android:background="#00000000"
+            android:layout_alignParentRight="true"
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="保存"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+    </RelativeLayout>
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:src="@mipmap/line" />
+
+    <LinearLayout
+        android:id="@+id/unionBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/bank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:ems="10"
+            android:hint="请输入开户银行名称"
+            android:inputType="text"
+            android:maxLength="18"
+            android:padding="@dimen/padding"
+            android:textColor="@color/text"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/subtitle2" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:src="@mipmap/line" />
+
+        <EditText
+            android:id="@+id/holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:ems="10"
+            android:hint="请输入户主姓名"
+            android:inputType="text"
+            android:maxLength="16"
+            android:padding="@dimen/padding"
+            android:textColor="@color/text"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/subtitle2" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:src="@mipmap/line" />
+
+        <EditText
+            android:id="@+id/unionPayAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:ems="10"
+            android:hint="请输入16位或19位银行卡号"
+            android:inputType="number"
+            android:maxLength="19"
+            android:padding="@dimen/padding"
+            android:textColor="@color/text"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/subtitle2" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:src="@mipmap/line" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/aliBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/aliPayAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:ems="10"
+            android:hint="请输入支付宝帐号（手机/邮箱）"
+            android:inputType="text"
+            android:maxLength="25"
+            android:padding="@dimen/padding"
+            android:textColor="@color/text"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/subtitle2" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:src="@mipmap/line" />
+
+        <EditText
+            android:id="@+id/aliName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:ems="10"
+            android:hint="请输入支付宝绑定的姓名"
+            android:inputType="text"
+            android:maxLength="16"
+            android:padding="@dimen/padding"
+            android:textColor="@color/text"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/subtitle2" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:src="@mipmap/line" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/wechatBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/wechatPayAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:ems="10"
+            android:hint="请输入微信帐号（手机/邮箱）"
+            android:inputType="text"
+            android:maxLength="25"
+            android:padding="@dimen/padding"
+            android:textColor="@color/text"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/subtitle2" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:src="@mipmap/line" />
+
+        <EditText
+            android:id="@+id/wechatName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:ems="10"
+            android:hint="请输入您的微信昵称"
+            android:inputType="text"
+            android:maxLength="16"
+            android:padding="@dimen/padding"
+            android:textColor="@color/text"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/subtitle2" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:src="@mipmap/line" />
+    </LinearLayout>
+
+
+</LinearLayout>

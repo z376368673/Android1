@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/border_top_bottom"
+        android:columnCount="3"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/bankIcon"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_rowSpan="2"
+            android:src="@mipmap/boc" />
+
+        <TextView
+            android:id="@+id/bankName"
+            android:text="中国银行"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/choose"
+            android:layout_gravity="end|center_vertical"
+            android:layout_rowSpan="2"
+            android:src="@drawable/rd_checked" />
+
+        <TextView
+            android:id="@+id/brief"
+            android:text="尾号8592储蓄卡" />
+    </GridLayout>
+
+</FrameLayout>

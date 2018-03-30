@@ -1,0 +1,111 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!-- =========================== 登录界面 ================================= -->
+    <style name="tv_title_white">
+        <item name="android:textSize">@dimen/text_size_title</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="ll_hz">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="ll_hz_bg" parent="ll_hz">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:background">@mipmap/login_ed</item>
+    </style>
+
+    <style name="edt">
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="edt_white" parent="edt">
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="tv_small_white">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="cb_small_white" parent="@style/tv_small_white">
+        <item name="android:button">@drawable/lg_cb</item>
+        <item name="android:paddingLeft">6dp</item>
+    </style>
+
+    <style name="btn_white_bg">
+        <item name="android:textSize">@dimen/text_size_btn</item>
+        <item name="android:background">@mipmap/login_btn</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- =========================== 忘记密码界面 ================================= -->
+    <style name="tr_bg_white">
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="tv_weight1">
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="edt_weight3" parent="edt">
+        <item name="android:layout_weight">3</item>
+    </style>
+
+    <style name="btn_bg_red">
+        <item name="android:textSize">@dimen/text_size_btn</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:background">@drawable/fg_btn_slt</item>
+    </style>
+
+
+    <!-- =========================== 首页界面 ================================= -->
+    <style name="tv_drawable_bg_white">
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:padding">6dp</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">0.5dp</item>
+    </style>
+
+    <style name="tv_subtitle_bold">
+        <item name="android:textSize">@dimen/text_size_subtitle</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- =========================== 个人信息界面 ================================= -->
+    <style name="ll_hz_bg_white" parent="ll_hz">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+</resources>

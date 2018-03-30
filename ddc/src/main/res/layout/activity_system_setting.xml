@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_system_setting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageBg"
+    tools:context="com.jhobor.ddc.activity.SystemSettingActivity">
+
+    <include layout="@layout/bar_top" />
+
+    <TableRow
+        android:id="@+id/accountAndSafe"
+        style="@style/tr_bg_white"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            style="@style/tv_weight1"
+            android:text="帐号和安全"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/me_item_enter" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/knowUs"
+        style="@style/tr_bg_white">
+
+        <TextView
+            style="@style/tv_weight1"
+            android:text="了解我们"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/me_item_enter" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/openShop"
+        style="@style/tr_bg_white"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/tv_weight1"
+            android:text="我要开店"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/me_item_enter" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/about"
+        style="@style/tr_bg_white">
+
+        <TextView
+            style="@style/tv_weight1"
+            android:text="关于"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/me_item_enter" />
+    </TableRow>
+
+    <Button
+        android:id="@+id/quit"
+        style="@style/btn_bg_red"
+        android:layout_marginTop="50dp"
+        android:text="退出登录" />
+
+</TableLayout>

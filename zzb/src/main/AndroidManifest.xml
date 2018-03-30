@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jhobor.zzb">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".base.BaseApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".ProductDetailsActivity" />
+        <activity android:name=".StoreProductsActivity" />
+        <activity android:name=".HallActivity" />
+        <activity android:name=".CollectionActivity" />
+        <activity android:name=".GetMaterialActivity" />
+        <activity android:name=".VCardActivity" />
+        <activity android:name=".GetMaterial2Activity" />
+        <activity android:name=".ShopActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".BuyVipActivity" />
+        <activity android:name=".ResetPwdActivity" />
+        <activity android:name=".PayForVipActivity" />
+        <activity android:name=".UpdateInfoActivity" />
+        <activity android:name=".CollectionPackageActivity" />
+        <activity android:name=".MyBrandActivity" />
+        <activity android:name=".ProductEditActivity" />
+        <activity android:name=".RecommendationActivity" />
+        <activity android:name=".TypeTestimonialActivity" />
+        <activity android:name=".QrCodeActivity" />
+        <activity android:name=".WithdrawActivity" />
+        <activity android:name=".SettingActivity" />
+        <activity android:name=".ChangeAccountActivity" />
+        <activity android:name=".ChangeAccount2Activity" />
+        <activity android:name=".MaintainActivity" />
+        <activity android:name=".SettledActivity" />
+        <activity android:name=".ContactUsActivity"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/page_bg"
+    android:orientation="vertical"
+    tools:context="com.jhobor.fortune.FinanceDetailsActivity">
+
+    <include layout="@layout/bar_top" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/line" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:layout_margin="15dp"
+        android:background="@mipmap/round_area_white_bg"
+        android:columnCount="2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingMiddle"
+            android:text="收款金额"
+            android:textColor="#666666" />
+
+        <TextView
+            android:id="@+id/capital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingMiddle"
+            android:text="0"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingMiddle"
+            android:text="收款帐号"
+            android:textColor="#666666" />
+
+        <TextView
+            android:id="@+id/account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingMiddle"
+            android:text="0000000000000000"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingMiddle"
+            android:text="收款人"
+            android:textColor="#666666" />
+
+        <TextView
+            android:id="@+id/payee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingMiddle"
+            android:text="xxx"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingMiddle"
+            android:text="收款银行"
+            android:textColor="#666666" />
+
+        <TextView
+            android:id="@+id/payBank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingMiddle"
+            android:text="牛X银行"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingMiddle"
+            android:text="收款方式"
+            android:textColor="#666666" />
+
+        <TextView
+            android:id="@+id/payWay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingMiddle"
+            android:text="银行卡账户收款"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingMiddle"
+            android:text="平台客服"
+            android:textColor="#666666" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/customerService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/paddingMiddle"
+                android:text="xxxx-xxxxxxxx"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/paddingMiddle"
+                android:layout_weight="1"
+                app:srcCompat="@mipmap/call" />
+
+        </LinearLayout>
+    </GridLayout>
+
+</LinearLayout>

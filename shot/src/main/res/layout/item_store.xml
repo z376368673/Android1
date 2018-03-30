@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp">
+
+    <FrameLayout
+        android:id="@+id/picFrame"
+        android:layout_width="@dimen/pic_width"
+        android:layout_height="@dimen/pic_height"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/item_padding"
+        android:layout_marginRight="@dimen/item_padding">
+
+        <ImageView
+            android:id="@+id/storePic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:contentDescription="@null"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@mipmap/store_foreground" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/picFrame"
+        android:layout_toRightOf="@id/picFrame"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/storeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XX店"
+            android:textColor="@color/nav_text_checked" />
+
+        <TextView
+            android:id="@+id/descript"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_padding_small"
+            android:layout_marginTop="@dimen/item_padding_small"
+            android:text="商铺描述..."
+            android:textColor="@color/second_text_color"
+            android:textSize="@dimen/text_size_small" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="小于 500 m"
+                android:textColor="@color/second_text_color"
+                android:textSize="@dimen/text_size_small" />
+
+            <ImageView
+                android:id="@+id/orderPass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:contentDescription="@null"
+                android:padding="10dp"
+                android:src="@mipmap/store_location" />
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

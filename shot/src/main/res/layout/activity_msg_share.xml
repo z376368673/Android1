@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_msg_share"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/bg_msg_share_dialog"
+    android:padding="20dp"
+    tools:context="com.huazong.app.huazong.MsgShareActivity">
+
+    <FrameLayout
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="@dimen/pic_margin">
+
+        <ImageView
+            android:id="@+id/userIconBorder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/head_image_border"
+            android:visibility="invisible"
+            android:contentDescription="@null" />
+
+        <ImageView
+            android:id="@+id/userIcon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:contentDescription="@null" />
+    </FrameLayout>
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/first_text_color"
+        android:layout_marginTop="5dp"
+        android:textSize="13sp"
+        android:text="射击者" />
+
+    <FrameLayout
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_msgshare">
+    <TextView
+        android:text="第12名"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#DE8415"
+        android:textStyle="bold"
+        android:textSize="26sp"
+        android:id="@+id/rank" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/inform"
+        android:textColor="@color/second_text_color"
+        android:text="您在第n关用时3'21&quot;获得了89分\n已超过86%的好友，打败全国828人" />
+
+    <EditText
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:minHeight="30dp"
+        android:inputType="text"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:id="@+id/comment"
+        android:textSize="13sp"
+        android:textColor="@color/second_text_color"
+        android:textColorHint="@color/second_text_color"
+        android:background="@drawable/edit_text_border2"
+        android:hint="评论一番吧" />
+
+    <Button
+        android:text="分享一下"
+        android:layout_width="120dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/shareBtn"
+        android:textColor="@color/defaultBackground"
+        android:background="@mipmap/btn_green" />
+
+</LinearLayout>

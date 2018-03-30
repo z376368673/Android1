@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="10dp">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sending_msg_bg"
+        android:padding="10dp">
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/goodsName"
+                android:layout_weight="1"
+                android:text="产品名称"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_subtitle" />
+
+            <TextView
+                android:layout_gravity="end|center_vertical"
+                android:text="数量："
+                android:textSize="@dimen/text_size_small" />
+
+            <TextView
+                android:id="@+id/count"
+                android:layout_gravity="end|center_vertical"
+                android:text="2"
+                android:textColor="@color/redTheme"
+                android:textSize="@dimen/text_size_small" />
+        </TableRow>
+
+        <TableRow android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/demand"
+                android:layout_weight="1"
+                android:text="产品要求：柔软，贴身，舒服。。。。。。"
+                android:textSize="@dimen/text_size_small" />
+        </TableRow>
+
+        <TableRow android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/toAddr"
+                android:layout_weight="1"
+                android:text="收货地址：深圳市宝安区公明镇民生大道上辇村口明婕大厦1201"
+                android:textSize="@dimen/text_size_small" />
+        </TableRow>
+
+        <TableRow android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_weight="1"
+                android:text="发布日期：2017-01-16"
+                android:textSize="@dimen/text_size_small" />
+        </TableRow>
+    </TableLayout>
+
+</FrameLayout>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="floatingball-1.0.2">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/build/intermediates/exploded-aar/com.zhengjt/floatingball/1.0.2/res" />
+      <root url="jar://$PROJECT_DIR$/build/intermediates/exploded-aar/com.zhengjt/floatingball/1.0.2/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.zhengjt/floatingball/1.0.2/84cec290b40cd29c4ac08a590683146cc38356c2/floatingball-1.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

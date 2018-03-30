@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/bar_top"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/line"/>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_10"
+        android:src="@mipmap/about_co"/>
+
+    <TextView
+        android:id="@+id/connect_tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:text="    有任何问题，欢迎联系我们"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/connect_tv_tel"
+
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:gravity="center_vertical"
+        android:text="客服电话： 0755-26667889"/>
+
+    <TextView
+        android:id="@+id/connect_tv_qq"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:text="客服QQ： 988727278"/>
+
+</LinearLayout>

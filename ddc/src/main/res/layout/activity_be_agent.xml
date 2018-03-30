@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_be_agent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageBg"
+    android:orientation="vertical"
+    tools:context="com.jhobor.ddc.activity.BeAgentActivity">
+
+    <include layout="@layout/bar_top" />
+
+    <TableRow style="@style/tr_bg_white">
+
+        <TextView
+            style="@style/tv_weight1"
+            android:text="姓名" />
+
+        <EditText
+            android:id="@+id/userName"
+            style="@style/edt_weight3"
+            android:hint="请输入真实姓名"
+            android:inputType="textPersonName"
+            android:maxLength="8" />
+    </TableRow>
+
+    <TableRow style="@style/tr_bg_white">
+
+        <TextView
+            style="@style/tv_weight1"
+            android:text="手机号码" />
+
+        <EditText
+            android:id="@+id/phone"
+            style="@style/edt_weight3"
+            android:hint="请输入手机号码"
+            android:inputType="phone"
+            android:maxLength="11" />
+    </TableRow>
+
+    <LinearLayout
+        style="@style/tr_bg_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="12dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="验证码" />
+
+        <EditText
+            android:id="@+id/code"
+            style="@style/edt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:hint="请输入验证码"
+            android:inputType="number"
+            android:maxLength="6" />
+
+        <TextView
+            android:id="@+id/getCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:text="│获取验证码"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+
+    <TableRow style="@style/tr_bg_white">
+
+        <TextView
+            style="@style/tv_weight1"
+            android:text="地址" />
+
+        <EditText
+            android:id="@+id/addr"
+            style="@style/edt_weight3"
+            android:layout_width="230dp"
+            android:drawableLeft="@mipmap/farming_locate"
+            android:drawablePadding="5dp"
+            android:drawableStart="@mipmap/farming_locate"
+            android:hint="xx省xx市xx县（区）xx镇xx村（街道）..."
+            android:inputType="text"
+            android:maxLines="1" />
+    </TableRow>
+
+    <TableRow style="@style/tr_bg_white">
+
+        <TextView
+            style="@style/tv_weight1"
+            android:text="选择" />
+
+        <Spinner
+            android:id="@+id/type"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_weight="3" />
+    </TableRow>
+
+    <Button
+        android:id="@+id/ok"
+        style="@style/btn_bg_red"
+        android:layout_marginTop="30dp"
+        android:text="确定" />
+
+</TableLayout>

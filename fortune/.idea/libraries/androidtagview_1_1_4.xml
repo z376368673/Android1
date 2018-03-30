@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="androidtagview-1.1.4">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../zzb/build/intermediates/exploded-aar/co.lujun/androidtagview/1.1.4/res" />
+      <root url="jar://$PROJECT_DIR$/../zzb/build/intermediates/exploded-aar/co.lujun/androidtagview/1.1.4/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

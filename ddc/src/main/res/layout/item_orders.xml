@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <TableRow android:padding="10dp">
+
+        <TextView
+            android:id="@+id/storeName"
+            style="@style/tv_subtitle_bold"
+            android:layout_weight="3"
+            android:text="八大行星" />
+
+        <TextView
+            android:id="@+id/state"
+            style="@style/tv_subtitle_bold"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="交易完成" />
+    </TableRow>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/pageBg" />
+
+    <TableRow android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/goodsPic"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/goodsName"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="点了8G内存卡"
+                android:textSize="@dimen/text_size" />
+
+            <TextView
+                android:id="@+id/ordersTime"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="点餐时间：2017-01-04 20:12:43"
+                android:textSize="@dimen/text_size" />
+        </LinearLayout>
+
+    </TableRow>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/pageBg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/tv_subtitle_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="金额："
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/money"
+            style="@style/tv_subtitle_bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="68.5"
+            android:textColor="@color/redTheme" />
+
+        <TextView
+            android:id="@+id/comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/orders_comment_border"
+            android:padding="5dp"
+            android:text="去评价"
+            android:textColor="@color/redTheme"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+
+</TableLayout>
