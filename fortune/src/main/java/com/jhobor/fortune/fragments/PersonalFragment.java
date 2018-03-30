@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +23,7 @@ import com.jhobor.fortune.WithdrawRecordActivity;
 import com.jhobor.fortune.base.BaseApplication;
 import com.jhobor.fortune.base.RetrofitCallback;
 import com.jhobor.fortune.utils.ErrorUtil;
+import com.jhobor.fortune.utils.TextUtil;
 import com.jhobor.fortune.view.ConnectActivity;
 import com.jhobor.fortune.view.FankuiActivity;
 import com.jhobor.fortune.view.GridManagerActivity;
@@ -136,14 +138,26 @@ public class PersonalFragment extends Fragment implements View.OnClickListener {
     }
 
     private void setData() {
-        userName.setText(strName);
-        joinTime.setText("加入日期" + strRegDate);
-        //mobile.setText(String.format("手机号码：%s", strMobile));
-        String string = BaseApplication.prefs.getString("m", "null");
-        mobile.setText(String.format("手机号码：%s", string));
-        refMobile.setText(String.format("推荐号码：%s", strPhone));
-        nu_pdb.setText(boodingCoin);
-        nu_jhm.setText(activationCode);
+        //如果没有token 则取登陆界面，并且销毁此界面
+        String token = BaseApplication.prefs.getString("token", "");
+        if (TextUtils.isEmpty(token)){
+            getActivity().finish();
+        }else {
+            userName.setText(strName);
+            joinTime.setText("加入日期" + strRegDate);
+            //mobile.setText(String.format("手机号码：%s", strMobile));
+            String string = BaseApplication.prefs.getString("phone", "null");
+            mobile.setText(String.format("手机号码：%s", string));
+            refMobile.setText(String.format("推荐号码：%s", strPhone));
+            nu_pdb.setText(boodingCoin);
+            nu_jhm.setText(activationCode);
+        }
+    }
+    private void goLogin() {
+        Intent intent = new Intent(getContext(), LoginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        startActivity(intent);
+
     }
 
     @Override
