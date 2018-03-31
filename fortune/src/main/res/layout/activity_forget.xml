@@ -14,7 +14,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="60dp"
         android:gravity="center"
-        android:text="财富天下"
+        android:text="@string/app_name"
         android:textColor="@color/LogoTextSize"
         android:textSize="42sp"/>
 
@@ -112,7 +112,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/shape_textfangbg"
             android:ems="10"
-            android:hint="请输入您6-18位密码"
+            android:hint="请输入新密码,6-18位密码"
             android:inputType="textPassword"
             android:maxLength="18"
             android:padding="@dimen/padding"

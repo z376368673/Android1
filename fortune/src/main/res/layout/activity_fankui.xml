@@ -18,8 +18,9 @@
         android:layout_height="200dp"
         android:background="#fff"
         android:hint="请输入您的宝贵意见……"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"/>
+        android:gravity="left"
+        android:padding="15dp"
+        />
 
     <TextView
         android:id="@+id/fankui_submmit"
@@ -31,6 +32,7 @@
         android:background="@drawable/submmit_shape"
         android:gravity="center"
         android:text="提交"
+        android:onClick="postData"
         android:textColor="#fff"
         android:textSize="22sp"/>
 

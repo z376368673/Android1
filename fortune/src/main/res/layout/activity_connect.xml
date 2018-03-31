@@ -16,7 +16,14 @@
         android:layout_height="60dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/dp_10"
-        android:src="@mipmap/about_co"/>
+        android:src="@mipmap/directed"/>
+    <TextView
+        android:id="@+id/tv_v"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="@string/app_name"/>
 
     <TextView
         android:id="@+id/connect_tv_content"
@@ -24,12 +31,10 @@
         android:layout_height="0dp"
         android:layout_margin="10dp"
         android:layout_weight="1"
-        android:text="    有任何问题，欢迎联系我们"
         android:textSize="18sp"/>
 
     <TextView
         android:id="@+id/connect_tv_tel"
-
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_margin="10dp"

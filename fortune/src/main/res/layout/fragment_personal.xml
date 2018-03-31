@@ -82,7 +82,7 @@
             android:layout_alignParentBottom="true"
             android:layout_margin="15dp"
             android:gravity="center"
-            android:text="手机号码：xxxxxxxxxxx"
+            android:text="xxxxxxxxxxx"
             android:textColor="#ffffff"
             android:textSize="22sp"/>
 

@@ -58,25 +58,30 @@ public class ResetActivity extends AppCompatActivity implements View.OnClickList
                 editTextArr[i].requestFocus();
             } else {
                 String mobile = (String) BaseApplication.dataMap.get("mobile");
-                BaseApplication.iService.resetPass(mobile, MD5Util.encode(contentArr[0])).enqueue(new RetrofitCallback(getBaseContext(), new RetrofitCallback.DataParser() {
-                    @Override
-                    public void parse(String data) {
-                        try {
-                            JSONObject jsonObject = new JSONObject(data);
-                            int msg = jsonObject.getInt("msg");
-                            if (msg == 1) {
-                                Toast.makeText(ResetActivity.this, "重置密码成功", Toast.LENGTH_SHORT).show();
-                                sendBroadcast(new Intent("destory"));
-                                finish();
-                            } else {
-                                Toast.makeText(ResetActivity.this, "重置密码失败", Toast.LENGTH_SHORT).show();
-                            }
-                        } catch (JSONException e) {
-                            ErrorUtil.retrofitResponseParseFail(ResetActivity.this, e);
-                        }
-                    }
-                }));
+                restPassWord(mobile,contentArr[0]);
             }
         }
     }
+
+    public void restPassWord(String mobile,String pwd){
+        BaseApplication.iService.resetPass(mobile, pwd).enqueue(new RetrofitCallback(getBaseContext(), new RetrofitCallback.DataParser() {
+            @Override
+            public void parse(String data) {
+                try {
+                    JSONObject jsonObject = new JSONObject(data);
+                    int msg = jsonObject.getInt("msg");
+                    if (msg == 1) {
+                        Toast.makeText(ResetActivity.this, "重置密码成功", Toast.LENGTH_SHORT).show();
+                        sendBroadcast(new Intent("destory"));
+                        finish();
+                    } else {
+                        Toast.makeText(ResetActivity.this, "重置密码失败", Toast.LENGTH_SHORT).show();
+                    }
+                } catch (JSONException e) {
+                    ErrorUtil.retrofitResponseParseFail(ResetActivity.this, e);
+                }
+            }
+        }));
+    }
+
 }
