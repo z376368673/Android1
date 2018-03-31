@@ -31,13 +31,12 @@
         android:layout_height="wrap_content"
         android:src="@mipmap/line"/>
 
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/account_rv"
+    <ListView
+        android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        />
 
-    </android.support.v7.widget.RecyclerView>
 
 
 </LinearLayout>

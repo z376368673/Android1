@@ -28,6 +28,7 @@ public class RetrofitCallback implements Callback<ResponseBody> {
     @Override
     public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
         if (response.body() == null) {
+            parser.parse("{ error :"+response.raw().toString()+" }");
             Log.i(">>", response.raw().toString());
             //Toast.makeText(context, "获取的数据为：null", Toast.LENGTH_SHORT).show();
             return;
@@ -38,6 +39,7 @@ public class RetrofitCallback implements Callback<ResponseBody> {
             parser.parse(data);
         } catch (IOException e) {
             Log.i(">>", e.getMessage());
+            parser.parse("{ IOException :"+e.getMessage()+" }");
             ErrorUtil.retrofitResponseParseFail(context, e);
         }
     }

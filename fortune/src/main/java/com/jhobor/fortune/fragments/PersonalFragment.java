@@ -108,33 +108,33 @@ public class PersonalFragment extends Fragment implements View.OnClickListener {
     }
 
     private void getData() {
-        String token = (String) BaseApplication.dataMap.get("token");
-        BaseApplication.iService.mine(token).enqueue(new RetrofitCallback(getContext(), new RetrofitCallback.DataParser() {
-            @Override
-            public void parse(String data) {
-                try {
-                    JSONObject jsonObject = new JSONObject(data);
-                    int isLogin = jsonObject.getInt("isLogin");
-                    if (isLogin == 1) {
-                        strName = jsonObject.getString("name");
-                        strMobile = jsonObject.getString("mobile");
-                        strRegDate = jsonObject.getString("regDate");
-                        boodingCoin = jsonObject.getInt("boodingCoin") + "";
-                        activationCode = jsonObject.getInt("activationCode") + "";
-                        boolean hasPhone = jsonObject.has("phone");
-                        if (hasPhone) {
-                            strPhone = jsonObject.getString("phone");
-                        }
-                        setData();
-                        hasData = true;
-                    } else {
-                        Toast.makeText(getContext(), "账户信息失效，无法获取数据", Toast.LENGTH_SHORT).show();
-                    }
-                } catch (JSONException e) {
-                    ErrorUtil.retrofitResponseParseFail(getContext(), e);
-                }
-            }
-        }));
+//        String token = (String) BaseApplication.dataMap.get("token");
+//        BaseApplication.iService.mine(token).enqueue(new RetrofitCallback(getContext(), new RetrofitCallback.DataParser() {
+//            @Override
+//            public void parse(String data) {
+//                try {
+//                    JSONObject jsonObject = new JSONObject(data);
+//                    int isLogin = jsonObject.getInt("isLogin");
+//                    if (isLogin == 1) {
+//                        strName = jsonObject.getString("name");
+//                        strMobile = jsonObject.getString("mobile");
+//                        strRegDate = jsonObject.getString("regDate");
+//                        boodingCoin = jsonObject.getInt("boodingCoin") + "";
+//                        activationCode = jsonObject.getInt("activationCode") + "";
+//                        boolean hasPhone = jsonObject.has("phone");
+//                        if (hasPhone) {
+//                            strPhone = jsonObject.getString("phone");
+//                        }
+//                        setData();
+//                        hasData = true;
+//                    } else {
+//                        Toast.makeText(getContext(), "账户信息失效，无法获取数据", Toast.LENGTH_SHORT).show();
+//                    }
+//                } catch (JSONException e) {
+//                    ErrorUtil.retrofitResponseParseFail(getContext(), e);
+//                }
+//            }
+//        }));
     }
 
     private void setData() {
@@ -152,12 +152,6 @@ public class PersonalFragment extends Fragment implements View.OnClickListener {
             nu_pdb.setText(boodingCoin);
             nu_jhm.setText(activationCode);
         }
-    }
-    private void goLogin() {
-        Intent intent = new Intent(getContext(), LoginActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        startActivity(intent);
-
     }
 
     @Override

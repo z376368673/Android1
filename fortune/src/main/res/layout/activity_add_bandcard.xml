@@ -21,8 +21,9 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/shape_account_et"
         android:hint="请输入持卡人姓名"
-        android:inputType="number"
+        android:inputType="textPersonName"
         android:paddingLeft="5dp"
+        android:textSize="15sp"
         android:textColorHint="#999"/>
 
     <EditText
@@ -33,48 +34,28 @@
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/shape_account_et"
+        android:inputType="numberSigned"
         android:hint="请输入银行卡号码"
         android:maxEms="11"
         android:paddingLeft="5dp"
+        android:textSize="15sp"
         android:textColorHint="#999"/>
 
-    <EditText
-        android:id="@+id/with_draw_psd"
+    <TextView
+        android:id="@+id/with_draw_name"
         android:layout_width="match_parent"
         android:layout_height="42dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
         android:background="@drawable/shape_account_et"
-        android:hint="请输入银行卡类型"
-        android:inputType="textPassword"
+        android:hint="请选择银行卡类型"
         android:paddingLeft="5dp"
-        android:textColorHint="#999"/>
-
-    <EditText
-        android:id="@+id/with_draw_set"
-        android:layout_width="match_parent"
-        android:layout_height="42dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/shape_account_et"
-        android:hint="请设置支付密码"
-        android:inputType="textPassword"
-        android:paddingLeft="5dp"
-        android:textColorHint="#999"/>
-
-    <EditText
-        android:id="@+id/with_draw_re_set"
-        android:layout_width="match_parent"
-        android:layout_height="42dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/shape_account_et"
-        android:hint="请重新输入支付密码"
-        android:inputType="textPassword"
-        android:paddingLeft="5dp"
+        android:onClick="dialogChoice"
+        android:textSize="15sp"
+        android:drawableRight="@mipmap/down"
+        android:paddingRight="10dp"
         android:textColorHint="#999"/>
 
     <TextView
@@ -85,6 +66,7 @@
         android:background="@drawable/shape_getverfycode"
         android:gravity="center"
         android:text="提交"
+        android:onClick="submit"
         android:textColor="#fff"
         android:textSize="22sp"/>
 

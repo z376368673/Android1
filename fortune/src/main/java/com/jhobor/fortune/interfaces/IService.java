@@ -76,7 +76,6 @@ public interface IService {
      *
      * @param token
      * @return http://tz.1yuanpf.com/rentalcarUsb/groupInfo/myGroupInfo
-
      */
     @POST("groupInfo/myGroupInfo.do")
     Call<ResponseBody> myLower(@Query("uuid") String token);
@@ -135,6 +134,41 @@ public interface IService {
                                       @Field("account") String account,
                                       @Field("type") String type);
 
+    /**
+     * 删除银行卡
+     * @param token
+     * @return
+     */
+    @POST("bankCard/delete")
+    Call<ResponseBody> delBank(@Query("uuid") String token,
+                                  @Query("bankCardId") int bankCardId
+                                  );
+
+    /**
+     * 我的账户 银行卡列表
+     * @param token
+     * @return
+     */
+    @POST("bankCard/list")
+    Call<ResponseBody> myBankList(@Query("uuid") String token);
+
+    /**
+     * 添加银行卡
+     *
+     * @param token
+     * @param name
+     * @param bankName 银行类型 名称
+     * @param bankNo   卡号
+     * @return
+     */
+    @FormUrlEncoded
+    @POST("bankCard/add")
+    Call<ResponseBody> addBank(@Field("uuid") String token,
+                               @Field("name") String name,
+                               @Field("bankName") String bankName,
+                               @Field("bankNo") String bankNo);
+
+
     @FormUrlEncoded
     @POST("optionMode/edit.do")
     Call<ResponseBody> changedAccountInfo(@Field("id") String id,
@@ -143,6 +177,7 @@ public interface IService {
                                           @Field("name") String name,
                                           @Field("account") String account,
                                           @Field("type") String type);
+
 
     /**
      * 交易记录
@@ -378,7 +413,6 @@ public interface IService {
                                  @Query("omId") String omId);
 
     /**
-     *
      * @param uuid
      * @return
      */
