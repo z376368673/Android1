@@ -28,7 +28,7 @@ import org.json.JSONObject;
  * Created by YQJ on 2018/3/30.
  * Description:
  */
-public class AddBankCardActivity extends AppCompatActivity  {
+public class AddBankCardActivity extends AppCompatActivity {
 
     private EditText with_draw_et;
     private EditText with_draw_account;
@@ -39,7 +39,8 @@ public class AddBankCardActivity extends AppCompatActivity  {
     String userName;
     String bankName;
     String bankNo;
-    ProgressDialog progressDialog ;
+    ProgressDialog progressDialog;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,10 +57,11 @@ public class AddBankCardActivity extends AppCompatActivity  {
 
     /**
      * 校验填写的信息
+     *
      * @param view
      */
-    public void submit(View view){
-        progressDialog = ProgressDialog.show(this, "添加银行卡", "提交信息...");
+    public void submit(View view) {
+
         userName = with_draw_et.getText().toString().trim();
         bankName = with_draw_name.getText().toString().trim();
         bankNo = with_draw_account.getText().toString().trim();
@@ -78,6 +80,7 @@ public class AddBankCardActivity extends AppCompatActivity  {
         if (i < itemChecks.length) {
             Toast.makeText(this, itemTips[i], Toast.LENGTH_SHORT).show();
         } else {
+            progressDialog = ProgressDialog.show(this, "添加银行卡", "提交信息...");
             postData();
         }
     }
@@ -109,6 +112,7 @@ public class AddBankCardActivity extends AppCompatActivity  {
 
     /**
      * 选择银行
+     *
      * @param view
      */
     public void dialogChoice(View view) {

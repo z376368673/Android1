@@ -216,7 +216,9 @@ public interface IService {
      * @return
      */
     @POST("withdraw/add.do")
-    Call<ResponseBody> withdraw(@Query("uuid") String token, @Query("money") int money, @Query("optionModeId") int optionModeId);
+    Call<ResponseBody> withdraw(@Query("uuid") String token,
+                                @Query("money") int money,
+                                @Query("optionModeId") int optionModeId);
 
     /**
      * 修改密码
@@ -421,10 +423,28 @@ public interface IService {
 
     @POST("userInfo/myReport")
     Call<ResponseBody> getmyReport(@Query("uuid") String uuid);
+    @POST("integralRecord/list")
+    Call<ResponseBody> getIntegralList(@Query("uuid") String uuid,@Query("tag") int tag);
 
     @POST("userInfo/addCapital")
     Call<ResponseBody> addMoney(@Query("uuid") String uuid, @Query("integral") BigDecimal bigDecimal);
 
+    /**
+     * 提现界面接口
+     * @param token
+     * @return
+     */
+    @POST("/withdraw/myWithdraw")
+    Call<ResponseBody> withdrawMoney(@Query("uuid") String token);
+
+    /**
+     * 提现接口
+     * @param token
+     * @param loginPwd
+     * @param bankCardId
+     * @param money
+     * @return
+     */
     @POST("withdraw/add")
     Call<ResponseBody> withdrawMoney(@Query("uuid") String token,
                                      @Query("loginPwd") String loginPwd,

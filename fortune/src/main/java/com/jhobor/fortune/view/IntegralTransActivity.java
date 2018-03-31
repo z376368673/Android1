@@ -75,9 +75,7 @@ public class IntegralTransActivity extends AppCompatActivity implements View.OnC
                         int msg = (int) jsonObject.opt("msg");
                         if (msg == 1) {
                             Toast.makeText(IntegralTransActivity.this, "提交成功", Toast.LENGTH_SHORT).show();
-                            mMoney.setText("");
-                            mAccount.setText("");
-                            mPsd.setText("");
+                            finish();
                         } else {
                             Toast.makeText(IntegralTransActivity.this, "提交失败", Toast.LENGTH_SHORT).show();
                         }

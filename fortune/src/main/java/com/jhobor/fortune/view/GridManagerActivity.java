@@ -36,7 +36,7 @@ public class GridManagerActivity extends AppCompatActivity implements View.OnCli
         setContentView(R.layout.activity_grid_manager);
         HideIMEUtil.wrap(this);
 
-        BarUtil.topBar(this, "账户信息");
+        BarUtil.topBar(this, "报表管理");
 
         mAccount_jf_tv = (TextView) findViewById(R.id.account_jf_tv);
         mAdd = (TextView) findViewById(R.id.account_tv_add);
@@ -92,7 +92,8 @@ public class GridManagerActivity extends AppCompatActivity implements View.OnCli
             Intent intent2 = new Intent(this, IntegralTransActivity.class);
             startActivity(intent2);
         } else if (v == mRecord) {
-            Toast.makeText(GridManagerActivity.this, "暂无交易记录", Toast.LENGTH_SHORT).show();
+            Intent intent2 = new Intent(this, TransactionRecordActivity.class);
+            startActivity(intent2);
         }
     }
 }
