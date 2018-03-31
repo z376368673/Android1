@@ -36,6 +36,10 @@
         android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="12dp"
+        android:dividerHeight="1px"
+        android:divider="@color/blue_df"
         />
 
 
