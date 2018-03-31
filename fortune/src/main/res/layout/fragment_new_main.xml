@@ -84,7 +84,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="日积分"
+                    android:text="日分红"
                     android:textColor="#ffffff"
                     android:textSize="18sp" />
             </LinearLayout>
@@ -108,7 +108,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="总积分"
+                    android:text="总分红"
                     android:textColor="#ffffff"
                     android:textSize="18sp" />
             </LinearLayout>
@@ -191,7 +191,6 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:visibility="gone"
             android:layout_marginLeft="20dp">
 
             <TextView
@@ -219,7 +218,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/most_high"
                 android:layout_marginTop="15dp"
-                android:text="历史最高"
+                android:text="总积分"
                 android:textColor="@color/black_66"
                 android:textSize="16sp"
                 android:id="@+id/textView3" />
