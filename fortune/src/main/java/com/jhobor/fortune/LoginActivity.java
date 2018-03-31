@@ -167,10 +167,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         BaseApplication.infoList.add(userPass.getText().toString().trim());
 
                         String uuid = jsonObject.getString("uuid");
+                        String imgUrl = jsonObject.getString("imgUrl");
                         BaseApplication.prefs.edit()
                                 .putString("phone", strMobile)
                                 .putString("pws", strPass)
                                 .putString("token", uuid)
+                                .putString("imgUrl", imgUrl)
                                 .apply();
 
                         PrefUtils.putString(LoginActivity.this, "phone", strMobile);

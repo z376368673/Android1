@@ -58,18 +58,23 @@ public class TransactionRecordActivity extends AppCompatActivity implements View
         Intent intent = new Intent(this,TransListActivity.class);
         if (view ==ll_zengzhi){
             intent.putExtra("Tag",0);
+            intent.putExtra("Type",0);
             startActivity(intent);
         }else if (view ==ll_fenhong){
-            intent.putExtra("Tag",0);
+            intent.putExtra("Tag",1);
+            intent.putExtra("Type",0);
             startActivity(intent);
         }else if (view ==ll_jfzengzhangd){
             intent.putExtra("Tag",0);
+            intent.putExtra("Type",1);
             startActivity(intent);
         }else if (view ==ll_jftixian){
             intent.putExtra("Tag",1);
+            intent.putExtra("Type",1);
             startActivity(intent);
         }else if (view ==ll_jfzhuangrang){
             intent.putExtra("Tag",2);
+            intent.putExtra("Type",1);
             startActivity(intent);
         }
     }

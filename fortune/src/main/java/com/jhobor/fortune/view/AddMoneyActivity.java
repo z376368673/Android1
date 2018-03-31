@@ -51,7 +51,8 @@ public class AddMoneyActivity extends AppCompatActivity implements View.OnClickL
 
             BigDecimal b = new BigDecimal(trim);
             b = b.setScale(2, BigDecimal.ROUND_DOWN);
-            BaseApplication.iService.addMoney(uuid, b).enqueue(new RetrofitCallback(this, new RetrofitCallback.DataParser() {
+            double dou = b.doubleValue();
+            BaseApplication.iService.addMoney(uuid, dou).enqueue(new RetrofitCallback(this, new RetrofitCallback.DataParser() {
                 @Override
                 public void parse(String data) {
                     try {

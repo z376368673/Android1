@@ -71,4 +71,5 @@ dependencies {
    // compile 'com.android.support:support-v4:26.0.2'
     testCompile 'junit:junit:4.12'
     compile 'com.google.zxing:core:3.3.0'
+    implementation 'com.zhihu.android:matisse:0.4.3'
 }

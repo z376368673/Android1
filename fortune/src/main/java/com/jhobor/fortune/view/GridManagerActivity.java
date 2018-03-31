@@ -65,6 +65,7 @@ public class GridManagerActivity extends AppCompatActivity implements View.OnCli
             public void parse(String data) {
                 try {
                     JSONObject jsonObject = new JSONObject(data);
+
                     double integral = jsonObject.getDouble("integral");
                     mAccount_jf_tv.setText(integral + "");
                 } catch (JSONException e) {

@@ -20,7 +20,7 @@ import com.jhobor.fortune.utils.HideIMEUtil;
  * Created by YQJ on 2018/3/27.
  * Description:
  */
-public class ConnectActivity extends AppCompatActivity{
+public class ConnectActivity extends AppCompatActivity {
 
     TextView tv_v;
     TextView connect_tv_content;
@@ -49,8 +49,8 @@ public class ConnectActivity extends AppCompatActivity{
             public void parse(String data) {
                 JSONObject jsonObject = JSON.parseObject(data);
                 int msg = jsonObject.getInteger("msg");
-                if (msg==1){
-                   // Toast.makeText(FankuiActivity.this, "提交成功", Toast.LENGTH_SHORT).show();
+                if (msg == 1) {
+                    // Toast.makeText(FankuiActivity.this, "提交成功", Toast.LENGTH_SHORT).show();
                     jsonObject = jsonObject.getJSONObject("aboutWe");
 
                     String version = jsonObject.getString("version");
@@ -58,12 +58,12 @@ public class ConnectActivity extends AppCompatActivity{
                     String phone = jsonObject.getString("phone");
                     String qq = jsonObject.getString("qq");
 
-                    tv_v.setText(R.string.app_name+": "+version);
+                    tv_v.setText(R.string.app_name + ": " + version);
                     connect_tv_content.setText(content);
-                    connect_tv_tel.setText("客服电话："+phone);
-                    connect_tv_qq.setText("客服电话："+qq);
+                    connect_tv_tel.setText("客服电话：" + phone);
+                    connect_tv_qq.setText("客服QQ：" + qq);
 
-                }else {
+                } else {
                     String error = jsonObject.getString("errorInfo");
                     Toast.makeText(ConnectActivity.this, error, Toast.LENGTH_SHORT).show();
                 }

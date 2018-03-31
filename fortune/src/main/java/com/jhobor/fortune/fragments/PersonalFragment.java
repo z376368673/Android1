@@ -1,11 +1,26 @@
 package com.jhobor.fortune.fragments;
 
 
+import android.Manifest;
+import android.content.ContentResolver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
+import android.util.Base64;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +29,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alibaba.fastjson.JSON;
+import com.bumptech.glide.Glide;
 import com.github.javiersantos.bottomdialogs.BottomDialog;
 import com.jhobor.fortune.LoginActivity;
 import com.jhobor.fortune.R;
@@ -22,29 +39,51 @@ import com.jhobor.fortune.WithdrawActivity;
 import com.jhobor.fortune.WithdrawRecordActivity;
 import com.jhobor.fortune.base.BaseApplication;
 import com.jhobor.fortune.base.RetrofitCallback;
+import com.jhobor.fortune.utils.ActionSheetDialog;
+import com.jhobor.fortune.utils.BitmapUtlis;
 import com.jhobor.fortune.utils.ErrorUtil;
+import com.jhobor.fortune.utils.PhotoUtil;
 import com.jhobor.fortune.utils.TextUtil;
+import com.jhobor.fortune.utils.UriPathUtils;
+import com.jhobor.fortune.view.AddMoneyActivity;
 import com.jhobor.fortune.view.ConnectActivity;
 import com.jhobor.fortune.view.FankuiActivity;
 import com.jhobor.fortune.view.GridManagerActivity;
 import com.jhobor.fortune.view.MyAccountActivity;
 import com.jhobor.fortune.view.SettingUserActivity;
 import com.jhobor.fortune.view.ShareActivity;
+import com.vincent.filepicker.ToastUtil;
+import com.zhihu.matisse.Matisse;
+import com.zhihu.matisse.MimeType;
+import com.zhihu.matisse.engine.impl.GlideEngine;
+
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.util.List;
+
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
+
+import static android.app.Activity.RESULT_OK;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class PersonalFragment extends Fragment implements View.OnClickListener {
+
+    private static final String TAG = "AAAAAAA";
     ImageView headImg, iv_isactivation;
-    TextView userName, joinTime, mobile, refMobile,tv_isactivation,nu_pdb,nu_jhm;
+    TextView userName, joinTime, mobile, refMobile, tv_isactivation, nu_pdb, nu_jhm;
     LinearLayout receiptWay, tradeRecord, withdrawRecord, modifyPass, logout, withdraw, about, pdb, jhm, help_record;
     View view;
 
 
-    String strName, strMobile, strRegDate, strPhone,boodingCoin,activationCode;
+    String strName, strMobile, strRegDate, strPhone, boodingCoin, activationCode;
     boolean hasData = false;
 
     public PersonalFragment() {
@@ -88,6 +127,8 @@ public class PersonalFragment extends Fragment implements View.OnClickListener {
         jhm.setOnClickListener(this);
         help_record.setOnClickListener(this);
         iv_isactivation.setOnClickListener(this);
+        headImg.setOnClickListener(this);
+
         if (hasData) {
             setData();
         } else {
@@ -95,10 +136,10 @@ public class PersonalFragment extends Fragment implements View.OnClickListener {
         }
 
         int isActivation_nu = BaseApplication.prefs.getInt("isActivation_nu", 1);
-        if (0 == isActivation_nu){
+        if (0 == isActivation_nu) {
             iv_isactivation.setImageResource(R.mipmap.wjh);
             tv_isactivation.setText("(未激活)");
-        }else {
+        } else {
             iv_isactivation.setImageResource(R.mipmap.jh);
             tv_isactivation.setVisibility(View.GONE);
         }
@@ -140,10 +181,12 @@ public class PersonalFragment extends Fragment implements View.OnClickListener {
     private void setData() {
         //如果没有token 则取登陆界面，并且销毁此界面
         String token = BaseApplication.prefs.getString("token", "");
-        if (TextUtils.isEmpty(token)){
+        if (TextUtils.isEmpty(token)) {
             getActivity().finish();
-        }else {
+        } else {
             userName.setText(strName);
+            String imgUrl = BaseApplication.prefs.getString("imgUrl", "");
+            Glide.with(getContext()).load(imgUrl).error(R.mipmap.head_img).into(headImg);
             joinTime.setText("加入日期" + strRegDate);
             //mobile.setText(String.format("手机号码：%s", strMobile));
             String string = BaseApplication.prefs.getString("phone", "null");
@@ -204,11 +247,11 @@ public class PersonalFragment extends Fragment implements View.OnClickListener {
         } else if (v == help_record) {
             //startActivity(new Intent(getActivity(), TradeRecordHelpActivity.class));
             startActivity(new Intent(getActivity(), ConnectActivity.class));
-        }else if (v == iv_isactivation) {
+        } else if (v == iv_isactivation) {
             int isActivation_nu = BaseApplication.prefs.getInt("isActivation_nu", 1);
             if (1 == isActivation_nu) {
                 Toast.makeText(getContext(), "您已激活", Toast.LENGTH_SHORT).show();
-            }else{
+            } else {
                 String string = BaseApplication.prefs.getString("token", "null");
                 BaseApplication.iService.account(string).enqueue(new RetrofitCallback(getContext(), new RetrofitCallback.DataParser() {
                     @Override
@@ -216,15 +259,15 @@ public class PersonalFragment extends Fragment implements View.OnClickListener {
                         try {
                             JSONObject jsonObject = new JSONObject(data);
                             int msg = jsonObject.getInt("msg");
-                            if (1 == msg){
+                            if (1 == msg) {
                                 BaseApplication.prefs.edit().remove("isActivation_nu").apply();
-                                BaseApplication.prefs.edit().putInt("isActivation_nu",1).apply();
+                                BaseApplication.prefs.edit().putInt("isActivation_nu", 1).apply();
 
 
                                 Toast.makeText(getContext(), "激活成功", Toast.LENGTH_SHORT).show();
                                 iv_isactivation.setImageResource(R.mipmap.jh);
                                 tv_isactivation.setVisibility(View.GONE);
-                            }else {
+                            } else {
                                 Toast.makeText(getContext(), "激活码不足", Toast.LENGTH_SHORT).show();
                             }
 
@@ -233,6 +276,89 @@ public class PersonalFragment extends Fragment implements View.OnClickListener {
                         }
                     }
                 }));
+            }
+        } else if (v == headImg) {
+            //换头像
+            checkP();
+        }
+    }
+
+    private void checkP() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED
+                    || ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED
+                    || ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED
+                    || ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.INTERNET) != PackageManager.PERMISSION_GRANTED) {
+
+
+                ActivityCompat.requestPermissions(getActivity(),
+                        new String[]{
+                                Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                                Manifest.permission.READ_EXTERNAL_STORAGE,
+                                Manifest.permission.CAMERA,
+                                Manifest.permission.INTERNET
+                        }, 1);
+            } else {
+                changedOption();
+            }
+        }
+    }
+
+    private void changedOption() {
+        ActionSheetDialog mDialog = new ActionSheetDialog(getActivity()).builder();
+        mDialog.setTitle("选择");
+        mDialog.setCancelable(false);
+        mDialog.addSheetItem("从相册选取", ActionSheetDialog.SheetItemColor.Blue, new ActionSheetDialog.OnSheetItemClickListener() {
+            @Override
+            public void onClick(int which) {
+                choseImg();
+            }
+        }).show();
+    }
+
+    String imgPath = "";
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1000 && resultCode == RESULT_OK) {
+            List<Uri> imgs = Matisse.obtainResult(data);
+            imgPath = getRealFilePath(getActivity(), imgs.get(0));
+            imgPath = new BitmapUtlis().compressImageByPath(imgPath);
+            Log.e("onActivityResult", "imgPath = " + imgPath);
+            Bitmap bitmap = BitmapFactory.decodeFile(imgPath);
+            String bit = convertIconToString(bitmap);
+            upDataHeadImg();
+        }
+    }
+
+    /**
+     * 选择图片 先检查是否有相应的权限
+     */
+    private void choseImg() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
+            } else {
+                Matisse.from(this)
+                        .choose(MimeType.allOf())
+                        .theme(R.style.Matisse_Dracula)//内置的主题
+                        .countable(false)//使用 countable(true) 来显示一个从 1 开始的数字
+                        .maxSelectable(1)//限制可选择的最大数目
+                        .imageEngine(new GlideEngine())
+                        .forResult(1000);
+            }
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == 1) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                choseImg();
+            } else {
+                Toast.makeText(getActivity(), "权限已拒绝", Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -243,4 +369,66 @@ public class PersonalFragment extends Fragment implements View.OnClickListener {
         getData();
         setData();
     }
+
+    public static String convertIconToString(Bitmap bitmap) {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();// outputstream
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+        byte[] appicon = baos.toByteArray();// 转为byte数组
+        return Base64.encodeToString(appicon, Base64.DEFAULT);
+
+    }
+
+    public static String getRealFilePath(final Context context, final Uri uri) {
+        if (null == uri) return null;
+        final String scheme = uri.getScheme();
+        String data = null;
+        if (scheme == null)
+            data = uri.getPath();
+        else if (ContentResolver.SCHEME_FILE.equals(scheme)) {
+            data = uri.getPath();
+        } else if (ContentResolver.SCHEME_CONTENT.equals(scheme)) {
+            Cursor cursor = context.getContentResolver().query(uri, new String[]{MediaStore.Images.ImageColumns.DATA}, null, null, null);
+            if (null != cursor) {
+                if (cursor.moveToFirst()) {
+                    int index = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
+                    if (index > -1) {
+                        data = cursor.getString(index);
+                    }
+                }
+                cursor.close();
+            }
+        }
+        return data;
+    }
+
+    private void upDataHeadImg() {
+        if (TextUtils.isEmpty(imgPath)) {
+            return;
+        }
+        String token = BaseApplication.prefs.getString("token", "");
+        File file = new File(imgPath);
+        MultipartBody build = new MultipartBody.Builder()
+                .setType(MultipartBody.FORM)
+                .addFormDataPart("uuid", token)
+                .addFormDataPart("goodsPhoto", file.getName(), RequestBody.create(MediaType.parse("image/*"), file))
+                .build();
+        List<MultipartBody.Part> parts = build.parts();
+        BaseApplication.iService.uploadheadImg(parts).enqueue(new RetrofitCallback(getActivity(), new RetrofitCallback.DataParser() {
+            @Override
+            public void parse(String data) {
+                com.alibaba.fastjson.JSONObject jsObj = JSON.parseObject(data);
+                int msg = jsObj.getIntValue("msg");
+                if (msg == 1) {
+                    Toast.makeText(getActivity(), "提交成功", Toast.LENGTH_SHORT).show();
+                    Glide.with(getActivity())
+                            .load(new File(imgPath))
+                            .into(headImg);
+                } else {
+                    Toast.makeText(getActivity(), jsObj.getString("errorInfo"), Toast.LENGTH_SHORT).show();
+                }
+            }
+        }));
+
+    }
+
 }

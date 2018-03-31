@@ -423,11 +423,22 @@ public interface IService {
 
     @POST("userInfo/myReport")
     Call<ResponseBody> getmyReport(@Query("uuid") String uuid);
+
+    /**
+     *获取积分记录
+     * @param uuid
+     * @param tag
+     * @return
+     */
     @POST("integralRecord/list")
     Call<ResponseBody> getIntegralList(@Query("uuid") String uuid,@Query("tag") int tag);
 
+    @POST("amountRecord/list")
+    Call<ResponseBody> getRecordlList(@Query("uuid") String uuid,@Query("tag") int tag);
+
+
     @POST("userInfo/addCapital")
-    Call<ResponseBody> addMoney(@Query("uuid") String uuid, @Query("integral") BigDecimal bigDecimal);
+    Call<ResponseBody> addMoney(@Query("uuid") String uuid, @Query("money") double bigDecimal);
 
     /**
      * 提现界面接口
@@ -494,4 +505,10 @@ public interface IService {
     @POST("userInfo/myQrCode")
     Call<ResponseBody> share(@Query("uuid") String token);
 
+
+
+
+    @Multipart
+    @POST("userInfo/updateImg")
+    Call<ResponseBody> uploadheadImg(@Part List<MultipartBody.Part> partList);
 }
