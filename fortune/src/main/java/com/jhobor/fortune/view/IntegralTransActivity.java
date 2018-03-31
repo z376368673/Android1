@@ -73,11 +73,12 @@ public class IntegralTransActivity extends AppCompatActivity implements View.OnC
                     try {
                         JSONObject jsonObject = new JSONObject(data);
                         int msg = (int) jsonObject.opt("msg");
+
                         if (msg == 1) {
                             Toast.makeText(IntegralTransActivity.this, "提交成功", Toast.LENGTH_SHORT).show();
                             finish();
                         } else {
-                            Toast.makeText(IntegralTransActivity.this, "提交失败", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(IntegralTransActivity.this, jsonObject.getString("errorInfo"), Toast.LENGTH_SHORT).show();
                         }
                     } catch (JSONException e) {
                         e.printStackTrace();
