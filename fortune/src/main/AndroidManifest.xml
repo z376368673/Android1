@@ -18,9 +18,9 @@
     <application
         android:name=".base.BaseApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/directed"
+        android:icon="@mipmap/ic_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/directed"
+        android:roundIcon="@mipmap/ic_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
@@ -74,40 +74,51 @@
         <activity
             android:name=".BrowserActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".TradeDetailsActivity"
+        <activity
+            android:name=".TradeDetailsActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".GiveHandActivity"
+        <activity
+            android:name=".GiveHandActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".GetHandActivity"
+        <activity
+            android:name=".GetHandActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".BalanceDetailsActivity"
+        <activity
+            android:name=".BalanceDetailsActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".FreezeDetailsActivity"
+        <activity
+            android:name=".FreezeDetailsActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".TradeRecordHelpActivity"
+        <activity
+            android:name=".TradeRecordHelpActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".BoodingDetailsActivity"
+        <activity
+            android:name=".BoodingDetailsActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".BoodingCoinActivity"
+        <activity
+            android:name=".BoodingCoinActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".ChooseActivity"
+        <activity
+            android:name=".ChooseActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".fragments.JiHuomaActivity"
-                  android:screenOrientation="portrait" />
-        <activity android:name=".fragments.DynamicBoxActivity"
-                  android:screenOrientation="portrait" />
-        <activity android:name=".view.MyAccountActivity"/>
-        <activity android:name=".view.GridManagerActivity"/>
-        <activity android:name=".view.FankuiActivity"/>
-        <activity android:name=".view.ConnectActivity"/>
-        <activity android:name=".view.TransactionRecordActivity"/>
-        <activity android:name=".view.TransListActivity"/>
-        <activity android:name=".view.SettingUserActivity"/>
-        <activity android:name=".view.ShareActivity"/>
-        <activity android:name=".view.AddMoneyActivity"/>
-        <activity android:name=".view.AccountWithdrawActivity"/>
-        <activity android:name=".view.IntegralTransActivity"/>
-        <activity android:name=".view.AddBankCardActivity"/>
+        <activity
+            android:name=".fragments.JiHuomaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragments.DynamicBoxActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".view.MyAccountActivity" />
+        <activity android:name=".view.GridManagerActivity" />
+        <activity android:name=".view.FankuiActivity" />
+        <activity android:name=".view.ConnectActivity" />
+        <activity android:name=".view.TransactionRecordActivity" />
+        <activity android:name=".view.TransListActivity" />
+        <activity android:name=".view.SettingUserActivity" />
+        <activity android:name=".view.ShareActivity" />
+        <activity android:name=".view.AddMoneyActivity" />
+        <activity android:name=".view.AccountWithdrawActivity" />
+        <activity android:name=".view.IntegralTransActivity" />
+        <activity android:name=".view.AddBankCardActivity" />
     </application>
 
 </manifest>

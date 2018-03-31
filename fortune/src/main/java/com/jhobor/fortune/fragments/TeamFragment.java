@@ -139,11 +139,10 @@ public class TeamFragment extends Fragment implements View.OnClickListener {
                             JSONObject chObj = childrenList.getJSONObject(i);
                             String mobile = chObj.getString("mobile");
                             float capital = (float) chObj.getDouble("capital");
-                            list.add(new LowerLevel(mobile, capital));
+                            list2.add(new LowerLevel(mobile, capital));
                         }
                         lowerList.put(1, list2);
 /*
-
                         childrenCount = jsonObject.getInt("childrenCount");
                         grandsonCount = jsonObject.getInt("grandsonCount");
                         JSONArray childrenList = jsonObject.getJSONArray("childrenList");

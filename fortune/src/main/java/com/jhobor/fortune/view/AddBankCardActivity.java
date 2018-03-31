@@ -100,6 +100,7 @@ public class AddBankCardActivity extends AppCompatActivity {
                             int msg = jsonObject.getInt("msg");
                             if (msg == 1) {
                                 Toast.makeText(context, "添加成功", Toast.LENGTH_SHORT).show();
+                                finish();
                             } else {
                                 Toast.makeText(context, "添加失败", Toast.LENGTH_SHORT).show();
                             }

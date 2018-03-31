@@ -147,7 +147,7 @@ public class PersonalFragment extends Fragment implements View.OnClickListener {
             joinTime.setText("加入日期" + strRegDate);
             //mobile.setText(String.format("手机号码：%s", strMobile));
             String string = BaseApplication.prefs.getString("phone", "null");
-            mobile.setText(string+"");
+            mobile.setText(String.format("通众会员：%s", string));
             refMobile.setText(String.format("推荐号码：%s", strPhone));
             nu_pdb.setText(boodingCoin);
             nu_jhm.setText(activationCode);
