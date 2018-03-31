@@ -121,7 +121,7 @@ public class AddBankCardActivity extends AppCompatActivity {
                 , "中国人民银行", "华夏银行", "深圳发展银行", "广东发展银行", "国家开发银行", "北京银行", "中国邮政储蓄银行", "上海银行"};
         AlertDialog.Builder builder = new AlertDialog.Builder(this, 3);
         builder.setTitle("请选择银行");
-        builder.setIcon(R.mipmap.ic_launcher);
+        builder.setIcon(R.mipmap.ic_bank);
         builder.setSingleChoiceItems(items, 0,
                 new DialogInterface.OnClickListener() {
                     @Override

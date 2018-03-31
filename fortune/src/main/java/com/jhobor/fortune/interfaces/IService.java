@@ -457,8 +457,41 @@ public interface IService {
                                         @Query("mobile") String mobile,
                                         @Query("integral") BigDecimal omId);
 
+
+
+    /**
+     * 意见反馈
+     * @param token
+     * @return
+     */
+    @POST("userInfo/myQrCode")
+    Call<ResponseBody> share(@Query("uuid") String token,
+                               @Query("str") String str);
+
+    /**
+     * 关于我们
+     * @param uuid
+     * @return
+     */
+    @POST("aboutWe/list")
+    Call<ResponseBody> aboutWe(@Query("uuid") String uuid);
+
+    /***
+     * 意见反馈
+     * @param uuid
+     * @param content
+     * @return
+     */
+    @POST("feedback/add")
+    Call<ResponseBody> feedback(@Query("uuid") String uuid,
+                               @Query("content") String content);
+
+    /***
+     * 分享界面的接口
+     * @param token
+     * @return
+     */
     @POST("userInfo/myQrCode")
     Call<ResponseBody> share(@Query("uuid") String token);
-
 
 }

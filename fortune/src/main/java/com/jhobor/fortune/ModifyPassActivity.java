@@ -60,8 +60,8 @@ public class ModifyPassActivity extends AppCompatActivity implements View.OnClic
                 editTextArr[i].requestFocus();
             } else {
                 String token = (String) BaseApplication.dataMap.get("token");
-                String strPass = MD5Util.encode(contentArr[0]);
-                String strNewPass = MD5Util.encode(contentArr[1]);
+                String strPass =contentArr[0];
+                String strNewPass = contentArr[1];
                 BaseApplication.iService.updatePass(token, strNewPass, strPass).enqueue(new RetrofitCallback(getBaseContext(), new RetrofitCallback.DataParser() {
                     @Override
                     public void parse(String data) {

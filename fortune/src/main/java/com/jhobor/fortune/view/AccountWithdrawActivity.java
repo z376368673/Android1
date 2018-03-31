@@ -146,7 +146,7 @@ public class AccountWithdrawActivity extends AppCompatActivity implements View.O
         }
         AlertDialog.Builder builder = new AlertDialog.Builder(this, 3);
         builder.setTitle("请选择银行");
-        builder.setIcon(R.mipmap.ic_launcher);
+        builder.setIcon(R.mipmap.ic_bank);
         builder.setSingleChoiceItems(items, 0,
                 new DialogInterface.OnClickListener() {
                     @Override
