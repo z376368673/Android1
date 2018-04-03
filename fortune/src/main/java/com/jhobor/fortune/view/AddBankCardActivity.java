@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -31,14 +32,18 @@ import org.json.JSONObject;
 public class AddBankCardActivity extends AppCompatActivity {
 
     private EditText with_draw_et;
+    private EditText with_draw_sfz;
     private EditText with_draw_account;
+    private EditText with_draw_name_sub;
     private TextView with_draw_name;//请输入银行卡类型
     private TextView with_draw_submmit;
 
     Context context;
-    String userName;
-    String bankName;
-    String bankNo;
+    String userName;//持卡人名字
+    String identityCard;//身份证号
+    String bankName; //银行名称
+    String bankNo;//银行卡号
+    String subbranch ;//银行所属支行
     ProgressDialog progressDialog;
 
     @Override
@@ -50,7 +55,9 @@ public class AddBankCardActivity extends AppCompatActivity {
         BarUtil.topBar(this, "添加银行卡");
 
         with_draw_et = (EditText) findViewById(R.id.with_draw_et);
+        with_draw_sfz = (EditText) findViewById(R.id.with_draw_sfz);
         with_draw_account = (EditText) findViewById(R.id.with_draw_account);
+        with_draw_name_sub = (EditText) findViewById(R.id.with_draw_name_sub);
         with_draw_name = (TextView) findViewById(R.id.with_draw_name);
         with_draw_submmit = (TextView) findViewById(R.id.with_draw_submmit);
     }
@@ -63,18 +70,24 @@ public class AddBankCardActivity extends AppCompatActivity {
     public void submit(View view) {
 
         userName = with_draw_et.getText().toString().trim();
+        identityCard = with_draw_sfz.getText().toString().trim();
         bankName = with_draw_name.getText().toString().trim();
         bankNo = with_draw_account.getText().toString().trim();
+        subbranch = with_draw_name_sub.getText().toString().trim();
 
         boolean[] itemChecks = {
                 CheckUtil.isName(userName),
+                CheckUtil.identityCard(identityCard),
                 CheckUtil.isName(bankName),
                 CheckUtil.isBankCardNo(bankNo),
+                !TextUtils.isEmpty(subbranch),
         };
         String[] itemTips = {
                 "户主姓名不正确",
+                "身份证为18位数字",
                 "银行名称不正确",
                 "银行卡卡号为16位或19位数字",
+                "支行名称能为空"
         };
         int i = CheckUtil.checkAll(itemChecks);
         if (i < itemChecks.length) {
@@ -90,7 +103,7 @@ public class AddBankCardActivity extends AppCompatActivity {
      */
     private void postData() {
         String token = (String) BaseApplication.dataMap.get("token");
-        BaseApplication.iService.addBank(token, userName, bankName, bankNo)
+        BaseApplication.iService.addBank(token, userName,identityCard, bankName, bankNo,subbranch)
                 .enqueue(new RetrofitCallback(context, new RetrofitCallback.DataParser() {
                     @Override
                     public void parse(String data) {

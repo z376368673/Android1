@@ -25,22 +25,20 @@
         android:paddingLeft="5dp"
         android:textSize="15sp"
         android:textColorHint="#999"/>
-
     <EditText
-        android:id="@+id/with_draw_account"
+        android:id="@+id/with_draw_sfz"
         android:layout_width="match_parent"
         android:layout_height="42dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/shape_account_et"
-        android:inputType="numberSigned"
-        android:hint="请输入银行卡号码"
-        android:maxEms="11"
+        android:hint="请输入持卡人身份证"
+        android:maxLength="18"
+        android:inputType="numberSigned|textPersonName"
         android:paddingLeft="5dp"
         android:textSize="15sp"
         android:textColorHint="#999"/>
-
     <TextView
         android:id="@+id/with_draw_name"
         android:layout_width="match_parent"
@@ -56,6 +54,34 @@
         android:textSize="15sp"
         android:drawableRight="@mipmap/down"
         android:paddingRight="10dp"
+        android:textColorHint="#999"/>
+    <EditText
+        android:id="@+id/with_draw_account"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_account_et"
+        android:inputType="numberSigned"
+        android:hint="请输入银行卡号码"
+        android:maxEms="11"
+        android:paddingLeft="5dp"
+        android:textSize="15sp"
+        android:textColorHint="#999"/>
+
+    <EditText
+        android:id="@+id/with_draw_name_sub"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_account_et"
+        android:hint="请输入银行卡所属支行"
+        android:inputType="text"
+        android:paddingLeft="5dp"
+        android:textSize="15sp"
         android:textColorHint="#999"/>
 
     <TextView

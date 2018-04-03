@@ -26,6 +26,9 @@ public class CheckUtil {
         return Pattern.compile("^\\d{4,6}$").matcher(code).matches();
     }
 
+    public static boolean identityCard(String pass) {
+        return Pattern.compile("^(^\\d{18}$)|(^\\d{17}(\\d|X|x)$)").matcher(pass).matches();
+    }
     public static boolean isPass(String pass) {
         return Pattern.compile("^\\w{6,18}$").matcher(pass).matches();
     }

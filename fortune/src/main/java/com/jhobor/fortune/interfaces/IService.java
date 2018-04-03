@@ -165,8 +165,10 @@ public interface IService {
     @POST("bankCard/add")
     Call<ResponseBody> addBank(@Field("uuid") String token,
                                @Field("name") String name,
+                               @Field("identityCard") String identityCard,
                                @Field("bankName") String bankName,
-                               @Field("bankNo") String bankNo);
+                               @Field("bankNo") String bankNo,
+                               @Field("subbranch") String subbranch );
 
 
     @FormUrlEncoded
