@@ -142,7 +142,7 @@ public class AccountWithdrawActivity extends AppCompatActivity implements View.O
         final int len = bankBeanList.size();
         final String items[] = new String[len];
         for (int i = 0; i < bankBeanList.size(); i++) {
-            items[i] = bankBeanList.get(i).getBankName() + ": \n" + bankBeanList.get(i).getBankNo();
+            items[i] = bankBeanList.get(i).getBankName() +"(尾号"+ bankBeanList.get(i).getBankNo().substring(bankBeanList.get(i).getBankNo().length()-4)+")";
         }
         AlertDialog.Builder builder = new AlertDialog.Builder(this, 3);
         builder.setTitle("请选择银行");

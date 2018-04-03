@@ -9,8 +9,10 @@ public class BankBean {
     private int id;  //1,
     private int userInfoId;  //1
     private String name;  //"华众",
+    private String identityCard;  //"身份证号",
     private String bankNo;  //"123456789123456789",
     private String bankName;  //"中国银行",
+    private String subbranch;  //"支行名称",
 
 
     public int getId() {
@@ -19,6 +21,22 @@ public class BankBean {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getIdentityCard() {
+        return identityCard;
+    }
+
+    public void setIdentityCard(String identityCard) {
+        this.identityCard = identityCard;
+    }
+
+    public String getSubbranch() {
+        return subbranch;
+    }
+
+    public void setSubbranch(String subbranch) {
+        this.subbranch = subbranch;
     }
 
     public int getUserInfoId() {
