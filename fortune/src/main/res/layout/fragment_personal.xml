@@ -157,7 +157,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="报表管理"
+                android:text="租车积分管理"
                 android:textColor="#0f0f0f"/>
 
             <ImageView

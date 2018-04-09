@@ -77,6 +77,10 @@ public class AccountWithdrawActivity extends AppCompatActivity implements View.O
                 Toast.makeText(this, "输入金额不能为空", Toast.LENGTH_SHORT).show();
                 return;
             }
+            if (Integer.valueOf(trim) < 500) {
+                Toast.makeText(this, "提现金额不能少于500", Toast.LENGTH_SHORT).show();
+                return;
+            }
             if (account.isEmpty() && bankId != -1) {
                 Toast.makeText(this, "提现账户不能为空", Toast.LENGTH_SHORT).show();
                 return;
@@ -85,6 +89,8 @@ public class AccountWithdrawActivity extends AppCompatActivity implements View.O
                 Toast.makeText(this, "密码不能为空", Toast.LENGTH_SHORT).show();
                 return;
             }
+
+
             String uuid = (String) BaseApplication.dataMap.get("token");
 
             BigDecimal b = new BigDecimal(trim);

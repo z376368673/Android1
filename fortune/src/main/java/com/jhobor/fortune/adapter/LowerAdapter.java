@@ -21,7 +21,7 @@ public class LowerAdapter extends BaseQuickAdapter<LowerLevel, BaseViewHolder> {
     protected void convert(BaseViewHolder helper, LowerLevel item) {
         helper.setText(R.id.name, item.getMobile())
                 .setText(R.id.joinTime, item.getMobile())
-                .setText(R.id.capital, String.valueOf(item.getCapital())+"万")
+                .setText(R.id.capital, String.valueOf(item.getCapital()) + "元")
                 .setText(R.id.profit, String.valueOf(item.getProfit()));
     }
 }

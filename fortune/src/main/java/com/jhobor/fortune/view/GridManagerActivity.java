@@ -36,7 +36,7 @@ public class GridManagerActivity extends AppCompatActivity implements View.OnCli
         setContentView(R.layout.activity_grid_manager);
         HideIMEUtil.wrap(this);
 
-        BarUtil.topBar(this, "报表管理");
+        BarUtil.topBar(this, "租车积分管理");
 
         mAccount_jf_tv = (TextView) findViewById(R.id.account_jf_tv);
         mAdd = (TextView) findViewById(R.id.account_tv_add);

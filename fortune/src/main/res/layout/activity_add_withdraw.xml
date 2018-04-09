@@ -32,17 +32,16 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/shape_account_et"
         android:drawableRight="@mipmap/down"
         android:gravity="center_vertical"
-        android:onClick="dialogChoice"
-        android:paddingRight="10dp"
-        android:background="@drawable/shape_account_et"
         android:hint="请选择收款账户"
+        android:onClick="dialogChoice"
         android:paddingLeft="5dp"
+        android:paddingRight="10dp"
         android:textColorHint="#999"/>
 
     <EditText
-        android:inputType="textPassword"
         android:id="@+id/with_draw_psd"
         android:layout_width="match_parent"
         android:layout_height="42dp"
@@ -51,6 +50,7 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/shape_account_et"
         android:hint="请输入支付密码"
+        android:inputType="textPassword"
         android:paddingLeft="5dp"
         android:textColorHint="#999"/>
 
@@ -64,6 +64,16 @@
         android:text="确认提现"
         android:textColor="#fff"
         android:textSize="22sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:text="    会员提现时，平台根据相关税法规定，扣除提现手续费10%！比如提现1000元，则相应的扣除手续费100元！"
+        android:textColor="#f00"
+        android:textSize="15sp"/>
 
 
 </LinearLayout>

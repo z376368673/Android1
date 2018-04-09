@@ -6,16 +6,6 @@
         <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleHome" value="$USER_HOME$/Desktop/grade/gradle-3.5" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/.." />
-            <option value="$PROJECT_DIR$/../apptest" />
-            <option value="$PROJECT_DIR$/../ddc" />
-            <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/../shot" />
-            <option value="$PROJECT_DIR$/../zzb" />
-          </set>
-        </option>
         <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>

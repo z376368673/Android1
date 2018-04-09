@@ -13,7 +13,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="120dp"
         android:gravity="center"
-        android:src="@mipmap/directed"/>
+        android:src="@mipmap/new_logo"/>
 
     <LinearLayout
         android:layout_width="match_parent"

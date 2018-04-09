@@ -15,6 +15,8 @@ import com.jhobor.fortune.base.RetrofitCallback;
 import com.jhobor.fortune.utils.BarUtil;
 import com.jhobor.fortune.utils.HideIMEUtil;
 
+import java.net.URLEncoder;
+
 /**
  * Author     Qijing
  * Created by YQJ on 2018/3/27.
@@ -40,8 +42,11 @@ public class FankuiActivity extends AppCompatActivity {
             Toast.makeText(FankuiActivity.this, "请输入您的意见", Toast.LENGTH_SHORT).show();
             return;
         }
+        String encode = URLEncoder.encode(fankui);
+        String encode1 = URLEncoder.encode(URLEncoder.encode(encode));
+
         String uuid = (String) BaseApplication.dataMap.get("token");
-        BaseApplication.iService.feedback(uuid, fankui).enqueue(new RetrofitCallback(getApplicationContext(), new RetrofitCallback.DataParser() {
+        BaseApplication.iService.feedback(uuid, encode1).enqueue(new RetrofitCallback(getApplicationContext(), new RetrofitCallback.DataParser() {
             @Override
             public void parse(String data) {
                 JSONObject jsonObject = JSON.parseObject(data);

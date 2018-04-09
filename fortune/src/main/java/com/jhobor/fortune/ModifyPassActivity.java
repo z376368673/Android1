@@ -67,18 +67,13 @@ public class ModifyPassActivity extends AppCompatActivity implements View.OnClic
                     public void parse(String data) {
                         try {
                             JSONObject jsonObject = new JSONObject(data);
-                            int isLogin = jsonObject.getInt("isLogin");
-                            if (isLogin == 1) {
-                                int msg = jsonObject.getInt("msg");
-                                if (msg == 1) {
-                                    BaseApplication.prefs.edit().remove("token").apply();
-                                    Toast.makeText(ModifyPassActivity.this, "密码修改成功，下次需要重新登录", Toast.LENGTH_LONG).show();
-                                    finish();
-                                } else {
-                                    Toast.makeText(ModifyPassActivity.this, "密码修改失败，可能旧密码错误", Toast.LENGTH_SHORT).show();
-                                }
+                            int msg = jsonObject.getInt("msg");
+                            if (msg == 1) {
+                                BaseApplication.prefs.edit().remove("token").apply();
+                                Toast.makeText(ModifyPassActivity.this, "密码修改成功，下次需要重新登录", Toast.LENGTH_LONG).show();
+                                finish();
                             } else {
-                                Toast.makeText(ModifyPassActivity.this, "账户信息失效，无法获取数据", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(ModifyPassActivity.this, "密码修改失败，可能旧密码错误", Toast.LENGTH_SHORT).show();
                             }
                         } catch (JSONException e) {
                             ErrorUtil.retrofitResponseParseFail(ModifyPassActivity.this, e);

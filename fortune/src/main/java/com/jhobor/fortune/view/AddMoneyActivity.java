@@ -43,10 +43,22 @@ public class AddMoneyActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         if (v == mSubbmit) {
             String trim = mAdd.getText().toString().trim();
+
             if (trim.isEmpty()) {
-                Toast.makeText(this, "输入金额不能为空", Toast.LENGTH_SHORT).show();
+                Toast.makeText(AddMoneyActivity.this, "输入金额不能为空", Toast.LENGTH_SHORT).show();
                 return;
             }
+            int aDouble = Integer.valueOf(trim);
+            if (aDouble < 2000) {
+                Toast.makeText(AddMoneyActivity.this, "输入金额必须是2000元以上", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            if (aDouble % 1000 != 0) {
+                Toast.makeText(AddMoneyActivity.this, "输入金额必须是1000的整数倍", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+
             String uuid = (String) BaseApplication.dataMap.get("token");
 
             BigDecimal b = new BigDecimal(trim);

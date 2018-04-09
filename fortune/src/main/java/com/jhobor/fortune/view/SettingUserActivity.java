@@ -9,7 +9,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.jhobor.fortune.LoginActivity;
-import com.jhobor.fortune.MainActivity;
 import com.jhobor.fortune.ModifyPassActivity;
 import com.jhobor.fortune.R;
 import com.jhobor.fortune.base.BaseApplication;
@@ -73,7 +72,7 @@ public class SettingUserActivity extends AppCompatActivity {
             public void onClick(View v) {
                 DataCleanManager.clearAllCache(SettingUserActivity.this);
                 mCache.setText("0K");
-                Toast.makeText(SettingUserActivity.this, "清楚成功", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SettingUserActivity.this, "清除成功", Toast.LENGTH_SHORT).show();
             }
         });
         mGetout.setOnClickListener(new View.OnClickListener() {
