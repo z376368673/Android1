@@ -75,7 +75,8 @@ public class AddMoneyActivity extends AppCompatActivity implements View.OnClickL
                             mAdd.setText("");
                             finish();
                         } else {
-                            Toast.makeText(AddMoneyActivity.this, "提交失败", Toast.LENGTH_SHORT).show();
+                            String errorInfo = jsonObject.getString("errorInfo");
+                            Toast.makeText(AddMoneyActivity.this, errorInfo, Toast.LENGTH_SHORT).show();
                         }
                     } catch (JSONException e) {
                         e.printStackTrace();

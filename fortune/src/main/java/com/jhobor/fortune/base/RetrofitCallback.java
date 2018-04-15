@@ -28,13 +28,14 @@ public class RetrofitCallback implements Callback<ResponseBody> {
     @Override
     public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
         if (response.body() == null) {
-            parser.parse("{ error :"+response.raw().toString()+" }");
             Log.i(">>", response.raw().toString());
+            parser.parse("{ error :"+response.raw().toString()+" }");
             //Toast.makeText(context, "获取的数据为：null", Toast.LENGTH_SHORT).show();
             return;
         }
         try {
             String data = response.body().string();
+            Log.i(">>", response.raw().toString());
             Log.i(">>", data);
             parser.parse(data);
         } catch (IOException e) {

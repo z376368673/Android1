@@ -16,7 +16,7 @@
             android:layout_height="match_parent"
             android:layout_weight="4"
             android:gravity="left"
-            android:text="【姓名】" />
+            android:text="【帐号】" />
 
         <TextView
             android:id="@+id/joinTime"

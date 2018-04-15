@@ -37,8 +37,7 @@
             android:layout_weight="1"
             android:gravity="center_vertical|left"
             android:padding="5dp"
-            android:text=""
-            android:textColor="@color/black_33" />
+            android:textColor="@color/black_66" />
 
         <TextView
             android:id="@+id/tv_2"
@@ -47,7 +46,6 @@
             android:layout_weight="1"
             android:gravity="center_vertical|right"
             android:padding="5dp"
-            android:text=""
             android:textColor="@color/black_66" />
     </LinearLayout>
 

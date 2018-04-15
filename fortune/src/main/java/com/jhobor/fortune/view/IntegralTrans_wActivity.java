@@ -11,6 +11,7 @@ import com.jhobor.fortune.R;
 import com.jhobor.fortune.base.BaseApplication;
 import com.jhobor.fortune.base.RetrofitCallback;
 import com.jhobor.fortune.utils.BarUtil;
+import com.jhobor.fortune.utils.CheckUtil;
 import com.jhobor.fortune.utils.HideIMEUtil;
 import com.jhobor.fortune.utils.VerifyUtil;
 
@@ -24,7 +25,7 @@ import java.math.BigDecimal;
  * Created by YQJ on 2018/3/30.
  * Description:
  */
-public class IntegralTransActivity extends AppCompatActivity implements View.OnClickListener {
+public class IntegralTrans_wActivity extends AppCompatActivity implements View.OnClickListener {
 
 
     private EditText mMoney;
@@ -35,9 +36,9 @@ public class IntegralTransActivity extends AppCompatActivity implements View.OnC
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_trans);
+        setContentView(R.layout.activity_trans_w);
         HideIMEUtil.wrap(this);
-        BarUtil.topBar(this, "积分转让");
+        BarUtil.topBar(this, "微积分转让");
         integral = getIntent().getDoubleExtra("JF",0);
         mMoney = (EditText) findViewById(R.id.with_draw_et);
         mAccount = (EditText) findViewById(R.id.with_draw_account);
@@ -72,18 +73,17 @@ public class IntegralTransActivity extends AppCompatActivity implements View.OnC
 
             BigDecimal b = new BigDecimal(trim);
             b = b.setScale(2, BigDecimal.ROUND_DOWN);
-            BaseApplication.iService.integralTransfer(uuid, psd, account, b).enqueue(new RetrofitCallback(this, new RetrofitCallback.DataParser() {
+            BaseApplication.iService.calculusTransfer(uuid, psd, account, b).enqueue(new RetrofitCallback(this, new RetrofitCallback.DataParser() {
                 @Override
                 public void parse(String data) {
                     try {
                         JSONObject jsonObject = new JSONObject(data);
                         int msg = (int) jsonObject.opt("msg");
-
                         if (msg == 1) {
-                            Toast.makeText(IntegralTransActivity.this, "提交成功", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(IntegralTrans_wActivity.this, "提交成功", Toast.LENGTH_SHORT).show();
                             finish();
                         } else {
-                            Toast.makeText(IntegralTransActivity.this, jsonObject.getString("errorInfo"), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(IntegralTrans_wActivity.this, jsonObject.getString("errorInfo"), Toast.LENGTH_SHORT).show();
                         }
                     } catch (JSONException e) {
                         e.printStackTrace();

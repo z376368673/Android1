@@ -115,11 +115,16 @@
         <activity android:name=".view.ConnectActivity" />
         <activity android:name=".view.TransactionRecordActivity" />
         <activity android:name=".view.TransListActivity" />
+        <activity android:name=".view.TransJfListActivity" />
+        <activity android:name=".view.TransWjfListActivity" />
+        <activity android:name=".view.TransMoneyListActivity" />
         <activity android:name=".view.SettingUserActivity" />
         <activity android:name=".view.ShareActivity" />
         <activity android:name=".view.AddMoneyActivity" />
         <activity android:name=".view.AccountWithdrawActivity" />
+        <activity android:name=".view.AccountWithdraw_wActivity" />
         <activity android:name=".view.IntegralTransActivity" />
+        <activity android:name=".view.IntegralTrans_wActivity" />
         <activity android:name=".view.AddBankCardActivity" />
 
         <provider

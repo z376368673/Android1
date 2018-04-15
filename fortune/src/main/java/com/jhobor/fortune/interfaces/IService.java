@@ -434,6 +434,14 @@ public interface IService {
      */
     @POST("integralRecord/list")
     Call<ResponseBody> getIntegralList(@Query("uuid") String uuid,@Query("tag") int tag);
+    /**
+     *获取微积分记录
+     * @param uuid
+     * @param tag
+     * @return
+     */
+    @POST("calculusRecord/list")
+    Call<ResponseBody> getalculusRecordList(@Query("uuid") String uuid,@Query("tag") int tag);
 
     @POST("amountRecord/list")
     Call<ResponseBody> getRecordlList(@Query("uuid") String uuid,@Query("tag") int tag);
@@ -443,15 +451,14 @@ public interface IService {
     Call<ResponseBody> addMoney(@Query("uuid") String uuid, @Query("money") double bigDecimal);
 
     /**
-     * 提现界面接口
+     * 积分提现界面接口
      * @param token
      * @return
      */
     @POST("/withdraw/myWithdraw")
     Call<ResponseBody> withdrawMoney(@Query("uuid") String token);
-
     /**
-     * 提现接口
+     * 积分提现接口
      * @param token
      * @param loginPwd
      * @param bankCardId
@@ -464,12 +471,55 @@ public interface IService {
                                      @Query("bankCardId") String bankCardId,
                                      @Query("money") BigDecimal money);
 
+
+    /**
+     * 微积分提现界面接口
+     * @param token
+     * @return
+     */
+    @POST("/calculusWithdraw/myWithdraw")
+    Call<ResponseBody> myWithdraw(@Query("uuid") String token);
+
+    /**
+     * 微积分提现接口
+     * @param token
+     * @param loginPwd
+     * @param bankCardId
+     * @param money
+     * @return
+     */
+    @POST("calculusWithdraw/add")
+    Call<ResponseBody> myWithdrawMoney(@Query("uuid") String token,
+                                     @Query("loginPwd") String loginPwd,
+                                     @Query("bankCardId") String bankCardId,
+                                     @Query("calculus") BigDecimal money);
+
+    /**
+     * 积分转让接口
+     * @param token
+     * @param loginPwd
+     * @param mobile
+     * @param omId
+     * @return
+     */
     @POST("userInfo/integralTransfer")
     Call<ResponseBody> integralTransfer(@Query("uuid") String token,
                                         @Query("loginPwd") String loginPwd,
                                         @Query("mobile") String mobile,
                                         @Query("integral") BigDecimal omId);
-
+    /**
+     * 微积分转让接口
+     * @param token
+     * @param loginPwd
+     * @param mobile
+     * @param omId
+     * @return
+     */
+    @POST("userInfo/calculusTransfer")
+    Call<ResponseBody> calculusTransfer(@Query("uuid") String token,
+                                        @Query("loginPwd") String loginPwd,
+                                        @Query("mobile") String mobile,
+                                        @Query("calculus") BigDecimal omId);
 
 
     /**

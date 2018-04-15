@@ -145,4 +145,56 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@mipmap/line" />
+    <LinearLayout
+        android:id="@+id/ll_wjftixian"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/text"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="微积分提现记录"
+            android:textColor="#0f0f0f" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/item_arrow" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/line" />
+    <LinearLayout
+        android:id="@+id/ll_wjfzhuangrang"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/text"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="微积分转让记录"
+            android:textColor="#0f0f0f" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/item_arrow" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/line" />
 </LinearLayout>

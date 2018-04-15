@@ -32,7 +32,7 @@ import java.util.List;
  * Created by YQJ on 2018/3/30.
  * Description:
  */
-public class AccountWithdrawActivity extends AppCompatActivity implements View.OnClickListener {
+public class AccountWithdraw_wActivity extends AppCompatActivity implements View.OnClickListener {
 
 
     private EditText mMoney;
@@ -50,10 +50,10 @@ public class AccountWithdrawActivity extends AppCompatActivity implements View.O
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_withdraw);
+        setContentView(R.layout.activity_add_withdraw_w);
         context = this;
         HideIMEUtil.wrap(this);
-        BarUtil.topBar(this, "积分提现");
+        BarUtil.topBar(this, "微积分提现");
         integral = getIntent().getDoubleExtra("JF",0);
         mMoney = (EditText) findViewById(R.id.with_draw_et);
         mAccount = (TextView) findViewById(R.id.with_draw_account);
@@ -94,14 +94,11 @@ public class AccountWithdrawActivity extends AppCompatActivity implements View.O
                 Toast.makeText(this, "密码不能为空", Toast.LENGTH_SHORT).show();
                 return;
             }
-
-
             String uuid = (String) BaseApplication.dataMap.get("token");
-
             BigDecimal b = new BigDecimal(trim);
             b = b.setScale(2, BigDecimal.ROUND_DOWN);
             progressDialog = ProgressDialog.show(this, "提现", "提交信息...");
-            BaseApplication.iService.withdrawMoney(uuid, psd, bankId + "", b).enqueue(new RetrofitCallback(this, new RetrofitCallback.DataParser() {
+            BaseApplication.iService.myWithdrawMoney(uuid, psd, bankId + "", b).enqueue(new RetrofitCallback(this, new RetrofitCallback.DataParser() {
                 @Override
                 public void parse(String data) {
                     progressDialog.dismiss();
@@ -109,10 +106,10 @@ public class AccountWithdrawActivity extends AppCompatActivity implements View.O
                         JSONObject jsonObject = new JSONObject(data);
                         int msg = (int) jsonObject.opt("msg");
                         if (msg == 1) {
-                            Toast.makeText(AccountWithdrawActivity.this, "提交成功,等待审核", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AccountWithdraw_wActivity.this, "提交成功,等待审核", Toast.LENGTH_SHORT).show();
                             finish();
                         } else {
-                            Toast.makeText(AccountWithdrawActivity.this, jsonObject.getString("errorInfo"), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AccountWithdraw_wActivity.this, jsonObject.getString("errorInfo"), Toast.LENGTH_SHORT).show();
                         }
                     } catch (JSONException e) {
                         e.printStackTrace();

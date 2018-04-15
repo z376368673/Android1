@@ -21,13 +21,15 @@ import com.jhobor.fortune.utils.HideIMEUtil;
  * Created by YQJ on 2018/3/27.
  * Description:
  */
-public class TransactionRecordActivity extends AppCompatActivity implements View.OnClickListener{
+public class TransactionRecordActivity extends AppCompatActivity implements View.OnClickListener {
 
     private LinearLayout ll_zengzhi;
     private LinearLayout ll_fenhong;
     private LinearLayout ll_jfzengzhangd;
     private LinearLayout ll_jftixian;
     private LinearLayout ll_jfzhuangrang;
+    private LinearLayout ll_wjftixian;
+    private LinearLayout ll_wjfzhuangrang;
 
 
     @Override
@@ -45,8 +47,12 @@ public class TransactionRecordActivity extends AppCompatActivity implements View
         ll_fenhong = (LinearLayout) findViewById(R.id.ll_fenhong);
         ll_jfzengzhangd = (LinearLayout) findViewById(R.id.ll_jfzengzhangd);
         ll_jftixian = (LinearLayout) findViewById(R.id.ll_jftixian);
+        ll_wjftixian = (LinearLayout) findViewById(R.id.ll_wjftixian);
         ll_jfzhuangrang = (LinearLayout) findViewById(R.id.ll_jfzhuangrang);
+        ll_wjfzhuangrang = (LinearLayout) findViewById(R.id.ll_wjfzhuangrang);
         ll_zengzhi.setOnClickListener(this);
+        ll_wjftixian.setOnClickListener(this);
+        ll_wjfzhuangrang.setOnClickListener(this);
         ll_fenhong.setOnClickListener(this);
         ll_jfzengzhangd.setOnClickListener(this);
         ll_jftixian.setOnClickListener(this);
@@ -55,26 +61,34 @@ public class TransactionRecordActivity extends AppCompatActivity implements View
 
     @Override
     public void onClick(View view) {
-        Intent intent = new Intent(this,TransListActivity.class);
-        if (view ==ll_zengzhi){
-            intent.putExtra("Tag",0);
-            intent.putExtra("Type",0);
+        Intent intent;
+        if (view == ll_zengzhi) {
+            intent = new Intent(this, TransMoneyListActivity.class);
+            intent.putExtra("Tag", 0);
             startActivity(intent);
-        }else if (view ==ll_fenhong){
-            intent.putExtra("Tag",1);
-            intent.putExtra("Type",0);
+        } else if (view == ll_fenhong) {
+            intent = new Intent(this, TransMoneyListActivity.class);
+            intent.putExtra("Tag", 1);
             startActivity(intent);
-        }else if (view ==ll_jfzengzhangd){
-            intent.putExtra("Tag",0);
-            intent.putExtra("Type",1);
+        } else if (view == ll_jfzengzhangd) {
+            intent = new Intent(this, TransJfListActivity.class);
+            intent.putExtra("Tag", 0);
             startActivity(intent);
-        }else if (view ==ll_jftixian){
-            intent.putExtra("Tag",1);
-            intent.putExtra("Type",1);
+        } else if (view == ll_jftixian) {
+            intent = new Intent(this, TransJfListActivity.class);
+            intent.putExtra("Tag", 1);
             startActivity(intent);
-        }else if (view ==ll_jfzhuangrang){
-            intent.putExtra("Tag",2);
-            intent.putExtra("Type",1);
+        } else if (view == ll_jfzhuangrang) {
+            intent = new Intent(this, TransJfListActivity.class);
+            intent.putExtra("Tag", 2);
+            startActivity(intent);
+        } else if (view == ll_wjftixian) {
+            intent = new Intent(this, TransWjfListActivity.class);
+            intent.putExtra("Tag", 1);
+            startActivity(intent);
+        } else if (view == ll_wjfzhuangrang) {
+            intent = new Intent(this, TransWjfListActivity.class);
+            intent.putExtra("Tag", 0);
             startActivity(intent);
         }
     }
