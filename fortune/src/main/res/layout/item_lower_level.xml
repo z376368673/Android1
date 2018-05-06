@@ -8,46 +8,42 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="15dp">
+        >
 
         <TextView
-            android:id="@+id/name"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="4"
-            android:gravity="left"
-            android:text="【帐号】" />
+            android:id="@+id/tv_name"
+            style="@style/textName"
+            android:text="姓名" />
 
         <TextView
-            android:id="@+id/joinTime"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="4"
-            android:text="【帐号】"
-            android:visibility="gone" />
+            android:id="@+id/tv_account"
+            style="@style/textAccount"
+            android:text="账号" />
 
         <TextView
-            android:id="@+id/capital"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:gravity="right"
-            android:text="0"
-            android:textColor="@color/tabActived" />
+            android:id="@+id/tv_investment"
+            style="@style/textInvestment"
+            android:text="投资额" />
 
         <TextView
-            android:id="@+id/profit"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:text="0"
-            android:textAlignment="center"
-            android:textColor="@color/tabActived"
-            android:visibility="gone" />
+            android:id="@+id/tv_date"
+            style="@style/textDate"
+            android:text="注册时间" />
+
+        <TextView
+            android:id="@+id/tv_activated"
+            style="@style/textActivated"
+            android:text="已激活数" />
+
+        <TextView
+            android:id="@+id/tv_unactivated"
+            style="@style/textUnActivated"
+            android:text="未激活数" />
+
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="@color/blue_5e" />
+        android:background="@color/textHint" />
 </LinearLayout>

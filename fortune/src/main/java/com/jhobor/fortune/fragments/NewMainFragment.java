@@ -27,8 +27,14 @@ public class NewMainFragment extends Fragment {
     private TextView mGuquan;
     private TextView mFenhong;
     private TextView mTotal_fee;
-    private TextView mFen_new;
-    private TextView mMost_high;
+    //租车积分
+    private TextView fen_new;
+    private TextView most_high;
+
+    //报单积分
+    private TextView fen_new_bd;
+    private TextView most_high_bd;
+
     private TextView mMain_content;
     private TextView mContent_date;
     private double mCapital;
@@ -49,8 +55,13 @@ public class NewMainFragment extends Fragment {
         mGuquan = (TextView) mView.findViewById(R.id.guquan);
         mFenhong = (TextView) mView.findViewById(R.id.fenhong);
         mTotal_fee = (TextView) mView.findViewById(R.id.total_fee);
-        mFen_new = (TextView) mView.findViewById(R.id.fen_new);
-        mMost_high = (TextView) mView.findViewById(R.id.most_high);
+
+        fen_new = (TextView) mView.findViewById(R.id.fen_new);
+        most_high = (TextView) mView.findViewById(R.id.most_high);
+
+        fen_new_bd = (TextView) mView.findViewById(R.id.fen_new_bd);
+        most_high_bd = (TextView) mView.findViewById(R.id.most_high_bd);
+
         mMain_content = (TextView) mView.findViewById(R.id.main_content);
         mContent_date = (TextView) mView.findViewById(R.id.content_date);
 
@@ -79,12 +90,17 @@ public class NewMainFragment extends Fragment {
                     mStatus = news.getInt("status");
 
                     mGuquan.setText(mCapital + "");
+                    mFenhong.setText(mDividend + "");
                     mTotal_fee.setText(mTotalRevenue + "");
                     mMain_content.setText("    " + mContent);
                     mContent_date.setText(mCreateDate);
-                    mFen_new.setText(mNewsRevenue + "");
-                    mMost_high.setText(mMaxRevenue + "");
-                    mFenhong.setText(mDividend + "");
+
+
+                    fen_new.setText(mNewsRevenue + "");
+                    most_high.setText(mMaxRevenue + "");
+
+                    fen_new_bd.setText(mNewsRevenue + "");
+                    most_high_bd.setText(mMaxRevenue + "");
 
                 } catch (JSONException e) {
                     e.printStackTrace();

@@ -1,1 +1,1 @@
-include ':ddc', ':fortune', ':apptest', ':shot', ':zzb'
+include ':fortune'

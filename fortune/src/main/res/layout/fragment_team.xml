@@ -62,90 +62,68 @@
 
     </RelativeLayout>
 
-    <LinearLayout
-        android:id="@+id/one_ll"
+    <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:visibility="visible">
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_gravity="center_horizontal"
-            android:background="#AEA387" />
+        android:scrollbarSize="0dp"
+        android:scrollbars="none">
 
         <LinearLayout
-            android:id="@+id/team_ll1"
+            android:id="@+id/one_ll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="@dimen/padding">
+            android:visibility="visible">
 
             <LinearLayout
+                android:id="@+id/team_ll1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="0dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"
                     android:layout_marginLeft="10dp"
-                    android:text="帐号"
-                    android:gravity="left"
-                     />
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="0dp"
+                    <TextView
+                        style="@style/textName"
+                        android:text="姓名" />
+
+                    <TextView
+                        style="@style/textAccount"
+                        android:text="账号" />
+
+                    <TextView
+                        style="@style/textInvestment"
+                        android:text="投资额" />
+
+                    <TextView
+                        style="@style/textDate"
+                        android:text="注册时间" />
+
+                    <TextView
+                        style="@style/textActivated"
+                        android:text="已激活数" />
+
+                    <TextView
+                        style="@style/textActivated"
+                        android:text="未激活数" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="4"
-                    android:text="帐号"
-                    android:textAlignment="center"
-                    android:visibility="gone" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:text="理财金额"
-
-                    android:textAlignment="center"
-                    android:visibility="gone" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:text="总金额"
-                    android:textAlignment="center"
-                    android:visibility="gone" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:text="投资额"
-                    android:gravity="right"
-                     />
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:minHeight="60dp" />
             </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="@dimen/padding"
-                android:background="#AEA387"
-                android:visibility="gone" />
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recyclerView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="60dp" />
         </LinearLayout>
-    </LinearLayout>
-
+    </HorizontalScrollView>
     <RelativeLayout
         android:id="@+id/twoBox"
         android:layout_width="match_parent"
@@ -187,7 +165,11 @@
             android:textSize="18sp"
             android:visibility="invisible" />
     </RelativeLayout>
-
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarSize="0dp"
+        android:scrollbars="none">
     <LinearLayout
         android:id="@+id/two_ll"
         android:layout_width="match_parent"
@@ -266,69 +248,48 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="@dimen/padding">
-
+            >
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:text="帐号"
-                    android:layout_marginLeft="10dp"
-                    android:gravity="left"
-                     />
+                    style="@style/textName"
+                    android:text="姓名" />
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="4"
-                    android:text="帐号"
-                    android:textAlignment="center"
-                    android:visibility="gone" />
+                    style="@style/textAccount"
+                    android:text="账号" />
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:text="理财金额"
-                    android:textAlignment="center"
-
-                    android:visibility="gone" />
+                    style="@style/textInvestment"
+                    android:text="投资额" />
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:text="总金额"
-                    android:textAlignment="center"
-                    android:visibility="gone" />
+                    style="@style/textDate"
+                    android:text="注册时间" />
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:text="投资额"
-                    android:gravity="right"
-                     />
+                    style="@style/textActivated"
+                    android:text="已激活数" />
+
+                <TextView
+                    style="@style/textActivated"
+                    android:text="未激活数" />
+
             </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="@dimen/padding"
-                android:background="#AEA387"
-                android:visibility="gone" />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recyclerView1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:minHeight="60dp" />
         </LinearLayout>
     </LinearLayout>
+    </HorizontalScrollView>
 </LinearLayout>

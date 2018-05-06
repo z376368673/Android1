@@ -143,35 +143,7 @@ public class TeamFragment extends Fragment implements View.OnClickListener {
                             list2.add(new LowerLevel(mobile, capital));
                         }
                         lowerList.put(1, list2);
-/*
-                        childrenCount = jsonObject.getInt("childrenCount");
-                        grandsonCount = jsonObject.getInt("grandsonCount");
-                        JSONArray childrenList = jsonObject.getJSONArray("childrenList");
-                        JSONArray grandsonList = jsonObject.getJSONArray("grandsonList");
-                        List<LowerLevel> list = new ArrayList<>();
-                        for (int i = 0; i < childrenCount; i++) {
-                            JSONArray jsonArray = childrenList.getJSONArray(i);
-                            int id = jsonArray.getInt(0);
-                            String name = jsonArray.getString(1);
-                            String time = jsonArray.getString(2);
-                            float capital = (float) jsonArray.getDouble(3);
-                            float profit = (float) jsonArray.getDouble(4);//金额
-                            list.add(new LowerLevel(id, name, time, capital, profit));
-                        }
 
-                        List<LowerLevel> list2 = new ArrayList<>();
-                        for (int i = 0; i < grandsonCount; i++) {
-                            JSONArray jsonArray = grandsonList.getJSONArray(i);
-                            int id = jsonArray.getInt(0);
-                            String name = jsonArray.getString(1);
-                            String time = jsonArray.getString(2);
-                            float capital = (float) jsonArray.getDouble(3);//总金融
-                            float profit = (float) jsonArray.getDouble(4);//金额
-                            list2.add(new LowerLevel(id, name, time, capital, profit));
-                        }
-                        lowerList.put(1, list2);
-                        //lowerAdapter = new LowerAdapter(R.layout.item_lower_level, lowerList.get(tab));
-*/
                         List<LowerLevel> lowerLevels = lowerList.get(0);
                         if (lowerLevels.size() > 0){
                             ll1.setVisibility(View.VISIBLE);

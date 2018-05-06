@@ -17,8 +17,8 @@ import retrofit2.Retrofit;
 
 public class BaseApplication extends Application {
     //public static final String BASE_URL = "http://123.1.180.243/fortuneUsb/";// http://119.23.231.252/fortune/   http://192.168.0.101:8080/fortuneUsb/
-    public static final String BASE_URL = "http://192.168.1.14:8080/rentalcarUsb/";//    http://192.168.0.101:8080/fortuneUsb/
-    //public static final String BASE_URL = "http://tz.1yuanpf.com/rentalcarUsb/";//    http://192.168.0.101:8080/fortuneUsb/
+    // public static final String BASE_URL = "http://192.168.1.14:8080/rentalcarUsb/";//    http://192.168.0.101:8080/fortuneUsb/
+    public static final String BASE_URL = "http://tz.1yuanpf.com/rentalcarUsb/";//    http://192.168.0.101:8080/fortuneUsb/
 
     public static Map<String, Object> dataMap = new HashMap<>();
     public static SharedPreferences prefs;
