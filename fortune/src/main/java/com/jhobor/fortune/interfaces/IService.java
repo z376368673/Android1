@@ -30,7 +30,7 @@ public interface IService {
      */
     @FormUrlEncoded
     @POST("userInfo/register")
-    Call<ResponseBody> register(@Field("mobile") String mobile, @Field("loginPwd") String loginPwd, /*@Field("name") String name,*/ @Field("phone") String phone);
+    Call<ResponseBody> register(@Field("name") String name,@Field("mobile") String mobile, @Field("loginPwd") String loginPwd, @Field("phone") String phone);
 
     /**
      * 登录
