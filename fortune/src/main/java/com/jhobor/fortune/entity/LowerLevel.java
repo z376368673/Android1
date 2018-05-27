@@ -8,32 +8,12 @@ public class LowerLevel {
     private int id;
     private String name;
     private String mobile;
-    private String joinTime;
     private float capital;
-    private float profit;
+    private String activate;
+    private String inactive;
+    private String createDate;
 
     public LowerLevel() {
-    }
-
-    public LowerLevel(String mobile, float capital) {
-        this.mobile = mobile;
-        this.capital = capital;
-    }
-
-    public LowerLevel(int id, String name, String joinTime, float capital, float profit) {
-        this.id = id;
-        this.name = name;
-        this.joinTime = joinTime;
-        this.capital = capital;
-        this.profit = profit;
-    }
-
-    public String getMobile() {
-        return mobile;
-    }
-
-    public void setMobile(String mobile) {
-        this.mobile = mobile;
     }
 
     public int getId() {
@@ -52,12 +32,12 @@ public class LowerLevel {
         this.name = name;
     }
 
-    public String getJoinTime() {
-        return joinTime;
+    public String getMobile() {
+        return mobile;
     }
 
-    public void setJoinTime(String joinTime) {
-        this.joinTime = joinTime;
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
     }
 
     public float getCapital() {
@@ -68,22 +48,27 @@ public class LowerLevel {
         this.capital = capital;
     }
 
-    public float getProfit() {
-        return profit;
+    public String getActivate() {
+        return activate;
     }
 
-    public void setProfit(float profit) {
-        this.profit = profit;
+    public void setActivate(String activate) {
+        this.activate = activate;
     }
 
-    @Override
-    public String toString() {
-        return "LowerLevel{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", joinTime='" + joinTime + '\'' +
-                ", capital=" + capital +
-                ", profit=" + profit +
-                '}';
+    public String getInactive() {
+        return inactive;
+    }
+
+    public void setInactive(String inactive) {
+        this.inactive = inactive;
+    }
+
+    public String getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(String createDate) {
+        this.createDate = createDate;
     }
 }

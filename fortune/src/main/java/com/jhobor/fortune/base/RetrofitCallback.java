@@ -3,6 +3,7 @@ package com.jhobor.fortune.base;
 import android.content.Context;
 import android.util.Log;
 
+import com.jhobor.fortune.dialog.LoadingDialog;
 import com.jhobor.fortune.utils.ErrorUtil;
 
 import java.io.IOException;
@@ -19,10 +20,10 @@ import retrofit2.Response;
 public class RetrofitCallback implements Callback<ResponseBody> {
     private Context context;
     private DataParser parser;
-
     public RetrofitCallback(Context context, DataParser parser) {
         this.context = context;
         this.parser = parser;
+
     }
 
     @Override
@@ -47,6 +48,7 @@ public class RetrofitCallback implements Callback<ResponseBody> {
 
     @Override
     public void onFailure(Call<ResponseBody> call, Throwable t) {
+        parser.parse("{ error : onFailure }");
         Log.i(">>", t.getMessage());
         ErrorUtil.retrofitGetDataFail(context, t);
     }

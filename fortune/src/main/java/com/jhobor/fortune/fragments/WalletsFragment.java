@@ -11,7 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.jhobor.fortune.R;
-import com.jhobor.fortune.WalletsDetailsActivity;
+import com.jhobor.fortune.oldui.WalletsDetailsActivity;
 import com.jhobor.fortune.base.BaseApplication;
 import com.jhobor.fortune.base.RetrofitCallback;
 import com.jhobor.fortune.utils.ErrorUtil;

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.jhobor.fortune.fragments.TeamFragment">
+    tools:context="com.jhobor.fortune.ui.fragment.TeamFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="20dp"
-            android:text="一级"
+            android:text="直推"
             android:textColor="@color/black"
             android:textSize="18sp" />
 
@@ -138,9 +138,10 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="20dp"
-            android:text="二级"
+            android:text="间推"
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:id="@+id/textView6" />
 
         <ImageView
             android:id="@+id/down_two"
@@ -164,6 +165,17 @@
             android:textColor="@color/tabActived"
             android:textSize="18sp"
             android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView6"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/textView6"
+            android:layout_marginBottom="232dp"
+            android:text="直推"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
     </RelativeLayout>
     <HorizontalScrollView
         android:layout_width="match_parent"

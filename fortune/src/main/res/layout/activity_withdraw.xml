@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@mipmap/page_bg"
     android:orientation="vertical"
-    tools:context="com.jhobor.fortune.WithdrawActivity">
+    tools:context="com.jhobor.fortune.oldui.WithdrawActivity">
 
     <include layout="@layout/bar_top" />
 

@@ -37,9 +37,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@mipmap/line" />
-
     <LinearLayout
-        android:id="@+id/ll_fenhong"
+        android:id="@+id/layout_zcjf"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/text"
@@ -51,7 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_weight="1"
-            android:text="日分红记录"
+            android:text="租车业绩积分记录"
             android:textColor="#0f0f0f" />
 
         <ImageView
@@ -66,7 +65,7 @@
         android:src="@mipmap/line" />
 
     <LinearLayout
-        android:id="@+id/ll_jfzengzhangd"
+        android:id="@+id/layout_dsjf"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/text"
@@ -78,61 +77,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_weight="1"
-            android:text="积分增长记录"
-            android:textColor="#0f0f0f" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/item_arrow" />
-    </LinearLayout>
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/line" />
-
-    <LinearLayout
-        android:id="@+id/ll_jftixian"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/text"
-        android:gravity="center_vertical"
-        android:padding="@dimen/padding">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_weight="1"
-            android:text="积分提现记录"
-            android:textColor="#0f0f0f" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/item_arrow" />
-    </LinearLayout>
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/line" />
-
-    <LinearLayout
-        android:id="@+id/ll_jfzhuangrang"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/text"
-        android:gravity="center_vertical"
-        android:padding="@dimen/padding">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_weight="1"
-            android:text="积分转让记录"
+            android:text="电商积分记录"
             android:textColor="#0f0f0f" />
 
         <ImageView
@@ -146,7 +91,7 @@
         android:layout_height="wrap_content"
         android:src="@mipmap/line" />
     <LinearLayout
-        android:id="@+id/ll_wjftixian"
+        android:id="@+id/layout_fwjf"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/text"
@@ -158,7 +103,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_weight="1"
-            android:text="微积分提现记录"
+            android:text="服务积分记录"
             android:textColor="#0f0f0f" />
 
         <ImageView
@@ -171,30 +116,166 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@mipmap/line" />
-    <LinearLayout
-        android:id="@+id/ll_wjfzhuangrang"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/text"
-        android:gravity="center_vertical"
-        android:padding="@dimen/padding">
+    <!--<LinearLayout-->
+        <!--android:id="@+id/ll_fenhong"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:background="@color/text"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:padding="@dimen/padding">-->
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_weight="1"
-            android:text="微积分转让记录"
-            android:textColor="#0f0f0f" />
+        <!--<TextView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="日分红记录"-->
+            <!--android:textColor="#0f0f0f" />-->
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/item_arrow" />
-    </LinearLayout>
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@mipmap/item_arrow" />-->
+    <!--</LinearLayout>-->
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/line" />
+    <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@mipmap/line" />-->
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/ll_jfzengzhangd"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:background="@color/text"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:padding="@dimen/padding">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="积分增长记录"-->
+            <!--android:textColor="#0f0f0f" />-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@mipmap/item_arrow" />-->
+    <!--</LinearLayout>-->
+
+    <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@mipmap/line" />-->
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/ll_jftixian"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:background="@color/text"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:padding="@dimen/padding">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="积分提现记录"-->
+            <!--android:textColor="#0f0f0f" />-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@mipmap/item_arrow" />-->
+    <!--</LinearLayout>-->
+
+    <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@mipmap/line" />-->
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/ll_jfzhuangrang"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:background="@color/text"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:padding="@dimen/padding">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="积分转让记录"-->
+            <!--android:textColor="#0f0f0f" />-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@mipmap/item_arrow" />-->
+    <!--</LinearLayout>-->
+
+    <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@mipmap/line" />-->
+    <!--<LinearLayout-->
+        <!--android:id="@+id/ll_wjftixian"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:background="@color/text"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:padding="@dimen/padding">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="微积分提现记录"-->
+            <!--android:textColor="#0f0f0f" />-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@mipmap/item_arrow" />-->
+    <!--</LinearLayout>-->
+
+    <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@mipmap/line" />-->
+    <!--<LinearLayout-->
+        <!--android:id="@+id/ll_wjfzhuangrang"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:background="@color/text"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:padding="@dimen/padding">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="微积分转让记录"-->
+            <!--android:textColor="#0f0f0f" />-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@mipmap/item_arrow" />-->
+    <!--</LinearLayout>-->
+
+    <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@mipmap/line" />-->
+
+
+
 </LinearLayout>

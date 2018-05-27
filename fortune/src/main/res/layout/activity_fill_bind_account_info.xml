@@ -8,7 +8,7 @@
     android:paddingBottom="@dimen/padding"
     android:paddingLeft="@dimen/padding"
     android:paddingRight="@dimen/padding"
-    tools:context="com.jhobor.fortune.FillBindAccountInfoActivity">
+    tools:context="com.jhobor.fortune.oldui.FillBindAccountInfoActivity">
 
     <RelativeLayout
 

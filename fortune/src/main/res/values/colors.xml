@@ -5,14 +5,18 @@
     <color name="colorPrimaryDark">#3F4347</color>
     <color name="colorAccent">#BBBBBB</color>
 
+    <color name="transparent">#00000000</color>
+    <color name="transparent_5">#88000000</color>
+
     <color name="tabNormal">#666666</color>
     <color name="tabActived">#FF2D4B</color>
     <color name="text">#FFFFFF</color>
     <color name="textHint">#CCCCCC</color>
     <color name="pageBg">#F5F5F5</color>
+    <color name="pageBge">#eeeeee</color>
 
     <color name="white">#FFFFFF</color>
-    <color name="red">#FF0000</color>
+    <color name="red">#FF2D4B</color>
     <color name="green">@android:color/holo_green_dark</color>
     <color name="black">#000000</color>
     <color name="black_33">#333333</color>

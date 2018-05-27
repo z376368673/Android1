@@ -26,7 +26,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".LoginActivity"
+            android:name=".ui.LoginActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,73 +35,73 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".RegActivity"
+            android:name=".ui.RegActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ForgetActivity"
+            android:name=".oldui.ForgetActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ResetActivity"
+            android:name=".oldui.ResetActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".FinanceDetailsActivity"
+            android:name=".oldui.FinanceDetailsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".WalletsDetailsActivity"
+            android:name=".oldui.WalletsDetailsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ReceiptWayActivity"
+            android:name=".oldui.ReceiptWayActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".TradeRecordActivity"
+            android:name=".oldui.TradeRecordActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".WithdrawRecordActivity"
+            android:name=".oldui.WithdrawRecordActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ModifyPassActivity"
+            android:name=".oldui.ModifyPassActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".WithdrawActivity"
+            android:name=".oldui.WithdrawActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ManagePropertyActivity"
+            android:name=".oldui.ManagePropertyActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".FillBindAccountInfoActivity"
+            android:name=".oldui.FillBindAccountInfoActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".BrowserActivity"
+            android:name=".oldui.BrowserActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".TradeDetailsActivity"
+            android:name=".oldui.TradeDetailsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".GiveHandActivity"
+            android:name=".oldui.GiveHandActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".GetHandActivity"
+            android:name=".oldui.GetHandActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".BalanceDetailsActivity"
+            android:name=".oldui.BalanceDetailsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".FreezeDetailsActivity"
+            android:name=".oldui.FreezeDetailsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".TradeRecordHelpActivity"
+            android:name=".oldui.TradeRecordHelpActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".BoodingDetailsActivity"
+            android:name=".oldui.BoodingDetailsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".BoodingCoinActivity"
+            android:name=".oldui.BoodingCoinActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ChooseActivity"
+            android:name=".oldui.ChooseActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".fragments.JiHuomaActivity"
@@ -109,23 +109,45 @@
         <activity
             android:name=".fragments.DynamicBoxActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".view.MyAccountActivity" />
-        <activity android:name=".view.GridManagerActivity" />
-        <activity android:name=".view.FankuiActivity" />
-        <activity android:name=".view.ConnectActivity" />
-        <activity android:name=".view.TransactionRecordActivity" />
-        <activity android:name=".view.TransListActivity" />
-        <activity android:name=".view.TransJfListActivity" />
-        <activity android:name=".view.TransWjfListActivity" />
-        <activity android:name=".view.TransMoneyListActivity" />
-        <activity android:name=".view.SettingUserActivity" />
-        <activity android:name=".view.ShareActivity" />
-        <activity android:name=".view.AddMoneyActivity" />
-        <activity android:name=".view.AccountWithdrawActivity" />
-        <activity android:name=".view.AccountWithdraw_wActivity" />
-        <activity android:name=".view.IntegralTransActivity" />
-        <activity android:name=".view.IntegralTrans_wActivity" />
-        <activity android:name=".view.AddBankCardActivity" />
+        <activity android:name=".ui.MyAccountActivity" />
+        <activity android:name=".ui.GridManagerActivity" />
+        <activity android:name=".ui.FankuiActivity" />
+        <activity android:name=".ui.ConnectActivity" />
+        <activity android:name=".ui.TransactionRecordActivity" />
+        <activity android:name=".oldui.TransListActivity" />
+        <activity android:name=".oldui.TransJfListActivity" />
+        <activity android:name=".oldui.TransWjfListActivity" />
+        <activity android:name=".oldui.TransMoneyListActivity" />
+        <activity android:name=".ui.SettingUserActivity" />
+        <activity android:name=".ui.ShareActivity" />
+        <activity android:name=".ui.ShareProductActivity" />
+        <activity android:name=".oldui.AddMoneyActivity" />
+        <activity android:name=".ui.AccountWithdrawActivity" />
+        <activity android:name=".ui.IntegralTransActivity" />
+        <activity android:name=".oldui.AddBankCardActivity" />
+
+        <activity
+            android:name=".ui.ReportCenterApplyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ReportCenterApplyingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ReportCenterActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.ReportRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.TeamDetailedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.TeamSubordinateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.IntegralRecordActivity"
+            android:screenOrientation="portrait" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"

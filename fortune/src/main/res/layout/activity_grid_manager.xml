@@ -30,7 +30,7 @@
                 android:layout_marginTop="30dp"
                 android:text="0.0"
                 android:textColor="#f00"
-                android:textSize="36sp"/>
+                android:textSize="28sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -38,7 +38,7 @@
                 android:layout_marginTop="16dp"
                 android:text="租车业绩积分"
                 android:textColor="#999"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -47,7 +47,7 @@
                 android:layout_marginTop="5dp"
                 android:text="(满500分可以提现)"
                 android:textColor="#999"
-                android:textSize="18sp"/>
+                android:textSize="14sp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="0dp"
@@ -64,24 +64,59 @@
                 android:layout_marginTop="30dp"
                 android:text="0.0"
                 android:textColor="#f00"
-                android:textSize="36sp"/>
+                android:textSize="28sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="租车微积分"
+                android:text="电商积分"
                 android:textColor="#999"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:layout_marginTop="5dp"
-                android:text="(满30分可以提现)"
+                android:text="(满500分可以提现)"
                 android:textColor="#999"
-                android:textSize="18sp"/>
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/account_bd_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="0.0"
+                android:textColor="#f00"
+                android:textSize="28sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="服务积分"
+                android:textColor="#999"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="5dp"
+                android:text="(满500分可以提现)"
+                android:textColor="#999"
+                android:textSize="14sp"/>
         </LinearLayout>
 
     </LinearLayout>
@@ -138,22 +173,22 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="12dp"
         android:layout_gravity="center_horizontal"
         android:background="#f3f3f3"/>
 
     <RelativeLayout
         android:id="@+id/rl_trade_record"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:background="#fff"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="5dp"
+            android:layout_height="wrap_content"
             android:gravity="center_vertical"
+            android:padding="15dp"
             android:text="交易记录"/>
 
         <ImageView

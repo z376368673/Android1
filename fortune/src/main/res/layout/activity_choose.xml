@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/page_bg"
-    tools:context="com.jhobor.fortune.ChooseActivity">
+    tools:context="com.jhobor.fortune.oldui.ChooseActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

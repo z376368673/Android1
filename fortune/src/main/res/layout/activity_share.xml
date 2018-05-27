@@ -19,7 +19,7 @@
             android:layout_centerVertical="true"
             android:padding="10dp"
             android:src="@mipmap/ic_share"
-            android:visibility="gone" />
+             />
 
     </RelativeLayout>
 

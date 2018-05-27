@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@mipmap/bg1"
     android:orientation="vertical"
-    tools:context="com.jhobor.fortune.TradeRecordHelpActivity">
+    tools:context="com.jhobor.fortune.oldui.TradeRecordHelpActivity">
 
     <include layout="@layout/bar_top" />
 

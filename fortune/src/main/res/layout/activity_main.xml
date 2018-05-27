@@ -5,7 +5,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                tools:context="com.jhobor.fortune.MainActivity">
+                tools:context="com.jhobor.fortune.ui.MainActivity">
 
     <view
         android:background="#fff"

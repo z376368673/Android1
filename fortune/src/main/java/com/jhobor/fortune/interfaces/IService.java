@@ -81,6 +81,17 @@ public interface IService {
     Call<ResponseBody> myLower(@Query("uuid") String token);
 
     /**
+     * 我的团队
+     * 查询下级团队
+     * @param token
+     * @return http://tz.1yuanpf.com/rentalcarUsb/groupInfo/myGroupInfo
+     */
+    @POST("groupInfo/queryLowerLevel.do")
+    Call<ResponseBody> queryLowerLevel(@Query("uuid") String token,@Query("mobile") String mobile);
+
+
+
+    /**
      * 钱包金额及下线金额
      *
      * @param token
@@ -443,6 +454,13 @@ public interface IService {
     @POST("calculusRecord/list")
     Call<ResponseBody> getalculusRecordList(@Query("uuid") String uuid,@Query("tag") int tag);
 
+
+
+
+
+
+
+
     @POST("amountRecord/list")
     Call<ResponseBody> getRecordlList(@Query("uuid") String uuid,@Query("tag") int tag);
 
@@ -450,13 +468,6 @@ public interface IService {
     @POST("userInfo/addCapital")
     Call<ResponseBody> addMoney(@Query("uuid") String uuid, @Query("money") double bigDecimal);
 
-    /**
-     * 积分提现界面接口
-     * @param token
-     * @return
-     */
-    @POST("/withdraw/myWithdraw")
-    Call<ResponseBody> withdrawMoney(@Query("uuid") String token);
     /**
      * 积分提现接口
      * @param token
@@ -471,17 +482,8 @@ public interface IService {
                                      @Query("bankCardId") String bankCardId,
                                      @Query("money") BigDecimal money);
 
-
     /**
-     * 微积分提现界面接口
-     * @param token
-     * @return
-     */
-    @POST("/calculusWithdraw/myWithdraw")
-    Call<ResponseBody> myWithdraw(@Query("uuid") String token);
-
-    /**
-     * 微积分提现接口
+     * 电商积分提现接口
      * @param token
      * @param loginPwd
      * @param bankCardId
@@ -493,6 +495,20 @@ public interface IService {
                                      @Query("loginPwd") String loginPwd,
                                      @Query("bankCardId") String bankCardId,
                                      @Query("calculus") BigDecimal money);
+
+    /**
+     * 服务积分提现接口
+     * @param token
+     * @param loginPwd
+     * @param bankCardId
+     * @param money
+     * @return
+     */
+    @POST("billWithdraw/add")
+    Call<ResponseBody> ReportWithdrawMoney(@Query("uuid") String token,
+                                       @Query("loginPwd") String loginPwd,
+                                       @Query("bankCardId") String bankCardId,
+                                       @Query("billIntegral") BigDecimal money);
 
     /**
      * 积分转让接口
@@ -520,6 +536,20 @@ public interface IService {
                                         @Query("loginPwd") String loginPwd,
                                         @Query("mobile") String mobile,
                                         @Query("calculus") BigDecimal omId);
+
+    /**
+     * 服务分转让接口
+     * @param token
+     * @param loginPwd
+     * @param mobile
+     * @param omId
+     * @return
+     */
+    @POST("userInfo/billIntegralTransfer")
+    Call<ResponseBody> reportTransfer(@Query("uuid") String token,
+                                        @Query("loginPwd") String loginPwd,
+                                        @Query("mobile") String mobile,
+                                        @Query("billIntegral") BigDecimal omId);
 
 
     /**
@@ -550,6 +580,14 @@ public interface IService {
                                @Query("content") String content);
 
     /***
+     * 分享产品界面的接口
+     * @param token
+     * @return
+     */
+    @POST("product/list")
+    Call<ResponseBody> shareProduct(@Query("uuid") String token);
+
+    /***
      * 分享界面的接口
      * @param token
      * @return
@@ -559,8 +597,105 @@ public interface IService {
 
 
 
-
     @Multipart
     @POST("userInfo/updateImg")
     Call<ResponseBody> uploadheadImg(@Part List<MultipartBody.Part> partList);
+
+
+
+    /**
+     * 查询服务中心的状态
+     *
+     * @param token
+     * @return   status：msg为1时返回，判断状态0.不是，1.是，2审核中
+     */
+    @POST("billCenter/isBillCenter")
+    Call<ResponseBody> isBillCenter(@Query("uuid") String token);
+
+    /**
+     * 服务中心 获取下属数量和投资金额
+     *
+     * @param token
+     * @return http://tz.1yuanpf.com/rentalcarUsb/groupInfo/myGroupInfo
+     */
+    @POST("billCenter/application")
+    Call<ResponseBody> applyChecked(@Query("uuid") String token);
+
+    /**
+     * 申请加入服务中心
+     *
+     * @param token
+     * @return http://tz.1yuanpf.com/rentalcarUsb/groupInfo/myGroupInfo
+     */
+    @POST("billCenter/add")
+    Call<ResponseBody> applyAdd(@Query("uuid") String token);
+
+
+    /**
+     * 服务中心首页
+     *
+     * @param token
+     * @return
+     */
+    @POST("billCenter/billCenterHome")
+    Call<ResponseBody> billCenterHome(@Query("uuid") String token);
+
+
+    /**
+     * 服务中心首页之旗下服务中心
+     *
+     * @param token
+     * @return
+     */
+    @POST("billCenter/childBillCenter")
+    Call<ResponseBody> childBillCenter(@Query("uuid") String token);
+
+
+    /**
+     * 服务中心首页之非服务中心
+     *
+     * @param token
+     * @return
+     */
+    @POST("billCenter/notBillCenter")
+    Call<ResponseBody> notBillCenter(@Query("uuid") String token);
+
+
+    /**
+     * 服务中心-服务积分增长记录
+     *
+     * @param token
+     * @return
+     */
+    @POST("billCenter/billIntegralRecord")
+    Call<ResponseBody> billIntegralRecord(@Query("uuid") String token);
+
+
+    /**
+     *  团队投资明细-增资记录
+     *
+     * @param token
+     * @return
+     */
+    @POST("billCenter/groupInvestRecord")
+    Call<ResponseBody> groupInvestRecord(@Query("uuid") String token);
+
+    /**
+     *  团队投资明细-未投资记录
+     *
+     * @param token
+     * @return
+     */
+    @POST("billCenter/noInvestRecord")
+    Call<ResponseBody> noInvestRecord(@Query("uuid") String token);
+
+    /**
+     *获取服务积分记录
+     * @param uuid
+     * @param tag
+     * @return
+     */
+    @POST("billIntegralRecord/list")
+    Call<ResponseBody> billIntegralRecord(@Query("uuid") String uuid,@Query("tag") int tag);
+
 }

@@ -118,7 +118,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="租车微积分"
+                            android:text="电商积分"
                             android:textColor="#ffffff"
                             android:textSize="18sp" />
                     </LinearLayout>
@@ -251,7 +251,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="10dp"
-                        android:text="报单积分" />
+                        android:text="服务积分" />
                 </LinearLayout>
 
                 <LinearLayout

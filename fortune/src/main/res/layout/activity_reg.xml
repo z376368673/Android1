@@ -7,7 +7,7 @@
     android:paddingBottom="@dimen/padding"
     android:paddingLeft="@dimen/padding"
     android:paddingRight="@dimen/padding"
-    tools:context="com.jhobor.fortune.RegActivity">
+    tools:context="com.jhobor.fortune.ui.RegActivity">
 
     <include layout="@layout/bar_top" />
 

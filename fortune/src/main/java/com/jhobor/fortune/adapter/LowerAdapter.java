@@ -1,5 +1,7 @@
 package com.jhobor.fortune.adapter;
 
+import android.view.View;
+
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.jhobor.fortune.R;
@@ -22,9 +24,9 @@ public class LowerAdapter extends BaseQuickAdapter<LowerLevel, BaseViewHolder> {
         helper.setText(R.id.tv_name, item.getName())
                 .setText(R.id.tv_account, item.getMobile())
                 .setText(R.id.tv_investment, String.valueOf(item.getCapital()) + "元")
-                .setText(R.id.tv_date, item.getJoinTime())
-                .setText(R.id.tv_activated, item.getProfit()+"")
-                .setText(R.id.tv_unactivated, item.getProfit()+"");
-
+                .setText(R.id.tv_date, item.getCreateDate())
+                .setText(R.id.tv_activated, item.getActivate())
+                .setText(R.id.tv_unactivated, item.getInactive());
     }
+
 }

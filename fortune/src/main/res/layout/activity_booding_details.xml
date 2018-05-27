@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/bg1"
-    tools:context="com.jhobor.fortune.BoodingDetailsActivity">
+    tools:context="com.jhobor.fortune.oldui.BoodingDetailsActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

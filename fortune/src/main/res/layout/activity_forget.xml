@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:paddingLeft="@dimen/padding"
     android:paddingRight="@dimen/padding"
-    tools:context="com.jhobor.fortune.ForgetActivity">
+    tools:context="com.jhobor.fortune.oldui.ForgetActivity">
 
     <include layout="@layout/bar_top" />
     <TextView
