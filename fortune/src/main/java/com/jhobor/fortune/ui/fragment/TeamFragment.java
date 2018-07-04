@@ -20,6 +20,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONException;
+import com.alibaba.fastjson.JSONObject;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.listener.OnItemChildClickListener;
 import com.chad.library.adapter.base.listener.OnItemClickListener;
@@ -32,11 +35,6 @@ import com.jhobor.fortune.entity.LowerLevel;
 import com.jhobor.fortune.ui.TeamSubordinateActivity;
 import com.jhobor.fortune.utils.ErrorUtil;
 import com.jhobor.fortune.utils.TabUtil;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -51,7 +49,8 @@ public class TeamFragment extends Fragment implements View.OnClickListener {
     TextView oneLevel, twoLevel, oneText, twoText;
     RecyclerView recyclerView,recyclerView1;
     ImageView arrow1,arrow2;
-    TextView p1,p2;
+    TextView tv_1,tv_2;
+    TextView tv_11,tv_22;
     boolean isAFloded = false; //表示不折叠
     boolean isBFloded = false;
 
@@ -59,7 +58,12 @@ public class TeamFragment extends Fragment implements View.OnClickListener {
     LowerAdapter lowerAdapter,lowerAdapter1;
     int tab = 0;
     TabUtil tabUtil;
-    int childrenCount, grandsonCount;
+
+    CountNumBean childrenCountBean = new CountNumBean();
+    CountNumBean grandsonCountBean = new CountNumBean();
+
+    int childrenCount, childrenActivate,childrenInactivate ,childrenCountCapital;
+    int grandsonCount, grandsonActivate,grandsonInactivate ,grandsonCountCapital;
 
     public TeamFragment() {
         // Required empty public constructor
@@ -87,8 +91,13 @@ public class TeamFragment extends Fragment implements View.OnClickListener {
         one_ll.setTag(1);
         two_ll = (LinearLayout) view.findViewById(R.id.two_ll);
         two_ll.setTag(0);
-        p1 = (TextView) view.findViewById(R.id.people_1);
-        p2 = (TextView) view.findViewById(R.id.people_2);
+        tv_1 = (TextView) view.findViewById(R.id.tv_1);
+        tv_2 = (TextView) view.findViewById(R.id.tv_2);
+
+
+        tv_11 = (TextView) view.findViewById(R.id.tv_11);
+        tv_22 = (TextView) view.findViewById(R.id.tv_22);
+
 
         if (lowerList.size() == 0) {
             getData();
@@ -133,13 +142,20 @@ public class TeamFragment extends Fragment implements View.OnClickListener {
             tabUtil = new TabUtil(ContextCompat.getColor(getActivity(), R.color.tabNormal), ContextCompat.getColor(getContext(), R.color.tabActived), new TextView[][]{{oneLevel, oneText}, {twoLevel, twoText}});
             tabUtil.change(tab);
         }
+        if (childrenCountBean!=null){
+//            tv_1.setText(String.format(Locale.CHINA, "金额总计:%d元", childrenCountBean.countCapital));
+//            tv_2.setText(String.format(Locale.CHINA, "激活总计:%d人", childrenCountBean.activate));
 
-        //oneLevel.setText(String.format(Locale.CHINA, "%d人", childrenCount));
-        //twoLevel.setText(String.format(Locale.CHINA, "%d人", grandsonCount));
-        p1.setText(String.format(Locale.CHINA, "%d人", childrenCount));
-        p2.setText(String.format(Locale.CHINA, "%d人", grandsonCount));
+            tv_11.setText(String.format(Locale.CHINA, "金额总计:%d元", grandsonCountCapital));
+            tv_22.setText(String.format(Locale.CHINA, "激活总计:%d人", grandsonActivate ));
+        }
+        if (grandsonCountBean!=null) {
+//            tv_11.setText(String.format(Locale.CHINA, "金额总计:%d元", grandsonCountBean.countCapital));
+//            tv_22.setText(String.format(Locale.CHINA, "激活总计:%d人", grandsonCountBean.activate));
 
-
+            tv_1.setText(String.format(Locale.CHINA, "金额总计:%d元", childrenCountCapital));
+            tv_2.setText(String.format(Locale.CHINA, "激活总计:%d人", childrenActivate));
+            }
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
@@ -163,15 +179,32 @@ public class TeamFragment extends Fragment implements View.OnClickListener {
             @Override
             public void parse(String data) {
                 try {
-                   JSONObject jsonObject = new JSONObject(data);
-                    int msg = jsonObject.getInt("msg");
+                   JSONObject jsonObject = JSON.parseObject(data);
+                    int msg = jsonObject.getIntValue("msg");
                     if (msg == 1) {
                         lowerList.clear();
                         JSONArray childrenList = jsonObject.getJSONArray("childrenList");
                         JSONArray grandsonList = jsonObject.getJSONArray("grandsonList");
-                        childrenCount = childrenList.length();
-                        grandsonCount = grandsonList.length();
+                        childrenCount = childrenList.size();
+                        grandsonCount = grandsonList.size();
 
+                        JSONArray countChildGroupList = jsonObject.getJSONArray("countChildGroupList");
+                        JSONArray countGrandGroupList = jsonObject.getJSONArray("countGrandGroupList");
+
+                        if (countChildGroupList!=null){
+                           JSONObject objectJs = countChildGroupList.getJSONObject(0);
+                          // childrenCountBean = JSON.parseObject(objectJs.toString(),CountNumBean.class);
+                           childrenInactivate = objectJs.getIntValue("inactive");
+                           childrenActivate = objectJs.getIntValue("activate");
+                           childrenCountCapital = objectJs.getIntValue("countCapital");
+                        }
+                        if (countGrandGroupList!=null){
+                            JSONObject objectJs = countGrandGroupList.getJSONObject(0);
+                            //grandsonCountBean = JSON.parseObject(objectJs.toString(),CountNumBean.class);
+                            grandsonInactivate = objectJs.getIntValue("inactive");
+                            grandsonActivate = objectJs.getIntValue("activate");
+                            grandsonCountCapital = objectJs.getIntValue("countCapital");
+                        }
                         List<LowerLevel> list = JSON.parseArray(childrenList.toString(),LowerLevel.class);
                         lowerList.put(0, list);
 
@@ -280,4 +313,37 @@ public class TeamFragment extends Fragment implements View.OnClickListener {
         super.onResume();
         getData();//聚焦时重新获取一遍数据
     }
+
+    public class CountNumBean{
+        private int count; //总人数
+        private int activate;//激活总人数
+        private int inactive;//未激活总人数
+        private int countCapital;//总投资额
+
+        public int getActivate() {
+            return activate;
+        }
+
+        public void setActivate(int activate) {
+            this.activate = activate;
+        }
+
+        public int getInactive() {
+            return inactive;
+        }
+
+        public void setInactive(int inactive) {
+            this.inactive = inactive;
+        }
+
+        public int getCountCapital() {
+            return countCapital;
+        }
+
+        public void setCountCapital(int countCapital) {
+            this.countCapital = countCapital;
+        }
+
+    }
+
 }

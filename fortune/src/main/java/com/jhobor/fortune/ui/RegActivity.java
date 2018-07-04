@@ -88,7 +88,7 @@ public class RegActivity extends AppCompatActivity implements View.OnClickListen
             }
         } else if (v == reg) {
                 strMobile = mobile.getText().toString().trim();
-                Object[] objectArr = TextUtil.arrange(name,mobile, code, pass, confirmPass, refMobile);
+                Object[] objectArr = TextUtil.arrange(name,mobile, code, pass, confirmPass /*refMobile*/);
                 String[] contentArr = (String[]) objectArr[0];
                 boolean[] itemChecks = {
                         !contentArr[0].trim().isEmpty(),
@@ -96,7 +96,7 @@ public class RegActivity extends AppCompatActivity implements View.OnClickListen
                         CheckUtil.isValifyCode(contentArr[2]) && CheckUtil.isSame(contentArr[2], valifyCode),
                         CheckUtil.isPass(contentArr[3]),
                         CheckUtil.isSame(contentArr[3], contentArr[4]),
-                        CheckUtil.isMobile(contentArr[5]) || !contentArr[5].isEmpty(),
+                        //CheckUtil.isMobile(contentArr[5]) || !contentArr[5].isEmpty(),
 
                 };
                 String[] itemTips = {
@@ -105,7 +105,7 @@ public class RegActivity extends AppCompatActivity implements View.OnClickListen
                         "验证码不正确",
                         "密码长度为6-18",
                         "密码和确认密码不一致",
-                        "推荐人手机号码格式不正确",
+                        //"推荐人手机号码格式不正确",
 
                 };
                 int i = CheckUtil.checkAll(itemChecks);

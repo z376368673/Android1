@@ -48,18 +48,30 @@
             android:layout_marginTop="10dp"
             android:src="@mipmap/down" />
 
+
         <TextView
-            android:id="@+id/people_1"
+            android:id="@+id/tv_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
-            android:layout_toLeftOf="@+id/down_one"
-            android:text="0人"
-            android:textColor="@color/tabActived"
-            android:textSize="18sp"
-            android:visibility="invisible" />
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/tv_2"
+            android:text="金额总计:0元"
+            android:textColor="@color/black_66"
+            android:textSize="15sp"
+            />
 
+        <TextView
+            android:id="@+id/tv_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/down_one"
+            android:text="激活总计：0人"
+            android:textColor="@color/black_66"
+            android:textSize="15sp"
+            />
     </RelativeLayout>
 
     <HorizontalScrollView
@@ -155,27 +167,29 @@
             android:src="@mipmap/up" />
 
         <TextView
-            android:id="@+id/people_2"
+            android:id="@+id/tv_11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
-            android:layout_toLeftOf="@+id/down_two"
-            android:text="0人"
-            android:textColor="@color/tabActived"
-            android:textSize="18sp"
-            android:visibility="invisible" />
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/tv_22"
+            android:text="金额总计:0元"
+            android:textColor="@color/black_66"
+            android:textSize="15sp"
+            />
 
         <TextView
+            android:id="@+id/tv_22"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/textView6"
-            android:layout_alignParentBottom="true"
-            android:layout_alignStart="@+id/textView6"
-            android:layout_marginBottom="232dp"
-            android:text="直推"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/down_two"
+            android:text="激活总计:0人"
+            android:textColor="@color/black_66"
+            android:textSize="15sp"
+            />
+
     </RelativeLayout>
     <HorizontalScrollView
         android:layout_width="match_parent"
@@ -193,11 +207,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:visibility="gone">
+            >
             <LinearLayout
                 android:id="@+id/oneBox_1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
                 android:layout_weight="1"
                 android:background="@drawable/card_round_bg"
                 android:orientation="vertical"
